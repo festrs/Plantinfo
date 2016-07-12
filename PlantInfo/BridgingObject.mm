@@ -10,24 +10,42 @@
 #import "Classifier.h"
 
 @implementation BridgingObject
-- (NSString*)predictWithImage: (UIImage*)image;
+
+Classifier *classifier = NULL;
+
++ (id)sharedManager {
+    static BridgingObject *sharedMyManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedMyManager = [[self alloc] init];
+    });
+    return sharedMyManager;
+}
+
+- (id)init {
+    if (self = [super init]) {
+        //Load model
+        NSString* model_file = [NSBundle.mainBundle pathForResource:@"deploy" ofType:@"prototxt" inDirectory:@"model"];
+        NSString* label_file = [NSBundle.mainBundle pathForResource:@"labels" ofType:@"txt" inDirectory:@"model"];
+        NSString* mean_file = [NSBundle.mainBundle pathForResource:@"mean" ofType:@"binaryproto" inDirectory:@"model"];
+        NSString* trained_file = [NSBundle.mainBundle pathForResource:@"bvlc_reference_caffenet" ofType:@"caffemodel" inDirectory:@"model"];
+        string model_file_str = std::string([model_file UTF8String]);
+        string label_file_str = std::string([label_file UTF8String]);
+        string trained_file_str = std::string([trained_file UTF8String]);
+        string mean_file_str = std::string([mean_file UTF8String]);
+        classifier = new Classifier(model_file_str, trained_file_str, mean_file_str, label_file_str);
+    }
+    return self;
+}
+
+- (NSString*)predictWithImage: (UIImage*)image
 {
-    NSString* model_file = [NSBundle.mainBundle pathForResource:@"deploy" ofType:@"prototxt" inDirectory:@"model"];
-    NSString* label_file = [NSBundle.mainBundle pathForResource:@"labels" ofType:@"txt" inDirectory:@"model"];
-    NSString* mean_file = [NSBundle.mainBundle pathForResource:@"mean" ofType:@"binaryproto" inDirectory:@"model"];
-    NSString* trained_file = [NSBundle.mainBundle pathForResource:@"bvlc_reference_caffenet" ofType:@"caffemodel" inDirectory:@"model"];
-    string model_file_str = std::string([model_file UTF8String]);
-    string label_file_str = std::string([label_file UTF8String]);
-    string trained_file_str = std::string([trained_file UTF8String]);
-    string mean_file_str = std::string([mean_file UTF8String]);
-    
     cv::Mat src_img, bgra_img;
     UIImageToMat(image, src_img);
     // needs to convert to BGRA because the image loaded from UIImage is in RGBA
     cv::cvtColor(src_img, bgra_img, CV_RGBA2BGRA);
     
-    Classifier classifier = Classifier(model_file_str, trained_file_str, mean_file_str, label_file_str);
-    std::vector<Prediction> result = classifier.Classify(bgra_img);
+    std::vector<Prediction> result = classifier->Classify(bgra_img);
     
     NSString* ret = nil;
     

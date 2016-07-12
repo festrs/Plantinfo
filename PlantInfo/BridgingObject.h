@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface BridgingObject : NSObject
 
+- (NSString*)predictWithImage: (UIImage*)image;
+
++ (id)sharedManager;
 @end
