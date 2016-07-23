@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1B702678D4E4E82714DCDD923D8F219ADE54E232",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1B702678D4E4E82714DCDD923D8F219ADE54E232" : 0,
+    "4CD8186CE66A0AD46BD21DF2E9F43E65780546D2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FC922B8C-B538-457E-BE6A-8B94FB3EC16F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1B702678D4E4E82714DCDD923D8F219ADE54E232" : "PlantInfo\/",
+    "4CD8186CE66A0AD46BD21DF2E9F43E65780546D2" : "PlantInfo\/caffe\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PlantInfo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PlantInfo.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/festrs\/Plantinfo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1B702678D4E4E82714DCDD923D8F219ADE54E232"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:aleph7\/caffe.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4CD8186CE66A0AD46BD21DF2E9F43E65780546D2"
+    }
+  ]
+}
