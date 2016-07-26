@@ -4,10 +4,13 @@
 
 ## Build generated
 build/
+
+##others
 DerivedData/
 .ipa
 .zip
 models/
+.DS_Store
 
 ## Various settings
 *.pbxuser
