@@ -25,10 +25,10 @@ Classifier *classifier = NULL;
 - (id)init {
     if (self = [super init]) {
         //Load model
-        NSString* model_file = [NSBundle.mainBundle pathForResource:@"deploy" ofType:@"prototxt" inDirectory:@"model"];
-        NSString* label_file = [NSBundle.mainBundle pathForResource:@"labels" ofType:@"txt" inDirectory:@"model"];
-        NSString* mean_file = [NSBundle.mainBundle pathForResource:@"mean" ofType:@"binaryproto" inDirectory:@"model"];
-        NSString* trained_file = [NSBundle.mainBundle pathForResource:@"bvlc_reference_caffenet" ofType:@"caffemodel" inDirectory:@"model"];
+        NSString* model_file = [NSBundle.mainBundle pathForResource:@"deploy" ofType:@"prototxt" inDirectory:@"models"];
+        NSString* label_file = [NSBundle.mainBundle pathForResource:@"labels" ofType:@"txt" inDirectory:@"models"];
+        NSString* mean_file = [NSBundle.mainBundle pathForResource:@"image_mean_whole_dataset" ofType:@"binaryproto" inDirectory:@"models"];
+        NSString* trained_file = [NSBundle.mainBundle pathForResource:@"bvlc_3training_googlenet_iter_9789" ofType:@"caffemodel" inDirectory:@"models"];
         string model_file_str = std::string([model_file UTF8String]);
         string label_file_str = std::string([label_file UTF8String]);
         string trained_file_str = std::string([trained_file UTF8String]);
@@ -38,7 +38,7 @@ Classifier *classifier = NULL;
     return self;
 }
 
-- (NSString*)predictWithImage: (UIImage*)image
+- (NSArray*)predictWithImage: (UIImage*)image
 {
     cv::Mat src_img, bgra_img;
     UIImageToMat(image, src_img);
@@ -47,17 +47,15 @@ Classifier *classifier = NULL;
     
     std::vector<Prediction> result = classifier->Classify(bgra_img);
     
-    NSString* ret = nil;
+    NSMutableArray *ret = [[NSMutableArray alloc] init];
     
     for (std::vector<Prediction>::iterator it = result.begin(); it != result.end(); ++it) {
         NSString* label = [NSString stringWithUTF8String:it->first.c_str()];
         NSNumber* probability = [NSNumber numberWithFloat:it->second];
         NSLog(@"label: %@, prob: %@", label, probability);
-        if (it == result.begin()) {
-            ret = label;
-        }
+        [ret addObject:label];
     }
     
-    return ret;
+    return [ret copy];
 }
 @end
