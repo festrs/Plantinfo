@@ -9,7 +9,7 @@ build/
 DerivedData/
 .ipa
 .zip
-models/
+*.DS_Store
 .DS_Store
 
 ## Various settings
