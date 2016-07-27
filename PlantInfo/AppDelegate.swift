@@ -13,10 +13,17 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    lazy var bridginObject:BridgingObjectClassifier = {
+       return BridgingObjectClassifier.sharedManager() as! BridgingObjectClassifier
+    }()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        if let rootViewController = self.window?.rootViewController as? FPHandlesIncomingObjects {
+            rootViewController.receiveMOC(managedObjectContext)
+        }
+        if let rootViewController = self.window?.rootViewController as? FPHandlesIncomingObjects {
+            rootViewController.receiveClassifier(bridginObject)
+        }
         return true
     }
 

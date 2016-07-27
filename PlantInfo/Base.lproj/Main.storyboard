@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HDx-E6-zZW">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--List Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlantInfo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListController" customModule="PlantInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,19 +17,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c8-MH-3ZC">
-                                <rect key="frame" x="74" y="51" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QdW-hj-c2Z">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lEc-l3-GSG"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hfv-uI-MXX"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zL5-Ey-Ah5"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QdW-hj-c2Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KQU-fY-6QQ"/>
+                            <constraint firstAttribute="trailing" secondItem="QdW-hj-c2Z" secondAttribute="trailing" id="MFh-mL-6hv"/>
+                            <constraint firstItem="QdW-hj-c2Z" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="OjN-ju-srW"/>
+                            <constraint firstItem="QdW-hj-c2Z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="srs-4o-c8H"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="a7m-rm-bPq">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="6Mu-Rp-Adx">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zPX-Ww-Rsl">
+                                <rect key="frame" x="20" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Jdx-cB-qpK">
+                            <connections>
+                                <action selector="addNewIdentification:" destination="BYZ-38-t0r" id="kGZ-2R-zha"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="QdW-hj-c2Z" id="wJ7-1n-4YM"/>
+                        <segue destination="56j-hN-owe" kind="show" identifier="ToNewIdentification" id="Ryj-Yv-3n3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1212" y="379"/>
+        </scene>
+        <!--New Identifier Controller-->
+        <scene sceneID="GHq-Ik-N8T">
+            <objects>
+                <viewController id="56j-hN-owe" customClass="NewIdentifierController" customModule="PlantInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RM0-ZU-ger"/>
+                        <viewControllerLayoutGuide type="bottom" id="pRS-1Q-JRy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WFl-dc-FQX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kzz-eZ-Owx">
+                                <rect key="frame" x="180" y="123" width="240" height="229"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="qtq-uR-1kv"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAC-sI-ZPV">
+                                <rect key="frame" x="185" y="380" width="235" height="119"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kzz-eZ-Owx" firstAttribute="top" secondItem="RM0-ZU-ger" secondAttribute="bottom" constant="59" id="C8N-s1-i0e"/>
+                            <constraint firstItem="pRS-1Q-JRy" firstAttribute="top" secondItem="kzz-eZ-Owx" secondAttribute="bottom" constant="248" id="hPg-I6-PoH"/>
+                            <constraint firstItem="kzz-eZ-Owx" firstAttribute="centerX" secondItem="WFl-dc-FQX" secondAttribute="centerX" id="rKJ-oU-ItN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pXL-Fm-S09">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="hGp-ZZ-kvu">
+                            <connections>
+                                <action selector="addNewIdentification:" destination="BYZ-38-t0r" id="IqM-10-TjL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pickedImageView" destination="kzz-eZ-Owx" id="Eu1-fH-haT"/>
+                        <outlet property="resultLabel" destination="JAC-sI-ZPV" id="vtN-y6-0gy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D1l-KM-twE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1975" y="379"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="BjQ-fU-FXp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HDx-E6-zZW" customClass="NavigationViewController" customModule="PlantInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8oU-wD-Iq2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4q3-X0-iJj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sha-UI-3vS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="379"/>
         </scene>
     </scenes>
 </document>

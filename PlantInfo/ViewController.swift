@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var bridginObject = BridgingObject.sharedManager()
+        var bridginObject = BridgingObjectClassifier.sharedManager()
         
         print(bridginObject.predictWithImage(UIImage(imageLiteral: "n12899752_5266.JPEG")))
         

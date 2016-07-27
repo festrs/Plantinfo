@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A24A4721D48167100BA685C /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4701D48167100BA685C /* CoreDataTableViewController.swift */; };
+		3A24A4731D48167100BA685C /* ProtocolCoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4711D48167100BA685C /* ProtocolCoreDataTableViewController.swift */; };
+		3A24A4771D4816DB00BA685C /* FPHandleMOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4761D4816DB00BA685C /* FPHandleMOC.swift */; };
+		3A24A47A1D48176400BA685C /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4791D48176400BA685C /* ListController.swift */; };
+		3A24A4801D481EA100BA685C /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A47F1D481EA100BA685C /* NavigationViewController.swift */; };
+		3A24A4871D48225F00BA685C /* Identifications+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4851D48225F00BA685C /* Identifications+CoreDataProperties.swift */; };
+		3A24A4881D48225F00BA685C /* Identifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4861D48225F00BA685C /* Identifications.swift */; };
+		3A24A48A1D4826FF00BA685C /* NewIdentifierController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4891D4826FF00BA685C /* NewIdentifierController.swift */; };
 		3A2813B81D2F35B900FA2078 /* Classifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3D51D2C669500A805EA /* Classifier.mm */; };
-		3A2813C21D2F417200FA2078 /* BridgingObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A2813C11D2F417200FA2078 /* BridgingObject.mm */; };
-		3A2813C31D2F439F00FA2078 /* BridgingObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A2813C11D2F417200FA2078 /* BridgingObject.mm */; };
+		3A2813C21D2F417200FA2078 /* BridgingObjectClassifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */; };
+		3A2813C31D2F439F00FA2078 /* BridgingObjectClassifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */; };
 		3A54E3B11D2C664D00A805EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3B01D2C664D00A805EA /* AppDelegate.swift */; };
 		3A54E3B31D2C664D00A805EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3B21D2C664D00A805EA /* ViewController.swift */; };
 		3A54E3B61D2C664D00A805EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A54E3B41D2C664D00A805EA /* Main.storyboard */; };
@@ -141,8 +149,16 @@
 /* Begin PBXFileReference section */
 		1013139A5E0AA043C1654113 /* Pods-PlantInfoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantInfoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlantInfoTests/Pods-PlantInfoTests.release.xcconfig"; sourceTree = "<group>"; };
 		172197D6EA3DEDF6F43A498A /* Pods_PlantInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlantInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A2813C01D2F417200FA2078 /* BridgingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingObject.h; sourceTree = "<group>"; };
-		3A2813C11D2F417200FA2078 /* BridgingObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BridgingObject.mm; sourceTree = "<group>"; };
+		3A24A4701D48167100BA685C /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
+		3A24A4711D48167100BA685C /* ProtocolCoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolCoreDataTableViewController.swift; sourceTree = "<group>"; };
+		3A24A4761D4816DB00BA685C /* FPHandleMOC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPHandleMOC.swift; sourceTree = "<group>"; };
+		3A24A4791D48176400BA685C /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		3A24A47F1D481EA100BA685C /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		3A24A4851D48225F00BA685C /* Identifications+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Identifications+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3A24A4861D48225F00BA685C /* Identifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifications.swift; sourceTree = "<group>"; };
+		3A24A4891D4826FF00BA685C /* NewIdentifierController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewIdentifierController.swift; sourceTree = "<group>"; };
+		3A2813C01D2F417200FA2078 /* BridgingObjectClassifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingObjectClassifier.h; sourceTree = "<group>"; };
+		3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BridgingObjectClassifier.mm; sourceTree = "<group>"; };
 		3A54E3AD1D2C664D00A805EA /* PlantInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A54E3B01D2C664D00A805EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A54E3B21D2C664D00A805EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -359,6 +375,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A24A4781D48174100BA685C /* Identifications */ = {
+			isa = PBXGroup;
+			children = (
+				3A24A4791D48176400BA685C /* ListController.swift */,
+				3A24A4891D4826FF00BA685C /* NewIdentifierController.swift */,
+			);
+			name = Identifications;
+			sourceTree = "<group>";
+		};
+		3A24A47B1D48178D00BA685C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3A24A4831D48215000BA685C /* Classifier */,
+				3A24A47C1D48179E00BA685C /* Protocols */,
+				3A24A4701D48167100BA685C /* CoreDataTableViewController.swift */,
+				3AFA3FB51D442D7F00F2BD3D /* Extensions.swift */,
+				3A2813C01D2F417200FA2078 /* BridgingObjectClassifier.h */,
+				3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		3A24A47C1D48179E00BA685C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3A24A4711D48167100BA685C /* ProtocolCoreDataTableViewController.swift */,
+				3A24A4761D4816DB00BA685C /* FPHandleMOC.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		3A24A4821D481F1F00BA685C /* Naviagation */ = {
+			isa = PBXGroup;
+			children = (
+				3A24A47F1D481EA100BA685C /* NavigationViewController.swift */,
+			);
+			name = Naviagation;
+			sourceTree = "<group>";
+		};
+		3A24A4831D48215000BA685C /* Classifier */ = {
+			isa = PBXGroup;
+			children = (
+				3A54E3D41D2C669500A805EA /* Classifier.h */,
+				3A54E3D51D2C669500A805EA /* Classifier.mm */,
+				3A54E3D61D2C669500A805EA /* classification.cpp */,
+			);
+			name = Classifier;
+			sourceTree = "<group>";
+		};
+		3A24A4841D48224C00BA685C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3A24A4851D48225F00BA685C /* Identifications+CoreDataProperties.swift */,
+				3A24A4861D48225F00BA685C /* Identifications.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		3A54E3A41D2C664D00A805EA = {
 			isa = PBXGroup;
 			children = (
@@ -382,14 +456,12 @@
 		3A54E3AF1D2C664D00A805EA /* PlantInfo */ = {
 			isa = PBXGroup;
 			children = (
+				3A24A4841D48224C00BA685C /* CoreData */,
+				3A24A4821D481F1F00BA685C /* Naviagation */,
+				3A24A47B1D48178D00BA685C /* Utilities */,
+				3A24A4781D48174100BA685C /* Identifications */,
 				3A54E3B01D2C664D00A805EA /* AppDelegate.swift */,
 				3A54E3B21D2C664D00A805EA /* ViewController.swift */,
-				3A2813C01D2F417200FA2078 /* BridgingObject.h */,
-				3A2813C11D2F417200FA2078 /* BridgingObject.mm */,
-				3A54E3D41D2C669500A805EA /* Classifier.h */,
-				3A54E3D51D2C669500A805EA /* Classifier.mm */,
-				3A54E3D61D2C669500A805EA /* classification.cpp */,
-				3AFA3FB51D442D7F00F2BD3D /* Extensions.swift */,
 				3A54E3B41D2C664D00A805EA /* Main.storyboard */,
 				3A54E3BA1D2C664D00A805EA /* Assets.xcassets */,
 				3A54E3BC1D2C664D00A805EA /* LaunchScreen.storyboard */,
@@ -904,14 +976,17 @@
 			files = (
 				3A54FCDB1D2CAB1400A805EA /* libprotoc.a in Sources */,
 				3A54FCDC1D2CAB1400A805EA /* libglog.a in Sources */,
+				3A24A4721D48167100BA685C /* CoreDataTableViewController.swift in Sources */,
 				3A54FCDD1D2CAB1400A805EA /* libprotobuf.a in Sources */,
 				3A54FCDA1D2CAAE800A805EA /* caffe.proto in Sources */,
 				3A54FC6B1D2CA3B500A805EA /* cudnn_tanh_layer.cpp in Sources */,
 				3A54FC5D1D2CA3B500A805EA /* contrastive_loss_layer.cpp in Sources */,
 				3A54FC561D2CA3B500A805EA /* base_conv_layer.cpp in Sources */,
-				3A2813C21D2F417200FA2078 /* BridgingObject.mm in Sources */,
+				3A2813C21D2F417200FA2078 /* BridgingObjectClassifier.mm in Sources */,
+				3A24A47A1D48176400BA685C /* ListController.swift in Sources */,
 				3A54FCB41D2CA3B500A805EA /* db_lmdb.cpp in Sources */,
 				3A54FC5F1D2CA3B500A805EA /* conv_layer.cpp in Sources */,
+				3A24A4871D48225F00BA685C /* Identifications+CoreDataProperties.swift in Sources */,
 				3A54FC541D2CA3B500A805EA /* accuracy_layer.cpp in Sources */,
 				3A54FCBC1D2CA3B500A805EA /* upgrade_proto.cpp in Sources */,
 				3A54FC891D2CA3B500A805EA /* loss_layer.cpp in Sources */,
@@ -932,12 +1007,14 @@
 				3A54FC631D2CA3B500A805EA /* cudnn_pooling_layer.cpp in Sources */,
 				3A54FC811D2CA3B500A805EA /* im2col_layer.cpp in Sources */,
 				3A54FCAB1D2CA3B500A805EA /* tanh_layer.cpp in Sources */,
+				3A24A4881D48225F00BA685C /* Identifications.swift in Sources */,
 				3A54FC791D2CA3B500A805EA /* filter_layer.cpp in Sources */,
 				3A54FC5B1D2CA3B500A805EA /* concat_layer.cpp in Sources */,
 				3A54FC971D2CA3B500A805EA /* reduction_layer.cpp in Sources */,
 				3A54FCA41D2CA3B500A805EA /* softmax_layer.cpp in Sources */,
 				3A54FC9C1D2CA3B500A805EA /* sigmoid_cross_entropy_loss_layer.cpp in Sources */,
 				3A54FC871D2CA3B500A805EA /* log_layer.cpp in Sources */,
+				3A24A4771D4816DB00BA685C /* FPHandleMOC.swift in Sources */,
 				3A54FC701D2CA3B500A805EA /* dropout_layer.cpp in Sources */,
 				3A54FC721D2CA3B500A805EA /* dummy_data_layer.cpp in Sources */,
 				3A54FC8E1D2CA3B500A805EA /* mvn_layer.cpp in Sources */,
@@ -955,12 +1032,15 @@
 				3A54FCAD1D2CA3B500A805EA /* threshold_layer.cpp in Sources */,
 				3A54FB311D2CA38D00A805EA /* gflags.cc in Sources */,
 				3A54FC8A1D2CA3B500A805EA /* lrn_layer.cpp in Sources */,
+				3A24A4801D481EA100BA685C /* NavigationViewController.swift in Sources */,
 				3A54FCB81D2CA3B500A805EA /* insert_splits.cpp in Sources */,
 				3A54FBE21D2CA38D00A805EA /* solver.cpp in Sources */,
+				3A24A48A1D4826FF00BA685C /* NewIdentifierController.swift in Sources */,
 				3A54FC8C1D2CA3B500A805EA /* memory_data_layer.cpp in Sources */,
 				3A54E3B31D2C664D00A805EA /* ViewController.swift in Sources */,
 				3A54FC8D1D2CA3B500A805EA /* multinomial_logistic_loss_layer.cpp in Sources */,
 				3A54FC751D2CA3B500A805EA /* euclidean_loss_layer.cpp in Sources */,
+				3A24A4731D48167100BA685C /* ProtocolCoreDataTableViewController.swift in Sources */,
 				3A54FC911D2CA3B500A805EA /* pooling_layer.cpp in Sources */,
 				3A54FC571D2CA3B500A805EA /* base_data_layer.cpp in Sources */,
 				3A54FC801D2CA3B500A805EA /* hinge_loss_layer.cpp in Sources */,
@@ -991,7 +1071,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A2813C31D2F439F00FA2078 /* BridgingObject.mm in Sources */,
+				3A2813C31D2F439F00FA2078 /* BridgingObjectClassifier.mm in Sources */,
 				3A2813B81D2F35B900FA2078 /* Classifier.mm in Sources */,
 				3A54E3C91D2C664D00A805EA /* PlantInfoTests.swift in Sources */,
 			);

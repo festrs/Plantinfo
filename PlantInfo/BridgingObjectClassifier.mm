@@ -6,15 +6,15 @@
 //  Copyright © 2016 Felipe Dias Pereira. All rights reserved.
 //
 
-#import "BridgingObject.h"
+#import "BridgingObjectClassifier.h"
 #import "Classifier.h"
 
-@implementation BridgingObject
+@implementation BridgingObjectClassifier
 
 Classifier *classifier = NULL;
 
 + (id)sharedManager {
-    static BridgingObject *sharedMyManager = nil;
+    static BridgingObjectClassifier *sharedMyManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedMyManager = [[self alloc] init];
