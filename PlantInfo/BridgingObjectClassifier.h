@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface BridgingObject : NSObject
+@interface BridgingObjectClassifier : NSObject
 
 - (NSArray*)predictWithImage: (UIImage*)image;
 
