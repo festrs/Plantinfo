@@ -21,7 +21,6 @@ UINavigationControllerDelegate {
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.configTableView()
     }
     
@@ -56,7 +55,6 @@ UINavigationControllerDelegate {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("documentCell")
         
-        
         return cell!
     }
     //MARK: Image Picker
@@ -85,7 +83,7 @@ UINavigationControllerDelegate {
         }
         
         if segue.identifier == SEGUE_IDENTIFIER,
-            let vc = segue.destinationViewController as? NewIdentifierController,
+            let vc = segue.destinationViewController as? NewIdentificationController,
                 let image = sender as? UIImage{
            vc.incomingImage = image
         }
