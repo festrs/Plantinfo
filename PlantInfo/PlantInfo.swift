@@ -40,6 +40,6 @@ class PlantInfo: Mappable {
         scientificName      <- map["Scientific_Name"]
         symptoms            <- map["Symptoms"]
         toxicPrinciple      <- map["Toxic_Principle"]
-        
+        severity            <- map["Severity"]
     }
 }

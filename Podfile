@@ -10,6 +10,7 @@ target 'PlantInfo' do
     pod 'Alamofire', '~> 3.4'
     pod 'ObjectMapper', '~> 1.3'
     pod 'Kingfisher', '~> 2.4'
+    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
 end
 
 target 'PlantInfoTests' do

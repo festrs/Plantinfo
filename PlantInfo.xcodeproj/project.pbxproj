@@ -14,7 +14,7 @@
 		3A24A4801D481EA100BA685C /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A47F1D481EA100BA685C /* NavigationViewController.swift */; };
 		3A24A4871D48225F00BA685C /* Identifications+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4851D48225F00BA685C /* Identifications+CoreDataProperties.swift */; };
 		3A24A4881D48225F00BA685C /* Identifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4861D48225F00BA685C /* Identifications.swift */; };
-		3A24A48A1D4826FF00BA685C /* NewIdentificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4891D4826FF00BA685C /* NewIdentificationController.swift */; };
+		3A24A48A1D4826FF00BA685C /* SelectIdentifierController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4891D4826FF00BA685C /* SelectIdentifierController.swift */; };
 		3A24A48E1D4C2DDB00BA685C /* plants.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A24A48C1D4C2DDB00BA685C /* plants.json */; };
 		3A2813B81D2F35B900FA2078 /* Classifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3D51D2C669500A805EA /* Classifier.mm */; };
 		3A2813C21D2F417200FA2078 /* BridgingObjectClassifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */; };
@@ -119,7 +119,10 @@
 		3A8626071D4D3C2C00214348 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8626061D4D3C2C00214348 /* Plant.swift */; };
 		3A8626091D4D3E3C00214348 /* PlantCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8626081D4D3E3C00214348 /* PlantCore.swift */; };
 		3A86260B1D4D4D4A00214348 /* PlantInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86260A1D4D4D4A00214348 /* PlantInfo.swift */; };
-		3A9CB4B81D518F7C00B9FDBB /* NewIdentificationCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CB4B71D518F7C00B9FDBB /* NewIdentificationCollectionCell.swift */; };
+		3A8CB13B1D59625A0097AE0F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8CB13A1D59625A0097AE0F /* TabBarController.swift */; };
+		3A8CB13D1D5A83280097AE0F /* ImageViewWithGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8CB13C1D5A83280097AE0F /* ImageViewWithGradient.swift */; };
+		3A8CB13F1D5AAC870097AE0F /* NewIdentifierController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8CB13E1D5AAC870097AE0F /* NewIdentifierController.swift */; };
+		3AA73EA61D5F69BE0042CD19 /* NewPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA73EA51D5F69BE0042CD19 /* NewPhotoController.swift */; };
 		3AFA3FB61D442D7F00F2BD3D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA3FB51D442D7F00F2BD3D /* Extensions.swift */; };
 		8B8585FACC612D8CDA7078A5 /* libPods-PlantInfoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 830B47BA462664807DF1BD00 /* libPods-PlantInfoTests.a */; };
 		F33B99B699F0034026E3426D /* Pods_PlantInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 172197D6EA3DEDF6F43A498A /* Pods_PlantInfo.framework */; };
@@ -161,7 +164,7 @@
 		3A24A47F1D481EA100BA685C /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		3A24A4851D48225F00BA685C /* Identifications+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Identifications+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3A24A4861D48225F00BA685C /* Identifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifications.swift; sourceTree = "<group>"; };
-		3A24A4891D4826FF00BA685C /* NewIdentificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewIdentificationController.swift; sourceTree = "<group>"; };
+		3A24A4891D4826FF00BA685C /* SelectIdentifierController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectIdentifierController.swift; sourceTree = "<group>"; };
 		3A24A48C1D4C2DDB00BA685C /* plants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = plants.json; sourceTree = "<group>"; };
 		3A2813C01D2F417200FA2078 /* BridgingObjectClassifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingObjectClassifier.h; sourceTree = "<group>"; };
 		3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BridgingObjectClassifier.mm; sourceTree = "<group>"; };
@@ -349,7 +352,10 @@
 		3A8626061D4D3C2C00214348 /* Plant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		3A8626081D4D3E3C00214348 /* PlantCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantCore.swift; sourceTree = "<group>"; };
 		3A86260A1D4D4D4A00214348 /* PlantInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantInfo.swift; sourceTree = "<group>"; };
-		3A9CB4B71D518F7C00B9FDBB /* NewIdentificationCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewIdentificationCollectionCell.swift; sourceTree = "<group>"; };
+		3A8CB13A1D59625A0097AE0F /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		3A8CB13C1D5A83280097AE0F /* ImageViewWithGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewWithGradient.swift; sourceTree = "<group>"; };
+		3A8CB13E1D5AAC870097AE0F /* NewIdentifierController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewIdentifierController.swift; sourceTree = "<group>"; };
+		3AA73EA51D5F69BE0042CD19 /* NewPhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPhotoController.swift; sourceTree = "<group>"; };
 		3AFA3FB51D442D7F00F2BD3D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		51E1C1E4B364861065AD9FD8 /* Pods-PlantInfoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantInfoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlantInfoTests/Pods-PlantInfoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		830B47BA462664807DF1BD00 /* libPods-PlantInfoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlantInfoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -389,10 +395,9 @@
 			isa = PBXGroup;
 			children = (
 				3A8626051D4D3BD300214348 /* Objects */,
-				3A24A4791D48176400BA685C /* ListController.swift */,
-				3A24A4891D4826FF00BA685C /* NewIdentificationController.swift */,
-				3A8626081D4D3E3C00214348 /* PlantCore.swift */,
-				3A9CB4B71D518F7C00B9FDBB /* NewIdentificationCollectionCell.swift */,
+				3A24A4891D4826FF00BA685C /* SelectIdentifierController.swift */,
+				3A8CB13E1D5AAC870097AE0F /* NewIdentifierController.swift */,
+				3AA73EA51D5F69BE0042CD19 /* NewPhotoController.swift */,
 			);
 			name = Identifications;
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 				3AFA3FB51D442D7F00F2BD3D /* Extensions.swift */,
 				3A2813C01D2F417200FA2078 /* BridgingObjectClassifier.h */,
 				3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */,
+				3A8CB13C1D5A83280097AE0F /* ImageViewWithGradient.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -423,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				3A24A47F1D481EA100BA685C /* NavigationViewController.swift */,
+				3A8CB13A1D59625A0097AE0F /* TabBarController.swift */,
 			);
 			name = Naviagation;
 			sourceTree = "<group>";
@@ -474,6 +481,7 @@
 				3A24A47B1D48178D00BA685C /* Utilities */,
 				3A24A4781D48174100BA685C /* Identifications */,
 				3A54E3B01D2C664D00A805EA /* AppDelegate.swift */,
+				3A24A4791D48176400BA685C /* ListController.swift */,
 				3A54E3B21D2C664D00A805EA /* ViewController.swift */,
 				3A54E3B41D2C664D00A805EA /* Main.storyboard */,
 				3A54E3BA1D2C664D00A805EA /* Assets.xcassets */,
@@ -765,6 +773,7 @@
 		3A8626051D4D3BD300214348 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				3A8626081D4D3E3C00214348 /* PlantCore.swift */,
 				3A8626061D4D3C2C00214348 /* Plant.swift */,
 				3A86260A1D4D4D4A00214348 /* PlantInfo.swift */,
 			);
@@ -1018,6 +1027,7 @@
 				3A54FBE01D2CA38D00A805EA /* layer_factory.cpp in Sources */,
 				3A54FC851D2CA3B500A805EA /* inner_product_layer.cpp in Sources */,
 				3A54FC841D2CA3B500A805EA /* infogain_loss_layer.cpp in Sources */,
+				3A8CB13D1D5A83280097AE0F /* ImageViewWithGradient.swift in Sources */,
 				3A54FCBA1D2CA3B500A805EA /* math_functions.cpp in Sources */,
 				3A54FCAA1D2CA3B500A805EA /* spp_layer.cpp in Sources */,
 				3A54FBDD1D2CA38D00A805EA /* common.cpp in Sources */,
@@ -1039,6 +1049,7 @@
 				3A54FC9C1D2CA3B500A805EA /* sigmoid_cross_entropy_loss_layer.cpp in Sources */,
 				3A54FC871D2CA3B500A805EA /* log_layer.cpp in Sources */,
 				3A24A4771D4816DB00BA685C /* FPHandleMOC.swift in Sources */,
+				3AA73EA61D5F69BE0042CD19 /* NewPhotoController.swift in Sources */,
 				3A54FC701D2CA3B500A805EA /* dropout_layer.cpp in Sources */,
 				3A54FC721D2CA3B500A805EA /* dummy_data_layer.cpp in Sources */,
 				3A54FC8E1D2CA3B500A805EA /* mvn_layer.cpp in Sources */,
@@ -1046,6 +1057,7 @@
 				3A54FCB21D2CA3B500A805EA /* cudnn.cpp in Sources */,
 				3A54FCB11D2CA3B500A805EA /* benchmark.cpp in Sources */,
 				3A54E3B91D2C664D00A805EA /* PlantInfo.xcdatamodeld in Sources */,
+				3A8CB13B1D59625A0097AE0F /* TabBarController.swift in Sources */,
 				3A54FC521D2CA3B500A805EA /* absval_layer.cpp in Sources */,
 				3A54FC611D2CA3B500A805EA /* cudnn_conv_layer.cpp in Sources */,
 				3A54FBDF1D2CA38D00A805EA /* internal_thread.cpp in Sources */,
@@ -1060,7 +1072,7 @@
 				3A24A4801D481EA100BA685C /* NavigationViewController.swift in Sources */,
 				3A54FCB81D2CA3B500A805EA /* insert_splits.cpp in Sources */,
 				3A54FBE21D2CA38D00A805EA /* solver.cpp in Sources */,
-				3A24A48A1D4826FF00BA685C /* NewIdentificationController.swift in Sources */,
+				3A24A48A1D4826FF00BA685C /* SelectIdentifierController.swift in Sources */,
 				3A54FC8C1D2CA3B500A805EA /* memory_data_layer.cpp in Sources */,
 				3A54E3B31D2C664D00A805EA /* ViewController.swift in Sources */,
 				3A54FC8D1D2CA3B500A805EA /* multinomial_logistic_loss_layer.cpp in Sources */,
@@ -1069,8 +1081,8 @@
 				3A24A4731D48167100BA685C /* ProtocolCoreDataTableViewController.swift in Sources */,
 				3A54FC911D2CA3B500A805EA /* pooling_layer.cpp in Sources */,
 				3A54FC571D2CA3B500A805EA /* base_data_layer.cpp in Sources */,
+				3A8CB13F1D5AAC870097AE0F /* NewIdentifierController.swift in Sources */,
 				3A54FC801D2CA3B500A805EA /* hinge_loss_layer.cpp in Sources */,
-				3A9CB4B81D518F7C00B9FDBB /* NewIdentificationCollectionCell.swift in Sources */,
 				3A54FCB51D2CA3B500A805EA /* db.cpp in Sources */,
 				3A54FB321D2CA38D00A805EA /* gflags_completions.cc in Sources */,
 				3A54FBE31D2CA38D00A805EA /* syncedmem.cpp in Sources */,

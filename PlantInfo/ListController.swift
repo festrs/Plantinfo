@@ -16,7 +16,7 @@ UINavigationControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
     private var moc:NSManagedObjectContext!
     private var bridginObjectClassifier:BridgingObjectClassifier!
-    private let SEGUE_IDENTIFIER = "ToNewIdentification";
+    private let SEGUE_IDENTIFIER = "ToSelect";
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -75,17 +75,4 @@ UINavigationControllerDelegate {
         self.dismissViewControllerAnimated(true, completion: nil);
     }
     
-    // MARK: - Navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let vc = segue.destinationViewController as? FPHandlesIncomingObjects{
-            vc.receiveClassifier(self.bridginObjectClassifier)
-            vc.receiveMOC(self.moc)
-        }
-        
-        if segue.identifier == SEGUE_IDENTIFIER,
-            let vc = segue.destinationViewController as? NewIdentificationController,
-                let image = sender as? UIImage{
-           vc.incomingImage = image
-        }
-    }
 }
