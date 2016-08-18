@@ -334,7 +334,7 @@
                     <navigationItem key="navigationItem" title="New Identification" id="pXL-Fm-S09">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="hGp-ZZ-kvu">
                             <connections>
-                                <action selector="addNewIdentification:" destination="BYZ-38-t0r" id="IqM-10-TjL"/>
+                                <action selector="saveNewIdentification:" destination="0X7-K8-mcc" id="RTG-kq-H9B"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -368,9 +368,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqs-hx-8wV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1045" y="1667"/>
+            <point key="canvasLocation" x="1093" y="1806"/>
         </scene>
-        <!--New Photo Controller-->
+        <!--Item-->
         <scene sceneID="tb8-Mq-xMv">
             <objects>
                 <viewController id="Obv-wR-mnO" customClass="NewPhotoController" customModule="PlantInfo" customModuleProvider="target" sceneMemberID="viewController">
@@ -382,7 +382,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.1764705882" green="0.70588235290000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="photo-camera" id="Pmn-dT-lb5"/>
                     <navigationItem key="navigationItem" id="ODs-7r-rEd"/>
                     <connections>
                         <segue destination="56j-hN-owe" kind="show" identifier="ToSelect" id="HII-rf-W1V"/>
@@ -390,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0E-Wv-FYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1905" y="996"/>
+            <point key="canvasLocation" x="1556" y="951"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JVJ-j2-zJA">
@@ -408,13 +410,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="HDx-E6-zZW" kind="relationship" relationship="viewControllers" id="mYl-Hg-j4V"/>
-                        <segue destination="BNS-6E-tKG" kind="relationship" relationship="viewControllers" id="kx4-NY-KTS"/>
+                        <segue destination="BNS-6E-tKG" kind="relationship" relationship="viewControllers" id="zMg-Es-hiJ"/>
                         <segue destination="8s1-f1-8dy" kind="relationship" relationship="viewControllers" id="foV-JZ-DZx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xO2-GS-rgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="238" y="972"/>
+            <point key="canvasLocation" x="132" y="951"/>
         </scene>
         <!--Navigation View Controller-->
         <scene sceneID="BjQ-fU-FXp">
@@ -443,6 +445,7 @@
         <!--Navigation View Controller-->
         <scene sceneID="kHH-Nq-0iw">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCb-Be-smK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BNS-6E-tKG" customClass="NavigationViewController" customModule="PlantInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="photo-camera" id="t2H-zv-3Ya"/>
                     <toolbarItems/>
@@ -457,12 +460,11 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Obv-wR-mnO" kind="relationship" relationship="rootViewController" id="RT6-Ot-YbE"/>
+                        <segue destination="Obv-wR-mnO" kind="relationship" relationship="rootViewController" id="nln-yq-Iff"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RCb-Be-smK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1093" y="996"/>
+            <point key="canvasLocation" x="924" y="951"/>
         </scene>
     </scenes>
     <resources>

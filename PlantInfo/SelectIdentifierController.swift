@@ -29,6 +29,7 @@ class SelectIdentiferController: UIViewController, FPHandlesIncomingObjects {
     let listOfUIImages = [50,51,52,53,54]
     
     private var classifier:BridgingObjectClassifier!
+    private var MOC:NSManagedObjectContext!
     private lazy var plantCore = {
        return PlantCore.sharedInstance;
     }()
@@ -44,9 +45,14 @@ class SelectIdentiferController: UIViewController, FPHandlesIncomingObjects {
             let button = self.view.viewWithTag(listOfUIImages[index]) as? UIButton
             let label = self.view.viewWithTag(listOfLabels[index]) as? UILabel
             
-            button?.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLink!)!, forState: .Normal)
             
-            gradientTopDownBlack(button!)
+            button?.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLink!)!, forState: .Normal, placeholderImage: nil, optionsInfo: nil, progressBlock: nil, completionHandler: { (image, error, cacheType, imageURL) in
+                self.gradientTopDownBlack(button!)
+            })
+
+            //button?.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLink!)!, forState: .Normal)
+            
+            
             
             label?.text = plant.info?.scientificName
             buttonXPlants[button!] = plant
@@ -85,7 +91,7 @@ class SelectIdentiferController: UIViewController, FPHandlesIncomingObjects {
     }
     
     func receiveMOC(incomingMOC: NSManagedObjectContext) {
-        
+        self.MOC = incomingMOC
     }
     
     //MARK: IMAGES TAP
@@ -101,14 +107,15 @@ class SelectIdentiferController: UIViewController, FPHandlesIncomingObjects {
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let vc = segue.destinationViewController as? FPHandlesIncomingObjects{
-//            vc.receiveClassifier(self.bridginObjectClassifier)
-//            vc.receiveMOC(self.moc)
+            vc.receiveClassifier(self.classifier)
+            vc.receiveMOC(self.MOC)
         }
         
         if segue.identifier == SEGUE_IDENTIFIER,
             let vc = segue.destinationViewController as? NewIdentifierController,
             let plant = sender as? Plant{
             vc.selectedPlant = plant
+            vc.incomingImage = incomingImage
         }
     }
     

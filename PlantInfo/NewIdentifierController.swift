@@ -18,7 +18,7 @@ class NewIdentifierController: UIViewController,FPHandlesIncomingObjects {
     @IBOutlet weak var commonLabel: UILabel!
     @IBOutlet weak var scientificLabel: UILabel!
     var selectedPlant:Plant!
-    
+    var incomingImage:UIImage!
     
     //MARK: Life cycle
     override func viewDidLoad() {
@@ -29,6 +29,11 @@ class NewIdentifierController: UIViewController,FPHandlesIncomingObjects {
         self.toxityPartLabel.text = selectedPlant.info?.poisonPart
         self.severityLabel.text = selectedPlant.info?.severity
         self.poisonDeliveryModeLabel.text = selectedPlant.info?.posionDeliveryMode
+        self.plantImageView.image = incomingImage
+    }
+    
+    @IBAction func saveNewIdentification(sender: AnyObject) {
+        
     }
     
     //MARK: Incomings

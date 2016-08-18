@@ -8,23 +8,34 @@
 
 import UIKit
 import CoreData
+import Fusuma
 
-class NewPhotoController: UIViewController, FPHandlesIncomingObjects, UIImagePickerControllerDelegate,
-UINavigationControllerDelegate  {
+class NewPhotoController: UIViewController, FPHandlesIncomingObjects, FusumaDelegate  {
     
     private var moc:NSManagedObjectContext!
     private var bridginObjectClassifier:BridgingObjectClassifier!
     private let SEGUE_IDENTIFIER = "ToSelect";
+    private var isFusumaPresented = false;
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
-            imagePicker.allowsEditing = false
-            self.presentViewController(imagePicker, animated: true, completion: nil)
+//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
+//            let imagePicker = UIImagePickerController()
+//            imagePicker.delegate = self
+//            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
+//            imagePicker.allowsEditing = false
+//            self.presentViewController(imagePicker, animated: true, completion: nil)
+//        }
+        guard !isFusumaPresented else {
+            self.tabBarController!.selectedIndex = 0
+            return
         }
+        let fusuma = FusumaViewController()
+        fusuma.delegate = self
+        fusumaTintColor = UIColor.hex("#2DB434", alpha: 1.0)
+        self.presentViewController(fusuma, animated: true, completion: nil)
+        isFusumaPresented = true;
     }
     
     //MARK: Incoming object
@@ -37,21 +48,34 @@ UINavigationControllerDelegate  {
     }
     
     //MARK: Image Picker
-    @IBAction func addNewIdentification(sender: AnyObject) {
+    // Return the image which is selected from camera roll or is taken via the camera.
+    func fusumaImageSelected(image: UIImage) {
+        performSegueWithIdentifier(SEGUE_IDENTIFIER, sender: image)
+        print("Image selected")
+    }
+    
+    // Return the image but called after is dismissed.
+    func fusumaDismissedWithImage(image: UIImage) {
+        //self.dismissViewControllerAnimated(true, completion: nil)
+        isFusumaPresented = false
+        print("Called just after FusumaViewController is dismissed.")
+    }
+    
+    func fusumaVideoCompleted(withFileURL fileURL: NSURL) {
         
+        print("Called just after a video has been selected.")
     }
     
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-        self.tabBarController!.selectedIndex = 0
+    // When camera roll is not authorized, this method is called.
+    func fusumaCameraRollUnauthorized() {
+        
+        print("Camera roll unauthorized")
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
-        if(image != nil){
-            performSegueWithIdentifier(SEGUE_IDENTIFIER, sender: image)
-        }
-        self.dismissViewControllerAnimated(true, completion: nil)
+    func fusumaClosed() {
+        isFusumaPresented = false
     }
+    
     
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -11,6 +11,7 @@ target 'PlantInfo' do
     pod 'ObjectMapper', '~> 1.3'
     pod 'Kingfisher', '~> 2.4'
     pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
+    pod 'Fusuma'
 end
 
 target 'PlantInfoTests' do
