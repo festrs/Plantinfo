@@ -19,6 +19,7 @@
 		3A2813B81D2F35B900FA2078 /* Classifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3D51D2C669500A805EA /* Classifier.mm */; };
 		3A2813C21D2F417200FA2078 /* BridgingObjectClassifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */; };
 		3A2813C31D2F439F00FA2078 /* BridgingObjectClassifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */; };
+		3A4885001D67DA9400C6212B /* CustomAlbumPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4884FF1D67DA9400C6212B /* CustomAlbumPhoto.swift */; };
 		3A54E3B11D2C664D00A805EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3B01D2C664D00A805EA /* AppDelegate.swift */; };
 		3A54E3B31D2C664D00A805EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3B21D2C664D00A805EA /* ViewController.swift */; };
 		3A54E3B61D2C664D00A805EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A54E3B41D2C664D00A805EA /* Main.storyboard */; };
@@ -168,6 +169,7 @@
 		3A24A48C1D4C2DDB00BA685C /* plants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = plants.json; sourceTree = "<group>"; };
 		3A2813C01D2F417200FA2078 /* BridgingObjectClassifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingObjectClassifier.h; sourceTree = "<group>"; };
 		3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BridgingObjectClassifier.mm; sourceTree = "<group>"; };
+		3A4884FF1D67DA9400C6212B /* CustomAlbumPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlbumPhoto.swift; sourceTree = "<group>"; };
 		3A54E3AD1D2C664D00A805EA /* PlantInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A54E3B01D2C664D00A805EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A54E3B21D2C664D00A805EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 				3A2813C01D2F417200FA2078 /* BridgingObjectClassifier.h */,
 				3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */,
 				3A8CB13C1D5A83280097AE0F /* ImageViewWithGradient.swift */,
+				3A4884FF1D67DA9400C6212B /* CustomAlbumPhoto.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -1042,6 +1045,7 @@
 				3A54FC811D2CA3B500A805EA /* im2col_layer.cpp in Sources */,
 				3A54FCAB1D2CA3B500A805EA /* tanh_layer.cpp in Sources */,
 				3A24A4881D48225F00BA685C /* Identifications.swift in Sources */,
+				3A4885001D67DA9400C6212B /* CustomAlbumPhoto.swift in Sources */,
 				3A54FC791D2CA3B500A805EA /* filter_layer.cpp in Sources */,
 				3A54FC5B1D2CA3B500A805EA /* concat_layer.cpp in Sources */,
 				3A54FC971D2CA3B500A805EA /* reduction_layer.cpp in Sources */,

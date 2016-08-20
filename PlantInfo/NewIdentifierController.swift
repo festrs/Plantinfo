@@ -8,8 +8,10 @@
 
 import UIKit
 import CoreData
+import MapKit
+import CoreLocation
 
-class NewIdentifierController: UIViewController,FPHandlesIncomingObjects {
+class NewIdentifierController: UIViewController,FPHandlesIncomingObjects,CLLocationManagerDelegate {
     
     @IBOutlet weak var plantImageView: UIImageView!
     @IBOutlet weak var poisonDeliveryModeLabel: UILabel!
@@ -19,6 +21,7 @@ class NewIdentifierController: UIViewController,FPHandlesIncomingObjects {
     @IBOutlet weak var scientificLabel: UILabel!
     var selectedPlant:Plant!
     var incomingImage:UIImage!
+    var locationManager = CLLocationManager()
     
     //MARK: Life cycle
     override func viewDidLoad() {
@@ -33,7 +36,56 @@ class NewIdentifierController: UIViewController,FPHandlesIncomingObjects {
     }
     
     @IBAction func saveNewIdentification(sender: AnyObject) {
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
         
+        var identifier:String?
+        
+        // save the image to library
+        
+            CustomPhotoAlbum.sharedInstance.saveImageAsAsset(incomingImage, completion: { (localIdentifier) -> Void in
+                identifier = localIdentifier
+            })
+        
+        
+        // other stuff
+        
+        // retrieve image from library at later date
+        if let identifier = identifier {
+            CustomPhotoAlbum.sharedInstance.retrieveImageWithIdentifer(identifier, completion: { (image) -> Void in
+                let retrievedImage = image
+            })
+        }
+    }
+    
+    func saveImage (image: UIImage, path: String ) -> Bool{
+        
+        let pngImageData = UIImagePNGRepresentation(image)
+        //let jpgImageData = UIImageJPEGRepresentation(image, 1.0)   // if you want to save as JPEG
+        let result = pngImageData!.writeToFile(path, atomically: true)
+        
+        return result
+        
+    }
+    
+    func loadImageFromPath(path: String) -> UIImage? {
+        
+        let image = UIImage(contentsOfFile: path)
+        
+        if image == nil {
+            
+            print("missing image at: \(path)")
+        }
+        print("Loading image from path: \(path)") // this is just for you to see the path in case you want to go to the directory, using Finder.
+        return image
+        
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation:CLLocation = locations.first!
+        
+        manager.stopUpdatingLocation()
     }
     
     //MARK: Incomings

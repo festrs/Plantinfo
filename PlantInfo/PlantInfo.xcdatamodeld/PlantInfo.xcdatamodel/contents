@@ -2,11 +2,12 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15G31" minimumToolsVersion="Automatic">
     <entity name="Identifications" representedClassName=".Identifications" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="image_ID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="plant_ID" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Identifications" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Identifications" positionX="-63" positionY="-18" width="128" height="120"/>
     </elements>
 </model>

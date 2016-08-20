@@ -19,6 +19,18 @@ let endPointAllProducts:String = "/api/plants/identification"
 
 let monthsName: [Int:String] = [1:"JAN",2:"FEV",3:"MAR",4:"ABR",5:"MAIO",6:"JUN",7:"JUL",8:"AGO",9:"SET",10:"OUT",11:"NOV",12:"DEZ"]
 
+func getDocumentsURL() -> NSURL {
+    let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+    return documentsURL
+}
+
+func fileInDocumentsDirectory(filename: String) -> String {
+    
+    let fileURL = getDocumentsURL().URLByAppendingPathComponent(filename)
+    return fileURL.path!
+    
+}
+
 extension CGFloat {
     static func random() -> CGFloat {
         return CGFloat(arc4random()) / CGFloat(UInt32.max)
