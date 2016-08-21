@@ -25,7 +25,8 @@ class SelectIdentiferController: UIViewController, FPHandlesIncomingObjects {
     private let URL_IMAGE_BASE = "https://s3-sa-east-1.amazonaws.com/plantinfo/listimage/"
     private let SEGUE_IDENTIFIER = "ToNewIdentification";
     var buttonXPlants:[UIButton: Plant] = [:]
-    let listOfLabels = [60,61,62,63,64]
+    let listOfProbLabels = [70,71,72,73,74]
+    let listOfNameLabels = [60,61,62,63,64]
     let listOfUIImages = [50,51,52,53,54]
     
     private var classifier:BridgingObjectClassifier!
@@ -39,12 +40,14 @@ class SelectIdentiferController: UIViewController, FPHandlesIncomingObjects {
         super.viewDidLoad()
         self.pickedImageView.image = incomingImage
         let identificationResult = self.classifier.predictWithImage(incomingImage) as? [String]
-        self.listOfPlants = plantCore.getPlantList(identificationResult!)
+        let listOfPredictions = plantCore.getListOfPredictions(identificationResult!)
+        self.listOfPlants = plantCore.getPlantList(listOfPredictions)
+        
         for plant in listOfPlants {
-            let index = listOfPlants.indexOf({$0.nid == plant.nid})!
+            let index = listOfPredictions.indexOf({$0.nid == plant.nid})!
             let button = self.view.viewWithTag(listOfUIImages[index]) as? UIButton
-            let label = self.view.viewWithTag(listOfLabels[index]) as? UILabel
-            
+            let nameLabel = self.view.viewWithTag(listOfNameLabels[index]) as? UILabel
+            let probLabel = self.view.viewWithTag(listOfProbLabels[index]) as? UILabel
             
             button?.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLink!)!, forState: .Normal, placeholderImage: nil, optionsInfo: nil, progressBlock: nil, completionHandler: { (image, error, cacheType, imageURL) in
                 self.gradientTopDownBlack(button!)
@@ -52,9 +55,9 @@ class SelectIdentiferController: UIViewController, FPHandlesIncomingObjects {
 
             //button?.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLink!)!, forState: .Normal)
             
-            
-            
-            label?.text = plant.info?.scientificName
+            nameLabel?.text = plant.info?.scientificName
+            let probability = Double(listOfPredictions[index].probability)!
+            probLabel?.text = String(format: "%.0f", probability * 100) + "%"
             buttonXPlants[button!] = plant
         }
     }
@@ -65,7 +68,6 @@ class SelectIdentiferController: UIViewController, FPHandlesIncomingObjects {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        //self.resultLabel.text = listOfPlants.map({return $0.info!.scientificName}).description
     }
     
     override func didReceiveMemoryWarning() {

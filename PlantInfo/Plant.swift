@@ -14,6 +14,7 @@ class Plant: Mappable {
     var nid:String?
     var info:PlantInfo?
     var imageLink:String?
+    var probability:Double?
     
     required init?(_ map: Map) {
         

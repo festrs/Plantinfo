@@ -19,6 +19,11 @@ let endPointAllProducts:String = "/api/plants/identification"
 
 let monthsName: [Int:String] = [1:"JAN",2:"FEV",3:"MAR",4:"ABR",5:"MAIO",6:"JUN",7:"JUL",8:"AGO",9:"SET",10:"OUT",11:"NOV",12:"DEZ"]
 
+struct PredictInfo {
+    var nid:String!
+    var probability:String!
+}
+
 func getDocumentsURL() -> NSURL {
     let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
     return documentsURL
@@ -84,11 +89,7 @@ extension NSNumber {
     }
     func maskToCurrency() ->String?{
         let formatter = NSNumberFormatter()
-        if #available(iOS 9.0, *) {
-            formatter.numberStyle = NSNumberFormatterStyle.CurrencyAccountingStyle
-        } else {
-            // Fallback on earlier versions
-        }
+        formatter.numberStyle = NSNumberFormatterStyle.CurrencyAccountingStyle
         return formatter.stringFromNumber(self)
     }
 }

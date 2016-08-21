@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import MapKit
 import CoreLocation
+import Dispatch
 
 class NewIdentifierController: UIViewController,FPHandlesIncomingObjects,CLLocationManagerDelegate {
     
@@ -21,6 +22,7 @@ class NewIdentifierController: UIViewController,FPHandlesIncomingObjects,CLLocat
     @IBOutlet weak var scientificLabel: UILabel!
     var selectedPlant:Plant!
     var incomingImage:UIImage!
+    var MOC:NSManagedObjectContext!
     var locationManager = CLLocationManager()
     
     //MARK: Life cycle
@@ -44,18 +46,27 @@ class NewIdentifierController: UIViewController,FPHandlesIncomingObjects,CLLocat
         
         // save the image to library
         
-            CustomPhotoAlbum.sharedInstance.saveImageAsAsset(incomingImage, completion: { (localIdentifier) -> Void in
-                identifier = localIdentifier
+        CustomPhotoAlbum.sharedInstance.saveImageAsAsset(incomingImage, completion: { (localIdentifier) -> Void in
+            identifier = localIdentifier
+            let newIdent = NSEntityDescription.insertNewObjectForEntityForName("Identifications", inManagedObjectContext: self.MOC) as! Identifications
+            
+            newIdent.image_ID = localIdentifier
+            newIdent.date = NSDate()
+            newIdent.plant_ID = self.selectedPlant.nid
+            self.saveContex()
+            dispatch_async(dispatch_get_main_queue(),{
+                self.tabBarController?.selectedIndex = 0
+                self.navigationController?.popToRootViewControllerAnimated(true)
             })
-        
-        
-        // other stuff
-        
-        // retrieve image from library at later date
-        if let identifier = identifier {
-            CustomPhotoAlbum.sharedInstance.retrieveImageWithIdentifer(identifier, completion: { (image) -> Void in
-                let retrievedImage = image
-            })
+            
+        })
+    }
+    
+    func saveContex() {
+        do {
+            try self.MOC.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
         }
     }
     
@@ -90,10 +101,10 @@ class NewIdentifierController: UIViewController,FPHandlesIncomingObjects,CLLocat
     
     //MARK: Incomings
     func receiveClassifier(incomingClassifier: BridgingObjectClassifier) {
-
+        
     }
     
     func receiveMOC(incomingMOC: NSManagedObjectContext) {
-        
+        self.MOC = incomingMOC
     }
 }

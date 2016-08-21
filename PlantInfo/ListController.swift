@@ -28,6 +28,11 @@ UINavigationControllerDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.performFetch()
+    }
+    
     func configTableView(){
         self.coreDataTableView = self.tableView
         let request = NSFetchRequest(entityName: "Identifications")
@@ -51,9 +56,17 @@ UINavigationControllerDelegate {
     override func tableView(tableView: UITableView,
                             cellForRowAtIndexPath
         indexPath: NSIndexPath) -> UITableViewCell {
-        //let mapType = self.fetchedResultsController?.objectAtIndexPath(indexPath) as! ItemList
+        let identificationObj = self.fetchedResultsController?.objectAtIndexPath(indexPath) as! Identifications
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("documentCell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("IdentificationCell")
+        
+        if let identifier = identificationObj.image_ID {
+            CustomPhotoAlbum.sharedInstance.retrieveImageWithIdentifer(identifier, completion: { (image) -> Void in
+                cell?.imageView?.image = image
+                cell?.setNeedsLayout()
+            })
+        }
+        cell?.textLabel?.text = identificationObj.plant_ID
         
         return cell!
     }

@@ -8,6 +8,7 @@
 
 #import "BridgingObjectClassifier.h"
 #import "Classifier.h"
+#import <Foundation/Foundation.h>
 
 @implementation BridgingObjectClassifier
 
@@ -53,8 +54,8 @@ Classifier *classifier = NULL;
         NSString* label = [NSString stringWithUTF8String:it->first.c_str()];
         NSString* nid = [label componentsSeparatedByString:@" "].lastObject;
         NSNumber* probability = [NSNumber numberWithFloat:it->second];
-        NSLog(@"label: %@, prob: %@", label, probability);
-        [ret addObject:nid];
+        NSString* result = [NSString stringWithFormat:@"%@;%@", nid, probability];
+        [ret addObject:result];
     }
     
     return [ret copy];
