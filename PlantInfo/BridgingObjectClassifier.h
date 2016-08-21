@@ -15,3 +15,4 @@
 
 + (id)sharedManager;
 @end
+

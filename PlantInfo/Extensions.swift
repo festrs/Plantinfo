@@ -19,6 +19,23 @@ let endPointAllProducts:String = "/api/plants/identification"
 
 let monthsName: [Int:String] = [1:"JAN",2:"FEV",3:"MAR",4:"ABR",5:"MAIO",6:"JUN",7:"JUL",8:"AGO",9:"SET",10:"OUT",11:"NOV",12:"DEZ"]
 
+struct PredictInfo {
+    var nid:String!
+    var probability:String!
+}
+
+func getDocumentsURL() -> NSURL {
+    let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+    return documentsURL
+}
+
+func fileInDocumentsDirectory(filename: String) -> String {
+    
+    let fileURL = getDocumentsURL().URLByAppendingPathComponent(filename)
+    return fileURL.path!
+    
+}
+
 extension CGFloat {
     static func random() -> CGFloat {
         return CGFloat(arc4random()) / CGFloat(UInt32.max)
@@ -34,6 +51,21 @@ extension UIColor {
         // If you wanted a random alpha, just create another
         // random number for that too.
         return UIColor(red: r, green: g, blue: b, alpha: 2.5)
+    }
+    class func hex (hexStr : NSString, alpha : CGFloat) -> UIColor {
+        
+        let realHexStr = hexStr.stringByReplacingOccurrencesOfString("#", withString: "")
+        let scanner = NSScanner(string: realHexStr as String)
+        var color: UInt32 = 0
+        if scanner.scanHexInt(&color) {
+            let r = CGFloat((color & 0xFF0000) >> 16) / 255.0
+            let g = CGFloat((color & 0x00FF00) >> 8) / 255.0
+            let b = CGFloat(color & 0x0000FF) / 255.0
+            return UIColor(red:r,green:g,blue:b,alpha:alpha)
+        } else {
+            print("invalid hex string", terminator: "")
+            return UIColor.whiteColor()
+        }
     }
 }
 
@@ -57,11 +89,7 @@ extension NSNumber {
     }
     func maskToCurrency() ->String?{
         let formatter = NSNumberFormatter()
-        if #available(iOS 9.0, *) {
-            formatter.numberStyle = NSNumberFormatterStyle.CurrencyAccountingStyle
-        } else {
-            // Fallback on earlier versions
-        }
+        formatter.numberStyle = NSNumberFormatterStyle.CurrencyAccountingStyle
         return formatter.stringFromNumber(self)
     }
 }

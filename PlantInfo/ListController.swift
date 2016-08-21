@@ -16,17 +16,21 @@ UINavigationControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
     private var moc:NSManagedObjectContext!
     private var bridginObjectClassifier:BridgingObjectClassifier!
-    private let SEGUE_IDENTIFIER = "ToNewIdentification";
+    private let SEGUE_IDENTIFIER = "ToSelect";
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.configTableView()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.performFetch()
     }
     
     func configTableView(){
@@ -52,10 +56,17 @@ UINavigationControllerDelegate {
     override func tableView(tableView: UITableView,
                             cellForRowAtIndexPath
         indexPath: NSIndexPath) -> UITableViewCell {
-        //let mapType = self.fetchedResultsController?.objectAtIndexPath(indexPath) as! ItemList
+        let identificationObj = self.fetchedResultsController?.objectAtIndexPath(indexPath) as! Identifications
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("documentCell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("IdentificationCell")
         
+        if let identifier = identificationObj.image_ID {
+            CustomPhotoAlbum.sharedInstance.retrieveImageWithIdentifer(identifier, completion: { (image) -> Void in
+                cell?.imageView?.image = image
+                cell?.setNeedsLayout()
+            })
+        }
+        cell?.textLabel?.text = identificationObj.plant_ID
         
         return cell!
     }
@@ -77,17 +88,4 @@ UINavigationControllerDelegate {
         self.dismissViewControllerAnimated(true, completion: nil);
     }
     
-    // MARK: - Navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let vc = segue.destinationViewController as? FPHandlesIncomingObjects{
-            vc.receiveClassifier(self.bridginObjectClassifier)
-            vc.receiveMOC(self.moc)
-        }
-        
-        if segue.identifier == SEGUE_IDENTIFIER,
-            let vc = segue.destinationViewController as? NewIdentifierController,
-                let image = sender as? UIImage{
-           vc.incomingImage = image
-        }
-    }
 }

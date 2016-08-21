@@ -8,6 +8,7 @@
 
 #import "BridgingObjectClassifier.h"
 #import "Classifier.h"
+#import <Foundation/Foundation.h>
 
 @implementation BridgingObjectClassifier
 
@@ -26,9 +27,9 @@ Classifier *classifier = NULL;
     if (self = [super init]) {
         //Load model
         NSString* model_file = [NSBundle.mainBundle pathForResource:@"deploy" ofType:@"prototxt" inDirectory:@"models"];
-        NSString* label_file = [NSBundle.mainBundle pathForResource:@"labels" ofType:@"txt" inDirectory:@"models"];
-        NSString* mean_file = [NSBundle.mainBundle pathForResource:@"image_mean_whole_dataset" ofType:@"binaryproto" inDirectory:@"models"];
-        NSString* trained_file = [NSBundle.mainBundle pathForResource:@"bvlc_3training_googlenet_iter_9789" ofType:@"caffemodel" inDirectory:@"models"];
+        NSString* label_file = [NSBundle.mainBundle pathForResource:@"labelt4" ofType:@"txt" inDirectory:@"models"];
+        NSString* mean_file = [NSBundle.mainBundle pathForResource:@"image_mean_t4_treainset" ofType:@"binaryproto" inDirectory:@"models"];
+        NSString* trained_file = [NSBundle.mainBundle pathForResource:@"bvlc_4training_googlenet_iter_80000" ofType:@"caffemodel" inDirectory:@"models"];
         string model_file_str = std::string([model_file UTF8String]);
         string label_file_str = std::string([label_file UTF8String]);
         string trained_file_str = std::string([trained_file UTF8String]);
@@ -51,9 +52,10 @@ Classifier *classifier = NULL;
     
     for (std::vector<Prediction>::iterator it = result.begin(); it != result.end(); ++it) {
         NSString* label = [NSString stringWithUTF8String:it->first.c_str()];
+        NSString* nid = [label componentsSeparatedByString:@" "].lastObject;
         NSNumber* probability = [NSNumber numberWithFloat:it->second];
-        NSLog(@"label: %@, prob: %@", label, probability);
-        [ret addObject:label];
+        NSString* result = [NSString stringWithFormat:@"%@;%@", nid, probability];
+        [ret addObject:result];
     }
     
     return [ret copy];
