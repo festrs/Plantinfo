@@ -396,7 +396,6 @@
 		3A24A4781D48174100BA685C /* Identifications */ = {
 			isa = PBXGroup;
 			children = (
-				3A8626051D4D3BD300214348 /* Objects */,
 				3A24A4891D4826FF00BA685C /* SelectIdentifierController.swift */,
 				3A8CB13E1D5AAC870097AE0F /* NewIdentifierController.swift */,
 				3AA73EA51D5F69BE0042CD19 /* NewPhotoController.swift */,
@@ -407,6 +406,7 @@
 		3A24A47B1D48178D00BA685C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3A8626051D4D3BD300214348 /* Objects */,
 				3A24A4831D48215000BA685C /* Classifier */,
 				3A24A47C1D48179E00BA685C /* Protocols */,
 				3A24A4701D48167100BA685C /* CoreDataTableViewController.swift */,
@@ -414,6 +414,7 @@
 				3A2813C01D2F417200FA2078 /* BridgingObjectClassifier.h */,
 				3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */,
 				3A8CB13C1D5A83280097AE0F /* ImageViewWithGradient.swift */,
+				3A8626081D4D3E3C00214348 /* PlantCore.swift */,
 				3A4884FF1D67DA9400C6212B /* CustomAlbumPhoto.swift */,
 			);
 			name = Utilities;
@@ -484,7 +485,7 @@
 				3A24A47B1D48178D00BA685C /* Utilities */,
 				3A24A4781D48174100BA685C /* Identifications */,
 				3A54E3B01D2C664D00A805EA /* AppDelegate.swift */,
-				3A24A4791D48176400BA685C /* ListController.swift */,
+				3ABF66741D6A384D00BCBD81 /* List */,
 				3A54E3B21D2C664D00A805EA /* ViewController.swift */,
 				3A54E3B41D2C664D00A805EA /* Main.storyboard */,
 				3A54E3BA1D2C664D00A805EA /* Assets.xcassets */,
@@ -776,11 +777,18 @@
 		3A8626051D4D3BD300214348 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				3A8626081D4D3E3C00214348 /* PlantCore.swift */,
 				3A8626061D4D3C2C00214348 /* Plant.swift */,
 				3A86260A1D4D4D4A00214348 /* PlantInfo.swift */,
 			);
 			name = Objects;
+			sourceTree = "<group>";
+		};
+		3ABF66741D6A384D00BCBD81 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				3A24A4791D48176400BA685C /* ListController.swift */,
+			);
+			name = List;
 			sourceTree = "<group>";
 		};
 		E4167F7F9AE522FF644274A5 /* Frameworks */ = {

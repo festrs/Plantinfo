@@ -79,7 +79,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kzz-eZ-Owx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kzz-eZ-Owx">
                                 <rect key="frame" x="0.0" y="64" width="600" height="192"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="186" id="unl-zz-Odm"/>
@@ -425,7 +425,7 @@
             </objects>
             <point key="canvasLocation" x="3390" y="996"/>
         </scene>
-        <!--View Controller-->
+        <!--Info-->
         <scene sceneID="QVh-QB-9Ws">
             <objects>
                 <viewController id="8s1-f1-8dy" sceneMemberID="viewController">
@@ -438,7 +438,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="information" id="1F0-eT-1LE"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="information" id="1F0-eT-1LE"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqs-hx-8wV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -493,11 +493,11 @@
             </objects>
             <point key="canvasLocation" x="132" y="951"/>
         </scene>
-        <!--Navigation View Controller-->
+        <!--List-->
         <scene sceneID="BjQ-fU-FXp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HDx-E6-zZW" customClass="NavigationViewController" customModule="PlantInfo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="list" id="UAa-fb-8lA"/>
+                    <tabBarItem key="tabBarItem" title="List" image="list" id="UAa-fb-8lA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8oU-wD-Iq2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -517,11 +517,11 @@
             </objects>
             <point key="canvasLocation" x="1045" y="283"/>
         </scene>
-        <!--Navigation View Controller-->
+        <!--New-->
         <scene sceneID="kHH-Nq-0iw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BNS-6E-tKG" customClass="NavigationViewController" customModule="PlantInfo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="photo-camera" id="t2H-zv-3Ya"/>
+                    <tabBarItem key="tabBarItem" title="New" image="photo-camera" id="t2H-zv-3Ya"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ojN-wO-NQe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

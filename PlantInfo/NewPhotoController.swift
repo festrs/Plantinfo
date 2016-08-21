@@ -20,22 +20,17 @@ class NewPhotoController: UIViewController, FPHandlesIncomingObjects, FusumaDele
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
-//            let imagePicker = UIImagePickerController()
-//            imagePicker.delegate = self
-//            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
-//            imagePicker.allowsEditing = false
-//            self.presentViewController(imagePicker, animated: true, completion: nil)
-//        }
         guard !isFusumaPresented else {
             self.tabBarController!.selectedIndex = 0
             return
         }
         let fusuma = FusumaViewController()
+        fusuma.modeOrder = .CameraFirst
         fusuma.delegate = self
         fusumaTintColor = UIColor.hex("#2DB434", alpha: 1.0)
-        self.presentViewController(fusuma, animated: true, completion: nil)
-        isFusumaPresented = true;
+        self.presentViewController(fusuma, animated: true, completion: {
+            self.isFusumaPresented = true;
+        })
     }
     
     //MARK: Incoming object
@@ -51,25 +46,19 @@ class NewPhotoController: UIViewController, FPHandlesIncomingObjects, FusumaDele
     // Return the image which is selected from camera roll or is taken via the camera.
     func fusumaImageSelected(image: UIImage) {
         performSegueWithIdentifier(SEGUE_IDENTIFIER, sender: image)
-        print("Image selected")
     }
     
     // Return the image but called after is dismissed.
     func fusumaDismissedWithImage(image: UIImage) {
-        //self.dismissViewControllerAnimated(true, completion: nil)
         isFusumaPresented = false
-        print("Called just after FusumaViewController is dismissed.")
     }
     
     func fusumaVideoCompleted(withFileURL fileURL: NSURL) {
-        
-        print("Called just after a video has been selected.")
     }
     
     // When camera roll is not authorized, this method is called.
     func fusumaCameraRollUnauthorized() {
         
-        print("Camera roll unauthorized")
     }
     
     func fusumaClosed() {
