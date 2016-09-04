@@ -15,7 +15,6 @@ UINavigationControllerDelegate {
     //MARK: - Variables
     @IBOutlet weak var tableView: UITableView!
     private var moc:NSManagedObjectContext!
-    private var bridginObjectClassifier:BridgingObjectClassifier!
     private let SEGUE_IDENTIFIER = "ToSelect";
     
     //MARK: - Life Cycle
@@ -49,7 +48,7 @@ UINavigationControllerDelegate {
     }
     
     func receiveClassifier(incomingClassifier: BridgingObjectClassifier) {
-        bridginObjectClassifier = incomingClassifier;
+        
     }
     
     //MARK: UITableView Delegate
@@ -62,8 +61,15 @@ UINavigationControllerDelegate {
         
         if let identifier = identificationObj.image_ID {
             CustomPhotoAlbum.sharedInstance.retrieveImageWithIdentifer(identifier, completion: { (image) -> Void in
-                cell?.imageView?.image = image
-                cell?.setNeedsLayout()
+                
+                dispatch_async(dispatch_get_main_queue(),{
+                    
+                    cell?.imageView?.image = image
+                    cell?.setNeedsLayout()
+                    
+                })
+                
+
             })
         }
         cell?.textLabel?.text = identificationObj.plant_ID

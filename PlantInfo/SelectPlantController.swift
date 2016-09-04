@@ -9,20 +9,17 @@
 import UIKit
 import CoreData
 import Kingfisher
-import Spring
 
-class SelectIdentiferController: UIViewController, FPHandlesIncomingObjects {
+class SelectPlantController: UIViewController, FPHandlesIncomingObjects {
     
     //MARK: - Variables
     @IBOutlet weak var pickedImageView: UIImageView!
-    
     var incomingImage:UIImage!
-    
     var listOfPlants:[Plant]!
+    var imageIdentifier:String!
     
     private let NUMBER_OF_SECTIONS = 1;
     private let REUSE_IDENTIFIER = "PlantCell"
-    private let URL_IMAGE_BASE = "https://s3-sa-east-1.amazonaws.com/plantinfo/listimage/"
     private let SEGUE_IDENTIFIER = "ToNewIdentification";
     var buttonXPlants:[UIButton: Plant] = [:]
     let listOfProbLabels = [70,71,72,73,74]
@@ -114,10 +111,11 @@ class SelectIdentiferController: UIViewController, FPHandlesIncomingObjects {
         }
         
         if segue.identifier == SEGUE_IDENTIFIER,
-            let vc = segue.destinationViewController as? NewIdentifierController,
+            let vc = segue.destinationViewController as? CreateIdentificationController,
             let plant = sender as? Plant{
             vc.selectedPlant = plant
             vc.incomingImage = incomingImage
+            vc.imageIdentifier = self.imageIdentifier
         }
     }
     

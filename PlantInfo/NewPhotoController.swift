@@ -8,29 +8,31 @@
 
 import UIKit
 import CoreData
-import Fusuma
+import ALCameraViewController
+import ImagePicker
+import Photos
 
-class NewPhotoController: UIViewController, FPHandlesIncomingObjects, FusumaDelegate  {
+class NewPhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePickerDelegate  {
     
     private var moc:NSManagedObjectContext!
     private var bridginObjectClassifier:BridgingObjectClassifier!
     private let SEGUE_IDENTIFIER = "ToSelect";
-    private var isFusumaPresented = false;
+    private var imageIdentifier:String!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.delegate = self
+        self.imageLimit = 1
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        guard !isFusumaPresented else {
-            self.tabBarController!.selectedIndex = 0
-            return
-        }
-        let fusuma = FusumaViewController()
-        fusuma.modeOrder = .CameraFirst
-        fusuma.delegate = self
-        fusumaTintColor = UIColor.hex("#2DB434", alpha: 1.0)
-        self.presentViewController(fusuma, animated: true, completion: {
-            self.isFusumaPresented = true;
-        })
+        self.navigationController?.navigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBarHidden = false
     }
     
     //MARK: Incoming object
@@ -42,29 +44,22 @@ class NewPhotoController: UIViewController, FPHandlesIncomingObjects, FusumaDele
         bridginObjectClassifier = incomingClassifier;
     }
     
-    //MARK: Image Picker
-    // Return the image which is selected from camera roll or is taken via the camera.
-    func fusumaImageSelected(image: UIImage) {
-        performSegueWithIdentifier(SEGUE_IDENTIFIER, sender: image)
+    //MARK: - ImagePicker Delegate Methods
+    func wrapperDidPress(imagePicker: ImagePickerController, images: [UIImage], assets:[PHAsset]){}
+    
+    func doneButtonDidPress(imagePicker: ImagePickerController, images: [UIImage], assets:[PHAsset]){
+        if let image = images.first{
+            self.imageIdentifier = assets.first?.localIdentifier
+            self.performSegueWithIdentifier(self.SEGUE_IDENTIFIER, sender: image)
+            self.resetAssets()
+        }
     }
     
-    // Return the image but called after is dismissed.
-    func fusumaDismissedWithImage(image: UIImage) {
-        isFusumaPresented = false
+    func cancelButtonDidPress(imagePicker: ImagePickerController){
+        self.dismissViewControllerAnimated(true, completion: {
+            self.tabBarController?.selectedIndex = 0
+        })
     }
-    
-    func fusumaVideoCompleted(withFileURL fileURL: NSURL) {
-    }
-    
-    // When camera roll is not authorized, this method is called.
-    func fusumaCameraRollUnauthorized() {
-        
-    }
-    
-    func fusumaClosed() {
-        isFusumaPresented = false
-    }
-    
     
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -74,10 +69,11 @@ class NewPhotoController: UIViewController, FPHandlesIncomingObjects, FusumaDele
         }
         
         if segue.identifier == SEGUE_IDENTIFIER,
-            let vc = segue.destinationViewController as? SelectIdentiferController,
+            let vc = segue.destinationViewController as? SelectPlantController,
             let image = sender as? UIImage{
             vc.incomingImage = image
+            vc.imageIdentifier = self.imageIdentifier
         }
     }
-
+    
 }

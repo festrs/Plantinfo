@@ -84,26 +84,32 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-PlantInfo/ALCameraViewController.framework"
+  install_framework "Pods-PlantInfo/AWSCognito.framework"
   install_framework "Pods-PlantInfo/AWSCore.framework"
   install_framework "Pods-PlantInfo/AWSS3.framework"
   install_framework "Pods-PlantInfo/Alamofire.framework"
   install_framework "Pods-PlantInfo/CryptoSwift.framework"
-  install_framework "Pods-PlantInfo/Fusuma.framework"
+  install_framework "Pods-PlantInfo/ImagePicker.framework"
   install_framework "Pods-PlantInfo/JWT.framework"
   install_framework "Pods-PlantInfo/Kingfisher.framework"
   install_framework "Pods-PlantInfo/MBProgressHUD.framework"
   install_framework "Pods-PlantInfo/ObjectMapper.framework"
   install_framework "Pods-PlantInfo/Spring.framework"
+  install_framework "Pods-PlantInfo/TransitionTreasury.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-PlantInfo/ALCameraViewController.framework"
+  install_framework "Pods-PlantInfo/AWSCognito.framework"
   install_framework "Pods-PlantInfo/AWSCore.framework"
   install_framework "Pods-PlantInfo/AWSS3.framework"
   install_framework "Pods-PlantInfo/Alamofire.framework"
   install_framework "Pods-PlantInfo/CryptoSwift.framework"
-  install_framework "Pods-PlantInfo/Fusuma.framework"
+  install_framework "Pods-PlantInfo/ImagePicker.framework"
   install_framework "Pods-PlantInfo/JWT.framework"
   install_framework "Pods-PlantInfo/Kingfisher.framework"
   install_framework "Pods-PlantInfo/MBProgressHUD.framework"
   install_framework "Pods-PlantInfo/ObjectMapper.framework"
   install_framework "Pods-PlantInfo/Spring.framework"
+  install_framework "Pods-PlantInfo/TransitionTreasury.framework"
 fi
