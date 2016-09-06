@@ -95,7 +95,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-PlantInfo/Kingfisher.framework"
   install_framework "Pods-PlantInfo/MBProgressHUD.framework"
   install_framework "Pods-PlantInfo/ObjectMapper.framework"
-  install_framework "Pods-PlantInfo/Spring.framework"
+  install_framework "Pods-PlantInfo/TransitionAnimation.framework"
   install_framework "Pods-PlantInfo/TransitionTreasury.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -110,6 +110,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-PlantInfo/Kingfisher.framework"
   install_framework "Pods-PlantInfo/MBProgressHUD.framework"
   install_framework "Pods-PlantInfo/ObjectMapper.framework"
-  install_framework "Pods-PlantInfo/Spring.framework"
+  install_framework "Pods-PlantInfo/TransitionAnimation.framework"
   install_framework "Pods-PlantInfo/TransitionTreasury.framework"
 fi

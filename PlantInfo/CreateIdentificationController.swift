@@ -10,9 +10,10 @@ import UIKit
 import CoreData
 import MapKit
 import CoreLocation
+import TransitionTreasury
+import TransitionAnimation
 
-
-class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,CLLocationManagerDelegate {
+class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,CLLocationManagerDelegate,ModalTransitionDelegate {
     
     @IBOutlet weak var plantImageView: UIImageView!
     @IBOutlet weak var poisonDeliveryModeLabel: UILabel!
@@ -27,7 +28,7 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
     var locationManager = CLLocationManager()
     private let SEGUE_IDENTIFIER = "toComment"
     var userLocation:CLLocation = CLLocation()
-    
+    var tr_presentTransition: TRViewControllerTransitionDelegate?
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +50,6 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
     
     @IBAction func saveNewIdentification(sender: AnyObject) {
         // save the image to library
-        
         let newIdent = NSEntityDescription.insertNewObjectForEntityForName("Identifications", inManagedObjectContext: self.MOC) as! Identifications
         
         newIdent.image_ID = imageIdentifier
@@ -75,6 +75,26 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
         self.userLocation = locations.first!
         
         manager.stopUpdatingLocation()
+    }
+    
+    @IBAction func openModal(sender: AnyObject) {
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
+        vc.modalDelegate = self
+        vc.title = "pop"
+        let nav = UINavigationController(rootViewController: vc)
+
+        tr_presentViewController(nav, method: TRPresentTransitionMethod.PopTip(visibleHeight: 500), completion: {
+            print("Present finished.")
+        })
+    }
+    
+    // MARK: - Modal viewController delegate
+    
+    func modalViewControllerDismiss(callbackData data: AnyObject? = nil) {
+        tr_dismissViewController(completion: {
+            print("Dismiss finished.")
+        })
     }
     
     //MARK: Incomings

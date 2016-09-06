@@ -29,7 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
         
-        
         if let rootViewController = self.window?.rootViewController as? FPHandlesIncomingObjects {
             rootViewController.receiveMOC(managedObjectContext)
         }

@@ -22,6 +22,9 @@
 		3A2813B81D2F35B900FA2078 /* Classifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3D51D2C669500A805EA /* Classifier.mm */; };
 		3A2813C21D2F417200FA2078 /* BridgingObjectClassifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */; };
 		3A2813C31D2F439F00FA2078 /* BridgingObjectClassifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */; };
+		3A3A53631D7CF88000F6E6E9 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A53621D7CF88000F6E6E9 /* ModalViewController.swift */; };
+		3A3A53651D7E538A00F6E6E9 /* CreateIdentificationSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A53641D7E538A00F6E6E9 /* CreateIdentificationSubView.swift */; };
+		3A3A53671D7E541100F6E6E9 /* SwiftPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A53661D7E541100F6E6E9 /* SwiftPages.swift */; };
 		3A471C721D7CA38B00B90B2C /* PhotoNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A471C711D7CA38B00B90B2C /* PhotoNavigationViewController.swift */; };
 		3A4885001D67DA9400C6212B /* CustomAlbumPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4884FF1D67DA9400C6212B /* CustomAlbumPhoto.swift */; };
 		3A54E3B11D2C664D00A805EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3B01D2C664D00A805EA /* AppDelegate.swift */; };
@@ -176,6 +179,9 @@
 		3A24A48C1D4C2DDB00BA685C /* plants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = plants.json; sourceTree = "<group>"; };
 		3A2813C01D2F417200FA2078 /* BridgingObjectClassifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingObjectClassifier.h; sourceTree = "<group>"; };
 		3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BridgingObjectClassifier.mm; sourceTree = "<group>"; };
+		3A3A53621D7CF88000F6E6E9 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		3A3A53641D7E538A00F6E6E9 /* CreateIdentificationSubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateIdentificationSubView.swift; sourceTree = "<group>"; };
+		3A3A53661D7E541100F6E6E9 /* SwiftPages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPages.swift; sourceTree = "<group>"; };
 		3A471C711D7CA38B00B90B2C /* PhotoNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoNavigationViewController.swift; sourceTree = "<group>"; };
 		3A4884FF1D67DA9400C6212B /* CustomAlbumPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlbumPhoto.swift; sourceTree = "<group>"; };
 		3A54E3AD1D2C664D00A805EA /* PlantInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -409,6 +415,7 @@
 				3A8CB13E1D5AAC870097AE0F /* CreateIdentificationController.swift */,
 				3A1AB88B1D73853300F85C4A /* SendIndentificationController.swift */,
 				3A09A6BF1D73879C0072ED56 /* SenderImageOjbect.swift */,
+				3A3A53641D7E538A00F6E6E9 /* CreateIdentificationSubView.swift */,
 			);
 			name = Identifications;
 			sourceTree = "<group>";
@@ -416,6 +423,7 @@
 		3A24A47B1D48178D00BA685C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3A3A53661D7E541100F6E6E9 /* SwiftPages.swift */,
 				3A8626051D4D3BD300214348 /* Objects */,
 				3A24A4831D48215000BA685C /* Classifier */,
 				3A24A47C1D48179E00BA685C /* Protocols */,
@@ -496,6 +504,7 @@
 				3A24A4781D48174100BA685C /* Identifications */,
 				3ABF66741D6A384D00BCBD81 /* List */,
 				3A54E3B01D2C664D00A805EA /* AppDelegate.swift */,
+				3A3A53621D7CF88000F6E6E9 /* ModalViewController.swift */,
 				3A54E3B41D2C664D00A805EA /* Main.storyboard */,
 				3A54E3BA1D2C664D00A805EA /* Assets.xcassets */,
 				3A54E3BC1D2C664D00A805EA /* LaunchScreen.storyboard */,
@@ -1057,6 +1066,7 @@
 				3A54FC951D2CA3B500A805EA /* prelu_layer.cpp in Sources */,
 				3A54FBDC1D2CA38D00A805EA /* blob.cpp in Sources */,
 				3A54FC691D2CA3B500A805EA /* cudnn_softmax_layer.cpp in Sources */,
+				3A3A53631D7CF88000F6E6E9 /* ModalViewController.swift in Sources */,
 				3A471C721D7CA38B00B90B2C /* PhotoNavigationViewController.swift in Sources */,
 				3A54FC901D2CA3B500A805EA /* neuron_layer.cpp in Sources */,
 				3A54FCA81D2CA3B500A805EA /* split_layer.cpp in Sources */,
@@ -1098,6 +1108,7 @@
 				3A54FC8A1D2CA3B500A805EA /* lrn_layer.cpp in Sources */,
 				3A24A4801D481EA100BA685C /* NavigationViewController.swift in Sources */,
 				3A54FCB81D2CA3B500A805EA /* insert_splits.cpp in Sources */,
+				3A3A53651D7E538A00F6E6E9 /* CreateIdentificationSubView.swift in Sources */,
 				3A54FBE21D2CA38D00A805EA /* solver.cpp in Sources */,
 				3A24A48A1D4826FF00BA685C /* SelectPlantController.swift in Sources */,
 				3A54FC8C1D2CA3B500A805EA /* memory_data_layer.cpp in Sources */,
@@ -1129,6 +1140,7 @@
 				3A54FC7B1D2CA3B500A805EA /* flatten_layer.cpp in Sources */,
 				3A8626071D4D3C2C00214348 /* Plant.swift in Sources */,
 				3A54FC6D1D2CA3B500A805EA /* data_layer.cpp in Sources */,
+				3A3A53671D7E541100F6E6E9 /* SwiftPages.swift in Sources */,
 				3A54FC731D2CA3B500A805EA /* eltwise_layer.cpp in Sources */,
 				3A54E3B11D2C664D00A805EA /* AppDelegate.swift in Sources */,
 				3A54FC771D2CA3B500A805EA /* exp_layer.cpp in Sources */,

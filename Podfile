@@ -15,6 +15,7 @@ target 'PlantInfo' do
     pod 'ALCameraViewController'
     pod 'ImagePicker'
     pod 'TransitionTreasury', '~> 3.0.4'
+    pod 'TransitionAnimation', '~>3.0.4'
 end
 
 target 'PlantInfoTests' do
