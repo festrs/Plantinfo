@@ -46,10 +46,10 @@ class SelectPlantController: UIViewController, FPHandlesIncomingObjects {
             let nameLabel = self.view.viewWithTag(listOfNameLabels[index]) as? UILabel
             let probLabel = self.view.viewWithTag(listOfProbLabels[index]) as? UILabel
             
-            button?.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLink!)!, forState: .Normal, placeholderImage: nil, optionsInfo: nil, progressBlock: nil, completionHandler: { (image, error, cacheType, imageURL) in
-                self.gradientTopDownBlack(button!)
-            })
-
+//            button?.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLink!)!, forState: .Normal, placeholderImage: nil, optionsInfo: nil, progressBlock: nil, completionHandler: { (image, error, cacheType, imageURL) in
+//                
+//            })
+            self.gradientTopDownBlack(button!)
             //button?.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLink!)!, forState: .Normal)
             
             nameLabel?.text = plant.info?.scientificName
@@ -116,6 +116,7 @@ class SelectPlantController: UIViewController, FPHandlesIncomingObjects {
             vc.selectedPlant = plant
             vc.incomingImage = incomingImage
             vc.imageIdentifier = self.imageIdentifier
+            vc.newFlag = true
         }
     }
     

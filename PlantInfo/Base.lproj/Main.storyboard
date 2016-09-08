@@ -44,7 +44,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="FaS-8s-cFY" kind="show" id="6uG-lC-GH5"/>
+                                            <segue destination="0X7-K8-mcc" kind="show" identifier="ToIdentifierPlant" id="nqG-Cm-h57"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -70,24 +70,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1833" y="275"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="AoU-pc-3db">
-            <objects>
-                <viewController id="FaS-8s-cFY" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2Bw-jl-Gaf"/>
-                        <viewControllerLayoutGuide type="bottom" id="8Id-kk-bJL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="YeP-TR-wjX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vIl-xn-nw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2516" y="275"/>
         </scene>
         <!--Resultado-->
         <scene sceneID="GHq-Ik-N8T">
@@ -326,7 +308,7 @@
                         <viewControllerLayoutGuide type="bottom" id="kpu-bC-hP2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9dv-FQ-uND">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cK-Fq-VcL">
@@ -347,7 +329,7 @@
                                 </variation>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ly1-h8-e6W">
-                                <rect key="frame" x="0.0" y="222" width="600" height="427"/>
+                                <rect key="frame" x="0.0" y="222" width="600" height="378"/>
                                 <connections>
                                     <segue destination="r0R-UZ-2nc" kind="embed" identifier="ToContainerInfoAndPhotos" id="AgA-AQ-gda"/>
                                 </connections>
@@ -465,7 +447,27 @@
                     <view key="view" contentMode="scaleToFill" id="w9c-aZ-7Ml">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="24z-qi-Wak">
+                                <rect key="frame" x="122" y="80" width="356" height="391"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="356" id="gQI-GL-9CV"/>
+                                </constraints>
+                                <mutableString key="text">Mussum Ipsum, cacilds vidis litro abertis. A ordem dos tratores não altera o pão duris Manduma pindureta quium dia nois paga. Quem num gosta di mé, boa gente num é. Mé faiz elementum girarzis, nisi eros vermeio.
+
+Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Si num tem leite então bota uma pinga aí cumpadi! undefined  http://plantinfo.herokuapp.com/index.html#/plants</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="24z-qi-Wak" firstAttribute="centerX" secondItem="w9c-aZ-7Ml" secondAttribute="centerX" id="5dU-2U-nX8"/>
+                            <constraint firstItem="24z-qi-Wak" firstAttribute="centerY" secondItem="w9c-aZ-7Ml" secondAttribute="centerY" id="bnP-o8-sd9"/>
+                            <constraint firstItem="24z-qi-Wak" firstAttribute="top" secondItem="FBN-qC-Mta" secondAttribute="bottom" constant="16" id="uxs-gK-E7u"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NGC-7n-L0U"/>
                 </viewController>
@@ -504,11 +506,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="q7Q-D3-5b7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.1764705882" green="0.70588235290000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
+                        <color key="tintColor" red="1" green="0.57452380489999999" blue="0.085381463130000002" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="HDx-E6-zZW" kind="relationship" relationship="viewControllers" id="mYl-Hg-j4V"/>
@@ -696,11 +694,11 @@
                         <viewControllerLayoutGuide type="bottom" id="aiC-vH-o5P"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ceo-c2-z4g">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="427"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="378"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJd-bQ-bq6" customClass="SwiftPages" customModule="PlantInfo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="427"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="378"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -718,7 +716,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZF-nb-Bd5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3979" y="950.5"/>
+            <point key="canvasLocation" x="3843" y="864.5"/>
         </scene>
         <!--Info Controller-->
         <scene sceneID="x3h-mv-IL5">
@@ -743,18 +741,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent Em pé sem cair, deitado sem" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Vcx-HU-Ex8">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent Em pé sem cair, deitado sem" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Vcx-HU-Ex8">
                                                     <rect key="frame" x="8" y="19" width="573" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name should work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sh-Yr-6zk">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name should work" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sh-Yr-6zk">
                                                     <rect key="frame" x="5" y="0.0" width="584" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="584" id="eyP-Ry-bXh"/>
-                                                        <constraint firstAttribute="height" constant="20" id="mHZ-Bv-XCm"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -762,10 +756,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Vcx-HU-Ex8" firstAttribute="leading" secondItem="OF1-li-itr" secondAttribute="leadingMargin" id="1ry-rO-F5O"/>
-                                                <constraint firstItem="Vcx-HU-Ex8" firstAttribute="top" secondItem="0Sh-Yr-6zk" secondAttribute="bottom" constant="-1" id="Xk2-hZ-rUP"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0Sh-Yr-6zk" secondAttribute="bottom" constant="32" id="NIp-Cc-Gfn"/>
+                                                <constraint firstItem="0Sh-Yr-6zk" firstAttribute="top" secondItem="OF1-li-itr" secondAttribute="top" id="QaR-ly-m3I"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Vcx-HU-Ex8" secondAttribute="trailing" constant="11" id="gtH-vj-awm"/>
-                                                <constraint firstItem="0Sh-Yr-6zk" firstAttribute="top" secondItem="OF1-li-itr" secondAttribute="topMargin" constant="-8" id="hHT-M9-zrO"/>
-                                                <constraint firstItem="0Sh-Yr-6zk" firstAttribute="leading" secondItem="OF1-li-itr" secondAttribute="leadingMargin" constant="-3" id="myp-fK-hQZ"/>
+                                                <constraint firstItem="0Sh-Yr-6zk" firstAttribute="leading" secondItem="OF1-li-itr" secondAttribute="leadingMargin" constant="-3" id="kZb-14-daq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0Sh-Yr-6zk" secondAttribute="trailing" constant="3" id="srr-5O-1Om"/>
                                                 <constraint firstItem="Vcx-HU-Ex8" firstAttribute="bottom" secondItem="OF1-li-itr" secondAttribute="bottomMargin" constant="-1" id="yAH-1G-wG0"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -802,4 +797,7 @@
         <image name="n12899752_5266.JPEG" width="256" height="256"/>
         <image name="photo-camera" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="nqG-Cm-h57"/>
+    </inferredMetricsTieBreakers>
 </document>

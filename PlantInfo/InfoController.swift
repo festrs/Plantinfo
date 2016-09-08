@@ -31,9 +31,6 @@ class InfoController: UIViewController,ReceivedPlantProtocol,UITableViewDataSour
     func receivePlant(plant: Plant) {
         self.plant = plant
     }
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 3
-    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return infoPlant.count

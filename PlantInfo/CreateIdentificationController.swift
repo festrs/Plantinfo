@@ -25,6 +25,7 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
     @IBOutlet weak var plantImageView: UIImageView!
 
     var selectedPlant:Plant!
+    var newFlag = false
     var imageIdentifier:String!
     var incomingImage:UIImage!
     var MOC:NSManagedObjectContext!
@@ -46,6 +47,13 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
         locationManager.startUpdatingLocation()
         
         self.plantImageView.image = incomingImage
+        
+        if newFlag {
+            self.title = "New Identification"
+        }else{
+            self.title = "Info"
+            self.navigationItem.rightBarButtonItem = nil
+        }
     }
     
     @IBAction func saveNewIdentification(sender: AnyObject) {
