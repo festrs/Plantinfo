@@ -12,7 +12,6 @@ target 'PlantInfo' do
     pod 'Alamofire', '~> 3.4'
     pod 'ObjectMapper', '~> 1.3'
     pod 'Kingfisher', '~> 2.4'
-    pod 'ALCameraViewController'
     pod 'ImagePicker'
     pod 'TransitionTreasury', '~> 3.0.4'
     pod 'TransitionAnimation', '~>3.0.4'

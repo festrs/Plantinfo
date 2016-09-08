@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (3.4.1)
-  - ALCameraViewController (1.2.1)
   - AWSCognito (2.4.5):
     - AWSCore (= 2.4.5)
   - AWSCore (2.4.5)
@@ -19,7 +18,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
-  - ALCameraViewController
   - AWSCognito
   - AWSCore
   - AWSS3
@@ -33,7 +31,6 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
-  ALCameraViewController: 51c3617ad4f955106e4bf3a34578433cfff1ec99
   AWSCognito: 96e1762404831ffb87f67c87a5ee68fde543bb69
   AWSCore: 2f356385bcea9b81ea47f9be0228c71697d9597d
   AWSS3: 8f73b439f12c4aaaea39fbec87f67a1f1e15bd42

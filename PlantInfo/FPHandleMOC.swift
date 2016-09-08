@@ -12,3 +12,7 @@ protocol FPHandlesIncomingObjects:class{
     func receiveMOC(incomingMOC: NSManagedObjectContext)
     func receiveClassifier(incomingClassifier: BridgingObjectClassifier)
 }
+
+public protocol ReceivedImageClassifier {
+    func receivedImageClassifier()
+}

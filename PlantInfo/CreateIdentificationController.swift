@@ -13,22 +13,27 @@ import CoreLocation
 import TransitionTreasury
 import TransitionAnimation
 
-class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,CLLocationManagerDelegate,ModalTransitionDelegate {
+
+protocol ReceivedPlantProtocol:class{
+    func receivePlant(plant: Plant)
+}
+
+
+class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,CLLocationManagerDelegate,ModalTransitionDelegate,ReceivedPlantProtocol {
     
+    @IBOutlet weak var container: UIView!
     @IBOutlet weak var plantImageView: UIImageView!
-    @IBOutlet weak var poisonDeliveryModeLabel: UILabel!
-    @IBOutlet weak var severityLabel: UILabel!
-    @IBOutlet weak var toxityPartLabel: UILabel!
-    @IBOutlet weak var commonLabel: UILabel!
-    @IBOutlet weak var scientificLabel: UILabel!
+
     var selectedPlant:Plant!
     var imageIdentifier:String!
     var incomingImage:UIImage!
     var MOC:NSManagedObjectContext!
     var locationManager = CLLocationManager()
     private let SEGUE_IDENTIFIER = "toComment"
+    private let SEGUE_CONTAINER = "ToContainerInfoAndPhotos"
     var userLocation:CLLocation = CLLocation()
     var tr_presentTransition: TRViewControllerTransitionDelegate?
+
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,11 +45,6 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         
-//        self.scientificLabel.text = selectedPlant.info?.scientificName
-//        self.commonLabel.text = selectedPlant.info?.commonName
-//        self.toxityPartLabel.text = selectedPlant.info?.poisonPart
-//        self.severityLabel.text = selectedPlant.info?.severity
-//        self.poisonDeliveryModeLabel.text = selectedPlant.info?.posionDeliveryMode
         self.plantImageView.image = incomingImage
     }
     
@@ -90,7 +90,6 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
     }
     
     // MARK: - Modal viewController delegate
-    
     func modalViewControllerDismiss(callbackData data: AnyObject? = nil) {
         tr_dismissViewController(completion: {
             print("Dismiss finished.")
@@ -106,8 +105,17 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
         self.MOC = incomingMOC
     }
     
+    func receivePlant(plant: Plant) {
+        self.selectedPlant = plant
+    }
+    
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == SEGUE_CONTAINER,
+            let vc = segue.destinationViewController as? ReceivedPlantProtocol{
+            vc.receivePlant(self.selectedPlant) 
+        }
         
         if segue.identifier == SEGUE_IDENTIFIER,
             let vc = segue.destinationViewController as? SendIndentificationController{

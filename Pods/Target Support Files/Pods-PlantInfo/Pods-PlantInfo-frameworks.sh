@@ -84,7 +84,6 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-PlantInfo/ALCameraViewController.framework"
   install_framework "Pods-PlantInfo/AWSCognito.framework"
   install_framework "Pods-PlantInfo/AWSCore.framework"
   install_framework "Pods-PlantInfo/AWSS3.framework"
@@ -99,7 +98,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-PlantInfo/TransitionTreasury.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-PlantInfo/ALCameraViewController.framework"
   install_framework "Pods-PlantInfo/AWSCognito.framework"
   install_framework "Pods-PlantInfo/AWSCore.framework"
   install_framework "Pods-PlantInfo/AWSS3.framework"

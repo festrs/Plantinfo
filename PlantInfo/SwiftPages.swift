@@ -130,14 +130,7 @@ public class SwiftPages: UIView {
             self.scrollView.translatesAutoresizingMaskIntoConstraints = false
             self.containerView.addSubview(self.scrollView)
             
-            // Add the constraints to the scrollview.
-            if #available(iOS 9.0, *) {
-                let leadingConstraint = self.scrollView.leadingAnchor.constraintEqualToAnchor(self.containerView.leadingAnchor)
-                let trailingConstraint = self.scrollView.trailingAnchor.constraintEqualToAnchor(self.containerView.trailingAnchor)
-                let topConstraint = self.scrollView.topAnchor.constraintEqualToAnchor(self.containerView.topAnchor)
-                let bottomConstraint = self.scrollView.bottomAnchor.constraintEqualToAnchor(self.containerView.bottomAnchor)
-                NSLayoutConstraint.activateConstraints([leadingConstraint, trailingConstraint, topConstraint, bottomConstraint])
-            }
+
             
             // Set the top bar
             self.topBar = UIView(frame: CGRect(x: 0, y: 0, width: self.containerView.frame.size.width, height: self.topBarHeight))
@@ -226,6 +219,16 @@ public class SwiftPages: UIView {
             // Defining the content size of the scrollview
             let pagesScrollViewSize = self.scrollView.frame.size
             self.scrollView.contentSize = CGSize(width: pagesScrollViewSize.width * CGFloat(pageCount), height: pagesScrollViewSize.height)
+            
+            // Add the constraints to the scrollview.
+            if #available(iOS 9.0, *) {
+                let heightConstant = self.topBarHeight + self.shadowView.frame.size.height
+                let leadingConstraint = self.scrollView.leadingAnchor.constraintEqualToAnchor(self.containerView.leadingAnchor)
+                let trailingConstraint = self.scrollView.trailingAnchor.constraintEqualToAnchor(self.containerView.trailingAnchor)
+                let topConstraint = self.scrollView.topAnchor.constraintEqualToAnchor(self.containerView.topAnchor, constant: heightConstant)
+                let bottomConstraint = self.scrollView.bottomAnchor.constraintEqualToAnchor(self.containerView.bottomAnchor, constant: -(self.topBarHeight-self.shadowView.frame.size.height))
+                NSLayoutConstraint.activateConstraints([leadingConstraint, trailingConstraint, topConstraint, bottomConstraint])
+            }
             
             // Load the pages to show initially
             self.loadVisiblePages()

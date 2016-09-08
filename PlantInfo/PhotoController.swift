@@ -12,7 +12,7 @@ import ALCameraViewController
 import ImagePicker
 import Photos
 
-class NewPhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePickerDelegate  {
+class PhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePickerDelegate  {
     
     private var moc:NSManagedObjectContext!
     private var bridginObjectClassifier:BridgingObjectClassifier!
@@ -56,7 +56,7 @@ class NewPhotoController: ImagePickerController, FPHandlesIncomingObjects, Image
     }
     
     func cancelButtonDidPress(imagePicker: ImagePickerController){
-        self.dismissViewControllerAnimated(true, completion: {
+        imagePicker.dismissViewControllerAnimated(true, completion: {
             self.tabBarController?.selectedIndex = 0
         })
     }
@@ -75,5 +75,4 @@ class NewPhotoController: ImagePickerController, FPHandlesIncomingObjects, Image
             vc.imageIdentifier = self.imageIdentifier
         }
     }
-    
 }

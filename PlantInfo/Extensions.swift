@@ -89,7 +89,11 @@ extension NSNumber {
     }
     func maskToCurrency() ->String?{
         let formatter = NSNumberFormatter()
-        formatter.numberStyle = NSNumberFormatterStyle.CurrencyAccountingStyle
+        if #available(iOS 9.0, *) {
+            formatter.numberStyle = NSNumberFormatterStyle.CurrencyAccountingStyle
+        } else {
+            // Fallback on earlier versions
+        }
         return formatter.stringFromNumber(self)
     }
 }

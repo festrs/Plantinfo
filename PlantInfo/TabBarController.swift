@@ -37,6 +37,7 @@ class TabBarController: UITabBarController, FPHandlesIncomingObjects, UITabBarCo
     }
     
     func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+        
         if viewController is PhotoNavigationViewController{
             if let newVC = tabBarController.storyboard?.instantiateViewControllerWithIdentifier("PhotoNavigation") as? PhotoNavigationViewController {
                 newVC.receiveClassifier(self.bridginObjectClassifier)

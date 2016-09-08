@@ -23,8 +23,9 @@
 		3A2813C21D2F417200FA2078 /* BridgingObjectClassifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */; };
 		3A2813C31D2F439F00FA2078 /* BridgingObjectClassifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */; };
 		3A3A53631D7CF88000F6E6E9 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A53621D7CF88000F6E6E9 /* ModalViewController.swift */; };
-		3A3A53651D7E538A00F6E6E9 /* CreateIdentificationSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A53641D7E538A00F6E6E9 /* CreateIdentificationSubView.swift */; };
+		3A3A53651D7E538A00F6E6E9 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A53641D7E538A00F6E6E9 /* SubViewController.swift */; };
 		3A3A53671D7E541100F6E6E9 /* SwiftPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A53661D7E541100F6E6E9 /* SwiftPages.swift */; };
+		3A3A53691D80A9F300F6E6E9 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A53681D80A9F300F6E6E9 /* InfoController.swift */; };
 		3A471C721D7CA38B00B90B2C /* PhotoNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A471C711D7CA38B00B90B2C /* PhotoNavigationViewController.swift */; };
 		3A4885001D67DA9400C6212B /* CustomAlbumPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4884FF1D67DA9400C6212B /* CustomAlbumPhoto.swift */; };
 		3A54E3B11D2C664D00A805EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3B01D2C664D00A805EA /* AppDelegate.swift */; };
@@ -129,7 +130,7 @@
 		3A8CB13B1D59625A0097AE0F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8CB13A1D59625A0097AE0F /* TabBarController.swift */; };
 		3A8CB13D1D5A83280097AE0F /* ImageViewWithGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8CB13C1D5A83280097AE0F /* ImageViewWithGradient.swift */; };
 		3A8CB13F1D5AAC870097AE0F /* CreateIdentificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8CB13E1D5AAC870097AE0F /* CreateIdentificationController.swift */; };
-		3AA73EA61D5F69BE0042CD19 /* NewPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA73EA51D5F69BE0042CD19 /* NewPhotoController.swift */; };
+		3AA73EA61D5F69BE0042CD19 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA73EA51D5F69BE0042CD19 /* PhotoController.swift */; };
 		3AE074A41D689CB100985E4C /* Identifications+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE074A31D689CB100985E4C /* Identifications+CoreDataProperties.swift */; };
 		3AFA3FB61D442D7F00F2BD3D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA3FB51D442D7F00F2BD3D /* Extensions.swift */; };
 		8B8585FACC612D8CDA7078A5 /* libPods-PlantInfoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 830B47BA462664807DF1BD00 /* libPods-PlantInfoTests.a */; };
@@ -180,8 +181,9 @@
 		3A2813C01D2F417200FA2078 /* BridgingObjectClassifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingObjectClassifier.h; sourceTree = "<group>"; };
 		3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BridgingObjectClassifier.mm; sourceTree = "<group>"; };
 		3A3A53621D7CF88000F6E6E9 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
-		3A3A53641D7E538A00F6E6E9 /* CreateIdentificationSubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateIdentificationSubView.swift; sourceTree = "<group>"; };
+		3A3A53641D7E538A00F6E6E9 /* SubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 		3A3A53661D7E541100F6E6E9 /* SwiftPages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPages.swift; sourceTree = "<group>"; };
+		3A3A53681D80A9F300F6E6E9 /* InfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
 		3A471C711D7CA38B00B90B2C /* PhotoNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoNavigationViewController.swift; sourceTree = "<group>"; };
 		3A4884FF1D67DA9400C6212B /* CustomAlbumPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlbumPhoto.swift; sourceTree = "<group>"; };
 		3A54E3AD1D2C664D00A805EA /* PlantInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -370,7 +372,7 @@
 		3A8CB13A1D59625A0097AE0F /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3A8CB13C1D5A83280097AE0F /* ImageViewWithGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewWithGradient.swift; sourceTree = "<group>"; };
 		3A8CB13E1D5AAC870097AE0F /* CreateIdentificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateIdentificationController.swift; sourceTree = "<group>"; };
-		3AA73EA51D5F69BE0042CD19 /* NewPhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPhotoController.swift; sourceTree = "<group>"; };
+		3AA73EA51D5F69BE0042CD19 /* PhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		3AE074A31D689CB100985E4C /* Identifications+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Identifications+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3AFA3FB51D442D7F00F2BD3D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		51E1C1E4B364861065AD9FD8 /* Pods-PlantInfoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantInfoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlantInfoTests/Pods-PlantInfoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -410,12 +412,11 @@
 		3A24A4781D48174100BA685C /* Identifications */ = {
 			isa = PBXGroup;
 			children = (
-				3AA73EA51D5F69BE0042CD19 /* NewPhotoController.swift */,
+				3AA73EA51D5F69BE0042CD19 /* PhotoController.swift */,
 				3A24A4891D4826FF00BA685C /* SelectPlantController.swift */,
-				3A8CB13E1D5AAC870097AE0F /* CreateIdentificationController.swift */,
+				3A3A536A1D80AA6300F6E6E9 /* Create */,
 				3A1AB88B1D73853300F85C4A /* SendIndentificationController.swift */,
 				3A09A6BF1D73879C0072ED56 /* SenderImageOjbect.swift */,
-				3A3A53641D7E538A00F6E6E9 /* CreateIdentificationSubView.swift */,
 			);
 			name = Identifications;
 			sourceTree = "<group>";
@@ -473,6 +474,16 @@
 				3A24A4861D48225F00BA685C /* Identifications.swift */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		3A3A536A1D80AA6300F6E6E9 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				3A8CB13E1D5AAC870097AE0F /* CreateIdentificationController.swift */,
+				3A3A53641D7E538A00F6E6E9 /* SubViewController.swift */,
+				3A3A53681D80A9F300F6E6E9 /* InfoController.swift */,
+			);
+			name = Create;
 			sourceTree = "<group>";
 		};
 		3A54E3A41D2C664D00A805EA = {
@@ -1085,7 +1096,7 @@
 				3A09A6C41D738D410072ED56 /* Identification.swift in Sources */,
 				3A54FC871D2CA3B500A805EA /* log_layer.cpp in Sources */,
 				3A24A4771D4816DB00BA685C /* FPHandleMOC.swift in Sources */,
-				3AA73EA61D5F69BE0042CD19 /* NewPhotoController.swift in Sources */,
+				3AA73EA61D5F69BE0042CD19 /* PhotoController.swift in Sources */,
 				3A54FC701D2CA3B500A805EA /* dropout_layer.cpp in Sources */,
 				3A54FC721D2CA3B500A805EA /* dummy_data_layer.cpp in Sources */,
 				3AE074A41D689CB100985E4C /* Identifications+CoreDataProperties.swift in Sources */,
@@ -1108,12 +1119,13 @@
 				3A54FC8A1D2CA3B500A805EA /* lrn_layer.cpp in Sources */,
 				3A24A4801D481EA100BA685C /* NavigationViewController.swift in Sources */,
 				3A54FCB81D2CA3B500A805EA /* insert_splits.cpp in Sources */,
-				3A3A53651D7E538A00F6E6E9 /* CreateIdentificationSubView.swift in Sources */,
+				3A3A53651D7E538A00F6E6E9 /* SubViewController.swift in Sources */,
 				3A54FBE21D2CA38D00A805EA /* solver.cpp in Sources */,
 				3A24A48A1D4826FF00BA685C /* SelectPlantController.swift in Sources */,
 				3A54FC8C1D2CA3B500A805EA /* memory_data_layer.cpp in Sources */,
 				3A54FC8D1D2CA3B500A805EA /* multinomial_logistic_loss_layer.cpp in Sources */,
 				3A54FC751D2CA3B500A805EA /* euclidean_loss_layer.cpp in Sources */,
+				3A3A53691D80A9F300F6E6E9 /* InfoController.swift in Sources */,
 				3A09A6C61D738D7C0072ED56 /* Comment.swift in Sources */,
 				3A8626091D4D3E3C00214348 /* PlantCore.swift in Sources */,
 				3A09A6C01D73879C0072ED56 /* SenderImageOjbect.swift in Sources */,
@@ -1297,7 +1309,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = PlantInfo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1336,7 +1348,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = PlantInfo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

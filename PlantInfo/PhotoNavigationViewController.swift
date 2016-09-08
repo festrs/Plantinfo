@@ -22,5 +22,4 @@ class PhotoNavigationViewController: UINavigationController, FPHandlesIncomingOb
             child.receiveClassifier(incomingClassifier)
         }
     }
-    
 }
