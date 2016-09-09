@@ -16,11 +16,4 @@ class NavigationViewController: UINavigationController, FPHandlesIncomingObjects
             child.receiveMOC(incomingMOC)
         }
     }
-    
-    func receiveClassifier(incomingClassifier: BridgingObjectClassifier) {
-        if let child = self.viewControllers.first as? FPHandlesIncomingObjects{
-            child.receiveClassifier(incomingClassifier)
-        }
-    }
- 
 }

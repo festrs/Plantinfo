@@ -113,7 +113,7 @@ class CustomPhotoAlbum: NSObject {
             if let imageAsset = fetchResults.firstObject as? PHAsset {
                 let requestOptions = PHImageRequestOptions()
                 requestOptions.deliveryMode = .HighQualityFormat
-                manager.requestImageForAsset(imageAsset, targetSize: PHImageManagerMaximumSize, contentMode: .AspectFill, options: requestOptions, resultHandler: { (image, info) -> Void in
+                manager.requestImageForAsset(imageAsset, targetSize: CGSize(width: 720, height: 1280), contentMode: .AspectFill, options: requestOptions, resultHandler: { (image, info) -> Void in
                     completion(image: image)
                 })
             } else {

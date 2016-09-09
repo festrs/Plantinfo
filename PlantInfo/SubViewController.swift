@@ -19,7 +19,7 @@ class SubViewController: UIViewController, ReceivedPlantProtocol {
         automaticallyAdjustsScrollViewInsets = false
         
         // Initiation
-        let VCIDs = ["InfoController", "CreateIdentSecondtSubView"]
+        let VCIDs = ["InfoController", "PhotosSubView"]
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         

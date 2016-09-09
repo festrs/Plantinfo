@@ -11,6 +11,7 @@ import CoreData
 import ALCameraViewController
 import ImagePicker
 import Photos
+import MBProgressHUD
 
 class PhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePickerDelegate  {
     
@@ -18,6 +19,8 @@ class PhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePic
     private var bridginObjectClassifier:BridgingObjectClassifier!
     private let SEGUE_IDENTIFIER = "ToSelect";
     private var imageIdentifier:String!
+    private var predictionResult = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,23 +38,39 @@ class PhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePic
         self.navigationController?.navigationBarHidden = false
     }
     
+    // MARK: - HUD
+    private func showLoadingHUD() {
+        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.labelText = "Identifying..."
+    }
+    
+    private func hideLoadingHUD() {
+        MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+    }
+    
     //MARK: Incoming object
     func receiveMOC(incomingMOC: NSManagedObjectContext) {
         moc = incomingMOC
-    }
-    
-    func receiveClassifier(incomingClassifier: BridgingObjectClassifier) {
-        bridginObjectClassifier = incomingClassifier;
     }
     
     //MARK: - ImagePicker Delegate Methods
     func wrapperDidPress(imagePicker: ImagePickerController, images: [UIImage], assets:[PHAsset]){}
     
     func doneButtonDidPress(imagePicker: ImagePickerController, images: [UIImage], assets:[PHAsset]){
-        if let image = images.first{
-            self.imageIdentifier = assets.first?.localIdentifier
-            self.performSegueWithIdentifier(self.SEGUE_IDENTIFIER, sender: image)
-            self.resetAssets()
+        guard images.first != nil else {
+            return
+        }
+        showLoadingHUD()
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            self.predictionResult = BridgingObjectClassifier.sharedManager().predictWithImage(images.first)
+            dispatch_async(dispatch_get_main_queue()) {
+                self.hideLoadingHUD()
+                if let image = images.first{
+                    self.imageIdentifier = assets.first?.localIdentifier
+                    self.performSegueWithIdentifier(self.SEGUE_IDENTIFIER, sender: image)
+                }
+            }
         }
     }
     
@@ -64,7 +83,6 @@ class PhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePic
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let vc = segue.destinationViewController as? FPHandlesIncomingObjects{
-            vc.receiveClassifier(self.bridginObjectClassifier)
             vc.receiveMOC(self.moc)
         }
         
@@ -73,6 +91,7 @@ class PhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePic
             let image = sender as? UIImage{
             vc.incomingImage = image
             vc.imageIdentifier = self.imageIdentifier
+            vc.identificationResult = self.predictionResult as? [String]
         }
     }
 }

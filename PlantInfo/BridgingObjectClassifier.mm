@@ -27,9 +27,9 @@ Classifier *classifier = NULL;
     if (self = [super init]) {
         //Load model
         NSString* model_file = [NSBundle.mainBundle pathForResource:@"deploy" ofType:@"prototxt" inDirectory:@"models"];
-        NSString* label_file = [NSBundle.mainBundle pathForResource:@"labelt4" ofType:@"txt" inDirectory:@"models"];
-        NSString* mean_file = [NSBundle.mainBundle pathForResource:@"image_mean_t4_treainset" ofType:@"binaryproto" inDirectory:@"models"];
-        NSString* trained_file = [NSBundle.mainBundle pathForResource:@"bvlc_4training_googlenet_iter_80000" ofType:@"caffemodel" inDirectory:@"models"];
+        NSString* label_file = [NSBundle.mainBundle pathForResource:@"labels" ofType:@"txt" inDirectory:@"models"];
+        NSString* mean_file = [NSBundle.mainBundle pathForResource:@"mean" ofType:@"binaryproto" inDirectory:@"models"];
+        NSString* trained_file = [NSBundle.mainBundle pathForResource:@"snapshot_iter_120000" ofType:@"caffemodel" inDirectory:@"models"];
         string model_file_str = std::string([model_file UTF8String]);
         string label_file_str = std::string([label_file UTF8String]);
         string trained_file_str = std::string([trained_file UTF8String]);

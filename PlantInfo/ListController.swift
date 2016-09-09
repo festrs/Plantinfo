@@ -15,11 +15,7 @@ UINavigationControllerDelegate {
     //MARK: - Variables
     @IBOutlet weak var tableView: UITableView!
     private var MOC:NSManagedObjectContext!
-    private var classifier:BridgingObjectClassifier!
     private let SEGUE_IDENTIFIER = "ToIdentifierPlant";
-    private lazy var plantCore = {
-        return PlantCore.sharedInstance;
-    }()
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -51,10 +47,6 @@ UINavigationControllerDelegate {
         self.MOC = incomingMOC
     }
     
-    func receiveClassifier(incomingClassifier: BridgingObjectClassifier) {
-        self.classifier = incomingClassifier
-    }
-    
     //MARK: UITableView Delegate
     override func tableView(tableView: UITableView,
                             cellForRowAtIndexPath
@@ -71,15 +63,15 @@ UINavigationControllerDelegate {
                 })
             })
         }
-        cell?.textLabel?.text = identificationObj.plant_ID
-        
+        let plant = PlantCore.sharedInstance.getPlantByID(identificationObj.plant_ID!)
+        cell?.textLabel?.text = plant.info?.scientificName
+        cell?.detailTextLabel?.text = NSDateFormatter.localizedStringFromDate(identificationObj.date!, dateStyle: .ShortStyle, timeStyle: .NoStyle)
         return cell!
     }
     
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let vc = segue.destinationViewController as? FPHandlesIncomingObjects{
-            vc.receiveClassifier(self.classifier)
             vc.receiveMOC(self.MOC)
         }
         
@@ -88,9 +80,7 @@ UINavigationControllerDelegate {
             let cell = sender as? UITableViewCell{
             let index = self.tableView.indexPathForCell(cell)
             let identificationObj = self.fetchedResultsController?.objectAtIndexPath(index!) as! Identifications
-            let fakePredict = PredictInfo(nid: identificationObj.plant_ID, probability: "")
-            
-            vc.selectedPlant = plantCore.getPlantList([fakePredict]).first
+            vc.selectedPlant = PlantCore.sharedInstance.getPlantByID(identificationObj.plant_ID!)
             vc.incomingImage = cell.imageView?.image
             vc.imageIdentifier = identificationObj.image_ID
         }

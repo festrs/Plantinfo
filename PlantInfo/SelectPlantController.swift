@@ -15,18 +15,17 @@ class SelectPlantController: UIViewController, FPHandlesIncomingObjects {
     //MARK: - Variables
     @IBOutlet weak var pickedImageView: UIImageView!
     var incomingImage:UIImage!
-    var listOfPlants:[Plant]!
     var imageIdentifier:String!
+    var identificationResult:[String]?
     
     private let NUMBER_OF_SECTIONS = 1;
     private let REUSE_IDENTIFIER = "PlantCell"
     private let SEGUE_IDENTIFIER = "ToNewIdentification";
-    var buttonXPlants:[UIButton: Plant] = [:]
-    let listOfProbLabels = [70,71,72,73,74]
-    let listOfNameLabels = [60,61,62,63,64]
-    let listOfUIImages = [50,51,52,53,54]
-    
-    private var classifier:BridgingObjectClassifier!
+    private var buttonXPlants:[UIButton: Plant] = [:]
+    private let listOfProbLabels = [70,71,72,73,74]
+    private let listOfNameLabels = [60,61,62,63,64]
+    private let listOfUIImages = [50,51,52,53,54]
+
     private var MOC:NSManagedObjectContext!
     private lazy var plantCore = {
        return PlantCore.sharedInstance;
@@ -36,9 +35,8 @@ class SelectPlantController: UIViewController, FPHandlesIncomingObjects {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pickedImageView.image = incomingImage
-        let identificationResult = self.classifier.predictWithImage(incomingImage) as? [String]
         let listOfPredictions = plantCore.getListOfPredictions(identificationResult!)
-        self.listOfPlants = plantCore.getPlantList(listOfPredictions)
+        let listOfPlants = plantCore.getPlantList(listOfPredictions)
         
         for plant in listOfPlants {
             let index = listOfPredictions.indexOf({$0.nid == plant.nid})!
@@ -46,10 +44,10 @@ class SelectPlantController: UIViewController, FPHandlesIncomingObjects {
             let nameLabel = self.view.viewWithTag(listOfNameLabels[index]) as? UILabel
             let probLabel = self.view.viewWithTag(listOfProbLabels[index]) as? UILabel
             
-//            button?.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLink!)!, forState: .Normal, placeholderImage: nil, optionsInfo: nil, progressBlock: nil, completionHandler: { (image, error, cacheType, imageURL) in
-//                
-//            })
-            self.gradientTopDownBlack(button!)
+            button?.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLink!)!, forState: .Normal, placeholderImage: nil, optionsInfo: nil, progressBlock: nil, completionHandler: { (image, error, cacheType, imageURL) in
+                self.gradientTopDownBlack(button!)
+            })
+            
             //button?.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLink!)!, forState: .Normal)
             
             nameLabel?.text = plant.info?.scientificName
@@ -85,9 +83,6 @@ class SelectPlantController: UIViewController, FPHandlesIncomingObjects {
     }
     
     //MARK: Incomings
-    func receiveClassifier(incomingClassifier: BridgingObjectClassifier) {
-        self.classifier = incomingClassifier
-    }
     
     func receiveMOC(incomingMOC: NSManagedObjectContext) {
         self.MOC = incomingMOC
@@ -106,7 +101,6 @@ class SelectPlantController: UIViewController, FPHandlesIncomingObjects {
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let vc = segue.destinationViewController as? FPHandlesIncomingObjects{
-            vc.receiveClassifier(self.classifier)
             vc.receiveMOC(self.MOC)
         }
         

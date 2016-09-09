@@ -14,5 +14,6 @@
 - (NSArray*)predictWithImage: (UIImage*)image;
 
 + (id)sharedManager;
+
 @end
 

@@ -13,7 +13,6 @@
 		3A1AB88C1D73853300F85C4A /* SendIndentificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AB88B1D73853300F85C4A /* SendIndentificationController.swift */; };
 		3A24A4721D48167100BA685C /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4701D48167100BA685C /* CoreDataTableViewController.swift */; };
 		3A24A4731D48167100BA685C /* ProtocolCoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4711D48167100BA685C /* ProtocolCoreDataTableViewController.swift */; };
-		3A24A4771D4816DB00BA685C /* FPHandleMOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4761D4816DB00BA685C /* FPHandleMOC.swift */; };
 		3A24A47A1D48176400BA685C /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4791D48176400BA685C /* ListController.swift */; };
 		3A24A4801D481EA100BA685C /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A47F1D481EA100BA685C /* NavigationViewController.swift */; };
 		3A24A4881D48225F00BA685C /* Identifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4861D48225F00BA685C /* Identifications.swift */; };
@@ -132,6 +131,7 @@
 		3A8CB13F1D5AAC870097AE0F /* CreateIdentificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8CB13E1D5AAC870097AE0F /* CreateIdentificationController.swift */; };
 		3AA73EA61D5F69BE0042CD19 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA73EA51D5F69BE0042CD19 /* PhotoController.swift */; };
 		3AE074A41D689CB100985E4C /* Identifications+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE074A31D689CB100985E4C /* Identifications+CoreDataProperties.swift */; };
+		3AF5E1A51D824FCB0042F8E2 /* PhotosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF5E1A41D824FCB0042F8E2 /* PhotosController.swift */; };
 		3AFA3FB61D442D7F00F2BD3D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA3FB51D442D7F00F2BD3D /* Extensions.swift */; };
 		8B8585FACC612D8CDA7078A5 /* libPods-PlantInfoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 830B47BA462664807DF1BD00 /* libPods-PlantInfoTests.a */; };
 		F33B99B699F0034026E3426D /* Pods_PlantInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 172197D6EA3DEDF6F43A498A /* Pods_PlantInfo.framework */; };
@@ -172,7 +172,6 @@
 		3A1AB88B1D73853300F85C4A /* SendIndentificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendIndentificationController.swift; sourceTree = "<group>"; };
 		3A24A4701D48167100BA685C /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
 		3A24A4711D48167100BA685C /* ProtocolCoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolCoreDataTableViewController.swift; sourceTree = "<group>"; };
-		3A24A4761D4816DB00BA685C /* FPHandleMOC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPHandleMOC.swift; sourceTree = "<group>"; };
 		3A24A4791D48176400BA685C /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		3A24A47F1D481EA100BA685C /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		3A24A4861D48225F00BA685C /* Identifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifications.swift; sourceTree = "<group>"; };
@@ -374,6 +373,7 @@
 		3A8CB13E1D5AAC870097AE0F /* CreateIdentificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateIdentificationController.swift; sourceTree = "<group>"; };
 		3AA73EA51D5F69BE0042CD19 /* PhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		3AE074A31D689CB100985E4C /* Identifications+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Identifications+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3AF5E1A41D824FCB0042F8E2 /* PhotosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosController.swift; sourceTree = "<group>"; };
 		3AFA3FB51D442D7F00F2BD3D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		51E1C1E4B364861065AD9FD8 /* Pods-PlantInfoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantInfoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlantInfoTests/Pods-PlantInfoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		830B47BA462664807DF1BD00 /* libPods-PlantInfoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlantInfoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -442,7 +442,6 @@
 			isa = PBXGroup;
 			children = (
 				3A24A4711D48167100BA685C /* ProtocolCoreDataTableViewController.swift */,
-				3A24A4761D4816DB00BA685C /* FPHandleMOC.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -482,6 +481,7 @@
 				3A8CB13E1D5AAC870097AE0F /* CreateIdentificationController.swift */,
 				3A3A53641D7E538A00F6E6E9 /* SubViewController.swift */,
 				3A3A53681D80A9F300F6E6E9 /* InfoController.swift */,
+				3AF5E1A41D824FCB0042F8E2 /* PhotosController.swift */,
 			);
 			name = Create;
 			sourceTree = "<group>";
@@ -1084,6 +1084,7 @@
 				3A54FCB91D2CA3B500A805EA /* io.cpp in Sources */,
 				3A54FCB61D2CA3B500A805EA /* im2col.cpp in Sources */,
 				3A54FC631D2CA3B500A805EA /* cudnn_pooling_layer.cpp in Sources */,
+				3AF5E1A51D824FCB0042F8E2 /* PhotosController.swift in Sources */,
 				3A54FC811D2CA3B500A805EA /* im2col_layer.cpp in Sources */,
 				3A54FCAB1D2CA3B500A805EA /* tanh_layer.cpp in Sources */,
 				3A24A4881D48225F00BA685C /* Identifications.swift in Sources */,
@@ -1095,7 +1096,6 @@
 				3A54FC9C1D2CA3B500A805EA /* sigmoid_cross_entropy_loss_layer.cpp in Sources */,
 				3A09A6C41D738D410072ED56 /* Identification.swift in Sources */,
 				3A54FC871D2CA3B500A805EA /* log_layer.cpp in Sources */,
-				3A24A4771D4816DB00BA685C /* FPHandleMOC.swift in Sources */,
 				3AA73EA61D5F69BE0042CD19 /* PhotoController.swift in Sources */,
 				3A54FC701D2CA3B500A805EA /* dropout_layer.cpp in Sources */,
 				3A54FC721D2CA3B500A805EA /* dummy_data_layer.cpp in Sources */,

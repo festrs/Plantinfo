@@ -11,21 +11,29 @@ import UIKit
 class InfoController: UIViewController,ReceivedPlantProtocol,UITableViewDataSource, UITableViewDelegate {
 
     var plant:Plant!
-    var infoPlant = [String]()
+    var infoPlant = [String:AnyObject]()
     let redInfo = ["Poison Part:","Posion Delivery Mode:","Severity:","Symptoms:"]
-    let categoryList = ["Common Name:","Scientific Name:","Family:","Poison Part:","Posion Delivery Mode:","Severity:","Symptoms:"]
+    let categoryList = ["Common_Name":"Common Name:",
+                        "Scientific_Name":"Scientific Name:",
+                        "Family":"Family:",
+                        "Poison_Part":"Poison Part:",
+                        "Posion_Delivery_Mode":"Posion Delivery Mode:",
+                        "Severity":"Severity:",
+                        "Symptoms":"Symptoms:"]
+    let order = [0:"Common_Name",
+                 1:"Scientific_Name",
+                 2:"Family",
+                 3:"Poison_Part",
+                 4:"Posion_Delivery_Mode",
+                 5:"Severity",
+                 6:"Symptoms"]
     
     //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        //populate array with platinfo
-        infoPlant.append((self.plant.info?.commonName)!)
-        infoPlant.append((self.plant.info?.scientificName)!)
-        infoPlant.append((self.plant.info?.family)!)
-        infoPlant.append((self.plant.info?.poisonPart)!)
-        infoPlant.append((self.plant.info?.posionDeliveryMode)!)
-        infoPlant.append((self.plant.info?.severity)!)
-        infoPlant.append((self.plant.info?.symptoms)!)
+        infoPlant = self.plant.info.map({
+            return $0.toJSON()
+        })!
     }
     
     func receivePlant(plant: Plant) {
@@ -33,7 +41,7 @@ class InfoController: UIViewController,ReceivedPlantProtocol,UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return infoPlant.count
+        return categoryList.count
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -41,14 +49,16 @@ class InfoController: UIViewController,ReceivedPlantProtocol,UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+        let key = order[indexPath.row]!
+        let category = categoryList[key]
+        let info = infoPlant[key] as? String
         
-        let info = infoPlant[indexPath.row]
-        let category = categoryList[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("InfoPlantCell") as? InfoPlantCell
         
         tableView.rowHeight = 60
         
-        if(redInfo.contains(category)){
+        if(redInfo.contains(category!)){
             cell?.categoryTitleLabel.textColor = UIColor.redColor()
         }
         cell?.categoryTitleLabel.text = category

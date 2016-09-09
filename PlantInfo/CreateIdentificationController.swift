@@ -38,7 +38,7 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -105,10 +105,6 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
     }
     
     //MARK: Incomings
-    func receiveClassifier(incomingClassifier: BridgingObjectClassifier) {
-        
-    }
-    
     func receiveMOC(incomingMOC: NSManagedObjectContext) {
         self.MOC = incomingMOC
     }

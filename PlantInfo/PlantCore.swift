@@ -33,6 +33,12 @@ class PlantCore{
         }
     }
     
+    func getPlantByID(id: String) -> Plant{
+        return listOfPlants.filter({
+            $0.nid! == id
+        }).first!
+    }
+    
     func getPlantList(predictions: [PredictInfo]) -> [Plant]{
         let nids = predictions.map({return $0.nid}) as [String]
         return listOfPlants.filter({

@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IdentificationCell" textLabel="DDa-CS-Zd9" imageView="6C4-eU-lPH" style="IBUITableViewCellStyleDefault" id="7lH-8m-WZv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IdentificationCell" textLabel="DDa-CS-Zd9" detailTextLabel="YkR-in-fqX" imageView="6C4-eU-lPH" style="IBUITableViewCellStyleValue1" id="7lH-8m-WZv">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7lH-8m-WZv" id="R3P-8V-BRX">
@@ -31,7 +31,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DDa-CS-Zd9">
-                                                    <rect key="frame" x="73" y="0.0" width="512" height="43"/>
+                                                    <rect key="frame" x="73" y="12" width="32" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,6 +41,13 @@
                                                     <rect key="frame" x="15" y="0.0" width="43" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YkR-in-fqX">
+                                                    <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -323,7 +330,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="n12899752_5266.JPEG" translatesAutoresizingMaskIntoConstraints="NO" id="qII-gf-WIp">
-                                <rect key="frame" x="0.0" y="64" width="600" height="157"/>
+                                <rect key="frame" x="0.0" y="64" width="552" height="157"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="80" y="57" width="240" height="128"/>
                                 </variation>
@@ -338,7 +345,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="ly1-h8-e6W" secondAttribute="bottom" constant="-49" id="Jdt-kH-Jv7"/>
-                            <constraint firstItem="2cK-Fq-VcL" firstAttribute="leading" secondItem="qII-gf-WIp" secondAttribute="trailing" constant="-46" id="MPr-7n-ooG"/>
+                            <constraint firstItem="2cK-Fq-VcL" firstAttribute="leading" secondItem="qII-gf-WIp" secondAttribute="trailing" constant="2" id="MPr-7n-ooG"/>
                             <constraint firstItem="2cK-Fq-VcL" firstAttribute="trailing" secondItem="ly1-h8-e6W" secondAttribute="trailing" id="MYd-4d-fbj"/>
                             <constraint firstItem="2cK-Fq-VcL" firstAttribute="top" secondItem="man-s6-FdJ" secondAttribute="bottom" constant="127" id="RYD-Rz-xbj"/>
                             <constraint firstItem="qII-gf-WIp" firstAttribute="leading" secondItem="ly1-h8-e6W" secondAttribute="leading" id="SC5-3X-lxu"/>
@@ -454,9 +461,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="356" id="gQI-GL-9CV"/>
                                 </constraints>
-                                <mutableString key="text">Mussum Ipsum, cacilds vidis litro abertis. A ordem dos tratores não altera o pão duris Manduma pindureta quium dia nois paga. Quem num gosta di mé, boa gente num é. Mé faiz elementum girarzis, nisi eros vermeio.
+                                <string key="text">Mussum Ipsum, cacilds vidis litro abertis. A ordem dos tratores não altera o pão duris Manduma pindureta quium dia nois paga. Quem num gosta di mé, boa gente num é. Mé faiz elementum girarzis, nisi eros vermeio.
 
-Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Si num tem leite então bota uma pinga aí cumpadi! undefined  http://plantinfo.herokuapp.com/index.html#/plants</mutableString>
+Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Si num tem leite então bota uma pinga aí cumpadi! undefined  http://plantinfo.herokuapp.com/index.html#/plants</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -651,39 +658,65 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
             </objects>
             <point key="canvasLocation" x="3467" y="1727"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="xjK-kv-2WR">
+        <!--Photos Controller-->
+        <scene sceneID="MBd-Cl-mXv">
             <objects>
-                <viewController restorationIdentifier="CreateIdentSecondtSubView" storyboardIdentifier="CreateIdentSecondtSubView" id="sHJ-Fz-AnN" sceneMemberID="viewController">
+                <viewController restorationIdentifier="PhotosSubView" storyboardIdentifier="PhotosSubView" id="TXT-S8-z5L" customClass="PhotosController" customModule="PlantInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="78M-38-fMj"/>
-                        <viewControllerLayoutGuide type="bottom" id="cYQ-cZ-NQr"/>
+                        <viewControllerLayoutGuide type="top" id="ads-S8-sY5"/>
+                        <viewControllerLayoutGuide type="bottom" id="mdd-xd-aLH"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rSu-r4-Pej">
+                    <view key="view" contentMode="scaleToFill" id="iim-vV-kGq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second VC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5R-C8-frr">
-                                <rect key="frame" x="194" y="268" width="212" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="6kx-0b-TFr"/>
-                                    <constraint firstAttribute="width" constant="212" id="9Zt-LO-dMr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r79-id-sJU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="6" minimumInteritemSpacing="6" id="eun-x7-aFo">
+                                    <size key="itemSize" width="180" height="135"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="4" minY="4" maxX="4" maxY="4"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="5yH-a7-BTv">
+                                        <rect key="frame" x="4" y="4" width="180" height="135"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="135"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="Mch-57-Jvp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="179" height="135"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="TXT-S8-z5L" id="AdP-9t-uZ9"/>
+                                    <outlet property="delegate" destination="TXT-S8-z5L" id="rzh-kq-bef"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Y5R-C8-frr" firstAttribute="centerX" secondItem="rSu-r4-Pej" secondAttribute="centerX" id="hsV-dp-YZb"/>
-                            <constraint firstItem="Y5R-C8-frr" firstAttribute="centerY" secondItem="rSu-r4-Pej" secondAttribute="centerY" id="jeZ-0E-Y28"/>
+                            <constraint firstItem="r79-id-sJU" firstAttribute="top" secondItem="iim-vV-kGq" secondAttribute="top" id="2Am-g2-7wv"/>
+                            <constraint firstItem="r79-id-sJU" firstAttribute="bottom" secondItem="mdd-xd-aLH" secondAttribute="top" id="8u2-28-NK9"/>
+                            <constraint firstItem="r79-id-sJU" firstAttribute="leading" secondItem="iim-vV-kGq" secondAttribute="leading" id="D1c-ra-JhR"/>
+                            <constraint firstAttribute="trailing" secondItem="r79-id-sJU" secondAttribute="trailing" id="pKw-fj-fk9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="photsCollection" destination="r79-id-sJU" id="U95-mk-Aa2"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GhT-pW-gwY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLq-aQ-0tR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4599" y="1759"/>
+            <point key="canvasLocation" x="4942" y="1730"/>
         </scene>
         <!--Sub View Controller-->
         <scene sceneID="LxL-ry-P3K">
@@ -791,6 +824,7 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
         </scene>
     </scenes>
     <resources>
+        <image name="0" width="640" height="400"/>
         <image name="cancel" width="32" height="32"/>
         <image name="information" width="32" height="32"/>
         <image name="list" width="32" height="32"/>
