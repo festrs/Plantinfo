@@ -13,24 +13,20 @@ import CoreLocation
 import TransitionTreasury
 import TransitionAnimation
 
-
 protocol ReceivedPlantProtocol:class{
     func receivePlant(plant: Plant)
 }
 
-
 class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,CLLocationManagerDelegate,ModalTransitionDelegate,ReceivedPlantProtocol {
     
     @IBOutlet weak var container: UIView!
-    @IBOutlet weak var plantImageView: UIImageView!
-
+    @IBOutlet weak var plantImageView: UIImageView?
     var selectedPlant:Plant!
     var newFlag = false
     var imageIdentifier:String!
     var incomingImage:UIImage!
     var MOC:NSManagedObjectContext!
     var locationManager = CLLocationManager()
-    private let SEGUE_IDENTIFIER = "toComment"
     private let SEGUE_CONTAINER = "ToContainerInfoAndPhotos"
     var userLocation:CLLocation = CLLocation()
     var tr_presentTransition: TRViewControllerTransitionDelegate?
@@ -46,7 +42,7 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         
-        self.plantImageView.image = incomingImage
+        self.plantImageView!.image = incomingImage
         
         if newFlag {
             self.title = "New Identification"
@@ -87,20 +83,17 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
     
     @IBAction func openModal(sender: AnyObject) {
         
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SendIndentificationController") as! SendIndentificationController
         vc.modalDelegate = self
-        vc.title = "pop"
-        let nav = UINavigationController(rootViewController: vc)
-
-        tr_presentViewController(nav, method: TRPresentTransitionMethod.PopTip(visibleHeight: 500), completion: {
-            print("Present finished.")
+        vc.incomingImage = incomingImage
+        vc.identification = Identification(latitude: self.userLocation.coordinate.latitude, longitude: self.userLocation.coordinate.longitude, plantID: self.selectedPlant.nid)
+        tr_presentViewController(vc, method: TRPresentTransitionMethod.PopTip(visibleHeight: 500), completion: {
         })
     }
     
     // MARK: - Modal viewController delegate
     func modalViewControllerDismiss(callbackData data: AnyObject? = nil) {
         tr_dismissViewController(completion: {
-            print("Dismiss finished.")
         })
     }
     
@@ -119,12 +112,6 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
         if segue.identifier == SEGUE_CONTAINER,
             let vc = segue.destinationViewController as? ReceivedPlantProtocol{
             vc.receivePlant(self.selectedPlant) 
-        }
-        
-        if segue.identifier == SEGUE_IDENTIFIER,
-            let vc = segue.destinationViewController as? SendIndentificationController{
-            vc.incomingImage = incomingImage
-            vc.identification = Identification(latitude: self.userLocation.coordinate.latitude, longitude: self.userLocation.coordinate.longitude, plantID: self.selectedPlant.nid)
         }
     }
 }

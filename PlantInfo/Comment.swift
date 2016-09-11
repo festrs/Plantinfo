@@ -21,9 +21,7 @@ class Comment: Mappable {
         self.flag = flag
     }
     
-    required init?(_ map: Map) {
-        
-    }
+    required init?(_ map: Map) {}
     
     // Mappable
     func mapping(map: Map) {

@@ -15,7 +15,7 @@ target 'PlantInfo' do
     pod 'ImagePicker'
     pod 'TransitionTreasury', '~> 3.0.4'
     pod 'TransitionAnimation', '~>3.0.4'
-    pod 'ImageViewer'
+    pod 'M13Checkbox'
 end
 
 target 'PlantInfoTests' do

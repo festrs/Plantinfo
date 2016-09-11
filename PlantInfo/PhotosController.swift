@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 import ImageViewer
 
 class PhotosController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,ReceivedPlantProtocol {
@@ -53,7 +54,7 @@ class PhotosController: UIViewController,UICollectionViewDataSource,UICollection
     
     func collectionView(collectionView: UICollectionView,
                                  numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return (plant.imageLinks?.count)!
     }
     
     func collectionView(collectionView: UICollectionView,
@@ -61,23 +62,24 @@ class PhotosController: UIViewController,UICollectionViewDataSource,UICollection
         UICollectionViewCell {
             
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier,
-            forIndexPath: indexPath)
+            forIndexPath: indexPath) as! PhotosCellController
             
             // Configure the cell
-            
+            cell.plantImageView.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLinks![indexPath.row])!, placeholderImage: nil, optionsInfo: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+                
+            }
             return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let cell = collectionView.cellForItemAtIndexPath(indexPath)
-        
-        let imageProvider = SomeImageProvider()
-        let buttonAssets = CloseButtonAssets(normal: UIImage(named:"close_normal")!, highlighted: UIImage(named: "close_highlighted"))
-        let configuration = ImageViewerConfiguration(imageSize: CGSize(width: 1920, height: 1080), closeButtonAssets: buttonAssets)
-        
-        let imageViewer = ImageViewerController(imageProvider: imageProvider, configuration: configuration, displacedView: cell!)
-        self.presentImageViewer(imageViewer)
+        //let cell = collectionView.cellForItemAtIndexPath(indexPath) as! PhotosCellController
     }
+}
+
+
+class PhotosCellController : UICollectionViewCell{
+    
+    @IBOutlet weak var plantImageView: UIImageView!
     
     
 }

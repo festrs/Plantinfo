@@ -13,17 +13,15 @@ class Plant: Mappable {
     
     var nid:String?
     var info:PlantInfo?
-    var imageLink:String?
+    var imageLinks:[String]?
     var probability:Double?
     
-    required init?(_ map: Map) {
-        
-    }
+    required init?(_ map: Map) {}
     
     // Mappable
     func mapping(map: Map) {
         nid             <- map["_id"]
         info            <- map["id_plant_info"]
-        imageLink       <- map["image_link"]
+        imageLinks       <- map["image_links"]
     }
 }

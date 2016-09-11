@@ -416,6 +416,7 @@
 				3A24A4891D4826FF00BA685C /* SelectPlantController.swift */,
 				3A3A536A1D80AA6300F6E6E9 /* Create */,
 				3A1AB88B1D73853300F85C4A /* SendIndentificationController.swift */,
+				3A3A53621D7CF88000F6E6E9 /* ModalViewController.swift */,
 				3A09A6BF1D73879C0072ED56 /* SenderImageOjbect.swift */,
 			);
 			name = Identifications;
@@ -425,7 +426,6 @@
 			isa = PBXGroup;
 			children = (
 				3A3A53661D7E541100F6E6E9 /* SwiftPages.swift */,
-				3A8626051D4D3BD300214348 /* Objects */,
 				3A24A4831D48215000BA685C /* Classifier */,
 				3A24A47C1D48179E00BA685C /* Protocols */,
 				3AFA3FB51D442D7F00F2BD3D /* Extensions.swift */,
@@ -514,8 +514,8 @@
 				3A24A47B1D48178D00BA685C /* Utilities */,
 				3A24A4781D48174100BA685C /* Identifications */,
 				3ABF66741D6A384D00BCBD81 /* List */,
+				3A8626051D4D3BD300214348 /* Objects */,
 				3A54E3B01D2C664D00A805EA /* AppDelegate.swift */,
-				3A3A53621D7CF88000F6E6E9 /* ModalViewController.swift */,
 				3A54E3B41D2C664D00A805EA /* Main.storyboard */,
 				3A54E3BA1D2C664D00A805EA /* Assets.xcassets */,
 				3A54E3BC1D2C664D00A805EA /* LaunchScreen.storyboard */,

@@ -44,7 +44,7 @@ class SelectPlantController: UIViewController, FPHandlesIncomingObjects {
             let nameLabel = self.view.viewWithTag(listOfNameLabels[index]) as? UILabel
             let probLabel = self.view.viewWithTag(listOfProbLabels[index]) as? UILabel
             
-            button?.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLink!)!, forState: .Normal, placeholderImage: nil, optionsInfo: nil, progressBlock: nil, completionHandler: { (image, error, cacheType, imageURL) in
+            button?.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLinks![0])!, forState: .Normal, placeholderImage: nil, optionsInfo: nil, progressBlock: nil, completionHandler: { (image, error, cacheType, imageURL) in
                 self.gradientTopDownBlack(button!)
             })
             

@@ -27,9 +27,7 @@ class Identification: Mappable {
         self.imageLink = "newimages/"+nid!+"/"+uuid+".jpeg"
     }
     
-    required init?(_ map: Map) {
-        
-    }
+    required init?(_ map: Map) {}
     
     // Mappable
     func mapping(map: Map) {
