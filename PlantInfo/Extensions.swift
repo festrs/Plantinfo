@@ -8,11 +8,13 @@
 
 import UIKit
 
+let URL_IMAGE_BASE = "https://s3-sa-east-1.amazonaws.com/plantinfo/listimage/"
+
 // MARK: JWT Secret key
 let jwtSecretKey:String = "felipe.com.br.plantinfo.5939854fe"
 
 // MARK: URL Base
-let urlBase:String = "http://localhost:3000"
+let urlBase:String = "http://plantinfoserver.herokuapp.com"
 
 // MARK: EndPoints
 let endPointAllProducts:String = "/api/plants/identification"
@@ -30,10 +32,8 @@ func getDocumentsURL() -> NSURL {
 }
 
 func fileInDocumentsDirectory(filename: String) -> String {
-    
     let fileURL = getDocumentsURL().URLByAppendingPathComponent(filename)
     return fileURL.path!
-    
 }
 
 extension CGFloat {
@@ -89,7 +89,11 @@ extension NSNumber {
     }
     func maskToCurrency() ->String?{
         let formatter = NSNumberFormatter()
-        formatter.numberStyle = NSNumberFormatterStyle.CurrencyAccountingStyle
+        if #available(iOS 9.0, *) {
+            formatter.numberStyle = NSNumberFormatterStyle.CurrencyAccountingStyle
+        } else {
+            // Fallback on earlier versions
+        }
         return formatter.stringFromNumber(self)
     }
 }
@@ -274,5 +278,24 @@ extension UIView {
             nibName: nibNamed,
             bundle: bundle
             ).instantiateWithOwner(nil, options: nil)[0] as? UIView
+    }
+}
+extension UIImage {
+    func resizedImageWithSize(newSize: CGSize) -> UIImage {
+        let newRect = CGRectIntegral(CGRectMake(0, 0, newSize.width, newSize.height))
+        var newImage: UIImage!
+        
+        let scale = UIScreen.mainScreen().scale
+        
+        UIGraphicsBeginImageContextWithOptions(newRect.size, false, 0.0);
+        newImage = UIImage(CGImage: self.CGImage!, scale: scale, orientation: self.imageOrientation)
+        newImage.drawInRect(newRect)
+        newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        let data = UIImageJPEGRepresentation(newImage, 0.9)
+        let newI = UIImage(data: data!, scale: UIScreen.mainScreen().scale)
+        
+        return newI!
     }
 }

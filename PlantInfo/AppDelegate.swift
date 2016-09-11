@@ -8,21 +8,30 @@
 
 import UIKit
 import CoreData
+import AWSCore
+
+protocol FPHandlesIncomingObjects:class{
+    func receiveMOC(incomingMOC: NSManagedObjectContext)
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    lazy var bridginObject:BridgingObjectClassifier = {
-       return BridgingObjectClassifier.sharedManager() as! BridgingObjectClassifier
-    }()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        AWSLogger.defaultLogger().logLevel = .Verbose
+        
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
+                                                                identityPoolId:"us-east-1:21fd5984-b996-4bd3-80f1-109d352fd9bf")
+        
+        let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
+        
+        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
+        
         if let rootViewController = self.window?.rootViewController as? FPHandlesIncomingObjects {
             rootViewController.receiveMOC(managedObjectContext)
-        }
-        if let rootViewController = self.window?.rootViewController as? FPHandlesIncomingObjects {
-            rootViewController.receiveClassifier(bridginObject)
         }
         return true
     }

@@ -71,19 +71,34 @@ class CustomPhotoAlbum: NSObject {
     }
     
     func saveImageAsAsset(image: UIImage, completion: (localIdentifier:String?) -> Void) {
-        
-        var imageIdentifier: String?
-        
-        PHPhotoLibrary.sharedPhotoLibrary().performChanges({ () -> Void in
-            let changeRequest = PHAssetChangeRequest.creationRequestForAssetFromImage(image)
-            let placeHolder = changeRequest.placeholderForCreatedAsset
-            let albumChangeRequest = PHAssetCollectionChangeRequest(forAssetCollection: self.assetCollection)
-            albumChangeRequest!.addAssets([placeHolder!])
-            imageIdentifier = placeHolder!.localIdentifier
-            }, completionHandler: { (success, error) -> Void in
+        var placeholder: PHObjectPlaceholder?
+        PHPhotoLibrary.sharedPhotoLibrary().performChanges({
+            
+            // Request creating an asset from the image
+            let createAssetRequest = PHAssetChangeRequest.creationRequestForAssetFromImage(image)
+            // Request editing the album
+            guard let albumChangeRequest = PHAssetCollectionChangeRequest(forAssetCollection: self.assetCollection) else {
+                assert(false, "Album change request failed")
+                return
+            }
+            // Get a placeholder for the new asset and add it to the album editing request
+            guard let photoPlaceholder = createAssetRequest.placeholderForCreatedAsset else {
+                assert(false, "Placeholder is nil")
+                return
+            }
+            placeholder = photoPlaceholder
+            albumChangeRequest.addAssets([photoPlaceholder])
+            }, completionHandler: { success, error in
+                guard let placeholder = placeholder else {
+                    assert(false, "Placeholder is nil")
+                    completion(localIdentifier: nil)
+                    return
+                }
                 if success {
-                    completion(localIdentifier: imageIdentifier)
-                } else {
+                    completion(localIdentifier: placeholder.localIdentifier)
+                }
+                else {
+                    print(error)
                     completion(localIdentifier: nil)
                 }
         })
@@ -95,10 +110,10 @@ class CustomPhotoAlbum: NSObject {
         let fetchResults = PHAsset.fetchAssetsWithLocalIdentifiers([localIdentifier], options: fetchOptions)
         
         if fetchResults.count > 0 {
-            if let imageAsset = fetchResults.objectAtIndex(0) as? PHAsset {
+            if let imageAsset = fetchResults.firstObject as? PHAsset {
                 let requestOptions = PHImageRequestOptions()
                 requestOptions.deliveryMode = .HighQualityFormat
-                manager.requestImageForAsset(imageAsset, targetSize: PHImageManagerMaximumSize, contentMode: .AspectFill, options: requestOptions, resultHandler: { (image, info) -> Void in
+                manager.requestImageForAsset(imageAsset, targetSize: CGSize(width: 720, height: 1280), contentMode: .AspectFill, options: requestOptions, resultHandler: { (image, info) -> Void in
                     completion(image: image)
                 })
             } else {

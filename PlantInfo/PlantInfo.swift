@@ -24,9 +24,7 @@ class PlantInfo: Mappable {
     var toxicPrinciple:String?
  
     
-    required init?(_ map: Map) {
-        
-    }
+    required init?(_ map: Map) {}
     
     // Mappable
     func mapping(map: Map) {

@@ -3,4 +3,4 @@ language: objective-c
 osx_image: xcode7.3
 
 script:
-    xcodebuild -workspace PlantInfo.xcworkspace -scheme PlantInfo -sdk iphonesimulator build
+- xcodebuild -workspace PlantInfo.xcworkspace -scheme PlantInfo -sdk iphonesimulator build

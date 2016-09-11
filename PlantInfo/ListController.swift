@@ -14,9 +14,8 @@ UINavigationControllerDelegate {
     
     //MARK: - Variables
     @IBOutlet weak var tableView: UITableView!
-    private var moc:NSManagedObjectContext!
-    private var bridginObjectClassifier:BridgingObjectClassifier!
-    private let SEGUE_IDENTIFIER = "ToSelect";
+    private var MOC:NSManagedObjectContext!
+    private let SEGUE_IDENTIFIER = "ToIdentifierPlant";
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -38,18 +37,14 @@ UINavigationControllerDelegate {
         let request = NSFetchRequest(entityName: "Identifications")
         let countDocumentSort = NSSortDescriptor(key: "date", ascending: false)
         request.sortDescriptors = [countDocumentSort]
-        self.fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: self.moc, sectionNameKeyPath: nil, cacheName: "rootCache")
+        self.fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: self.MOC, sectionNameKeyPath: nil, cacheName: "rootCache")
         self.performFetch()
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     
     //MARK: Incoming object
     func receiveMOC(incomingMOC: NSManagedObjectContext) {
-        moc = incomingMOC
-    }
-    
-    func receiveClassifier(incomingClassifier: BridgingObjectClassifier) {
-        bridginObjectClassifier = incomingClassifier;
+        self.MOC = incomingMOC
     }
     
     //MARK: UITableView Delegate
@@ -62,30 +57,33 @@ UINavigationControllerDelegate {
         
         if let identifier = identificationObj.image_ID {
             CustomPhotoAlbum.sharedInstance.retrieveImageWithIdentifer(identifier, completion: { (image) -> Void in
-                cell?.imageView?.image = image
-                cell?.setNeedsLayout()
+                dispatch_async(dispatch_get_main_queue(),{
+                    cell?.imageView?.image = image
+                    cell?.setNeedsLayout()
+                })
             })
         }
-        cell?.textLabel?.text = identificationObj.plant_ID
-        
+        let plant = PlantCore.sharedInstance.getPlantByID(identificationObj.plant_ID!)
+        cell?.textLabel?.text = plant.info?.scientificName
+        cell?.detailTextLabel?.text = NSDateFormatter.localizedStringFromDate(identificationObj.date!, dateStyle: .ShortStyle, timeStyle: .NoStyle)
         return cell!
     }
-    //MARK: Image Picker
-    @IBAction func addNewIdentification(sender: AnyObject) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
-            imagePicker.allowsEditing = false
-            self.presentViewController(imagePicker, animated: true, completion: nil)
-        }
-    }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
-        if(image != nil){
-            performSegueWithIdentifier(SEGUE_IDENTIFIER, sender: image)
+    // MARK: - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc = segue.destinationViewController as? FPHandlesIncomingObjects{
+            vc.receiveMOC(self.MOC)
         }
-        self.dismissViewControllerAnimated(true, completion: nil);
+        
+        if segue.identifier == SEGUE_IDENTIFIER,
+            let vc = segue.destinationViewController as? CreateIdentificationController,
+            let cell = sender as? UITableViewCell{
+            let index = self.tableView.indexPathForCell(cell)
+            let identificationObj = self.fetchedResultsController?.objectAtIndexPath(index!) as! Identifications
+            vc.selectedPlant = PlantCore.sharedInstance.getPlantByID(identificationObj.plant_ID!)
+            vc.incomingImage = cell.imageView?.image
+            vc.imageIdentifier = identificationObj.image_ID
+        }
     }
     
 }
