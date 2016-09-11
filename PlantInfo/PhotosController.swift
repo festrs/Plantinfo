@@ -8,40 +8,12 @@
 
 import UIKit
 import Kingfisher
-import ImageViewer
 
 class PhotosController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,ReceivedPlantProtocol {
 
     private var plant:Plant!
     private let reuseIdentifier = "photoCell"
     @IBOutlet var photsCollection: UICollectionView!
-    
-    
-    class SomeImageProvider: ImageProvider {
-        let images = [
-            UIImage(named: "0"),
-            UIImage(named: "1"),
-            UIImage(named: "2"),
-            UIImage(named: "3"),
-            UIImage(named: "4"),
-            UIImage(named: "5"),
-            UIImage(named: "6"),
-            UIImage(named: "7"),
-            UIImage(named: "8"),
-            UIImage(named: "9")]
-        
-        var imageCount: Int {
-            return images.count
-        }
-        
-        func provideImage(completion: UIImage? -> Void) {
-            completion(UIImage(named: "image_big"))
-        }
-        
-        func provideImage(atIndex index: Int, completion: UIImage? -> Void) {
-            completion(images[index])
-        }
-    }
     
     func receivePlant(plant: Plant) {
         self.plant = plant

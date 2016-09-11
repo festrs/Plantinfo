@@ -21,7 +21,7 @@ class SendIndentificationController: UIViewController, UITextFieldDelegate {
     weak var modalDelegate: ModalViewControllerDelegate?
     
     lazy var dismissGestureRecognizer: UIPanGestureRecognizer = {
-        let pan = UIPanGestureRecognizer(target: self, action: #selector(ModalViewController.panDismiss(_:)))
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(SendIndentificationController.panDismiss(_:)))
         self.view.addGestureRecognizer(pan)
         return pan
     }()

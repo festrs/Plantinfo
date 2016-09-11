@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-import ALCameraViewController
 import ImagePicker
 import Photos
 import MBProgressHUD
