@@ -15,7 +15,7 @@ class SendIndentificationController: UIViewController, UITextFieldDelegate {
     var incomingImage:UIImage!
     var identification:Identification!
     var senderImageObjec:SenderImage!
-    
+     
     @IBOutlet weak var checkBoxView: M13Checkbox!
     @IBOutlet weak var commentTextField: UITextView!
     weak var modalDelegate: ModalViewControllerDelegate?
