@@ -87,7 +87,7 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
         vc.modalDelegate = self
         vc.incomingImage = incomingImage
         vc.identification = Identification(latitude: self.userLocation.coordinate.latitude, longitude: self.userLocation.coordinate.longitude, plantID: self.selectedPlant.nid)
-        tr_presentViewController(vc, method: TRPresentTransitionMethod.PopTip(visibleHeight: 500), completion: {
+        tr_presentViewController(vc, method: TRPresentTransitionMethod.PopTip(visibleHeight: self.view.frame.size.height*0.90), completion: {
         })
     }
     

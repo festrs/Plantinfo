@@ -15,11 +15,9 @@ import MBProgressHUD
 class PhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePickerDelegate  {
     
     private var moc:NSManagedObjectContext!
-    private var bridginObjectClassifier:BridgingObjectClassifier!
     private let SEGUE_IDENTIFIER = "ToSelect";
     private var imageIdentifier:String!
     private var predictionResult = []
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

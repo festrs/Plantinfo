@@ -23,7 +23,7 @@ let monthsName: [Int:String] = [1:"JAN",2:"FEV",3:"MAR",4:"ABR",5:"MAIO",6:"JUN"
 
 struct PredictInfo {
     var nid:String!
-    var probability:String!
+    var probability:Double!
 }
 
 func getDocumentsURL() -> NSURL {

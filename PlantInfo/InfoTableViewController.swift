@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InfoController: UIViewController,ReceivedPlantProtocol,UITableViewDataSource, UITableViewDelegate {
+class InfoTableViewController: UIViewController,ReceivedPlantProtocol,UITableViewDataSource, UITableViewDelegate {
 
     var plant:Plant!
     var infoPlant = [String:AnyObject]()
@@ -56,13 +56,15 @@ class InfoController: UIViewController,ReceivedPlantProtocol,UITableViewDataSour
         
         let cell = tableView.dequeueReusableCellWithIdentifier("InfoPlantCell") as? InfoPlantCell
         
-        tableView.rowHeight = 60
+        tableView.rowHeight = 80
         
         if(redInfo.contains(category!)){
             cell?.categoryTitleLabel.textColor = UIColor.redColor()
+        }else{
+            cell?.categoryTitleLabel.textColor = UIColor.blackColor()
         }
-        cell?.categoryTitleLabel.text = category
         
+        cell?.categoryTitleLabel.text = category
         cell?.plantDetailLabel.text = info
         
         return cell!

@@ -34,7 +34,7 @@ class SubViewController: UIViewController, ReceivedPlantProtocol {
         
         // Sample customization
         swiftPagesView.setTopBarBackground(UIColor.clearColor())
-        swiftPagesView.setAnimatedBarColor(self.view.tintColor)
+        swiftPagesView.setAnimatedBarColor(UIColor.hex("#2ea75f", alpha: 1.0))
         swiftPagesView.initializeWithVCsInstanciatedArrayAndButtonTitlesArray(VCsInstanciated, buttonTitlesArray: ["Info","Photos"])
     }
     

@@ -57,9 +57,9 @@ class SendIndentificationController: UIViewController, UITextFieldDelegate {
     
     // MARK: - HUD
     private func showLoadingHUD() {
+        
         let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         hud.labelText = "Sending..."
-        hud.yOffset = 30.0
     }
     
     private func hideLoadingHUD() {

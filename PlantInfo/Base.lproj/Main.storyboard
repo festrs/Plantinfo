@@ -27,22 +27,22 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7lH-8m-WZv" id="R3P-8V-BRX">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DDa-CS-Zd9">
-                                                    <rect key="frame" x="73" y="12" width="32" height="20"/>
+                                                    <rect key="frame" x="74" y="12" width="31.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="n12899752_5266.JPEG" id="6C4-eU-lPH">
-                                                    <rect key="frame" x="15" y="0.0" width="43" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="44" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YkR-in-fqX">
-                                                    <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                                    <rect key="frame" x="543.5" y="12" width="41.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -96,8 +96,8 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="unl-zz-Odm"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melhores Resultados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5Q-JG-8no">
-                                <rect key="frame" x="10" y="273" width="160" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5Q-JG-8no">
+                                <rect key="frame" x="10" y="273" width="90" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="1fo-ks-owv"/>
                                 </constraints>
@@ -130,7 +130,7 @@
                             <button opaque="NO" clipsSubviews="YES" tag="52" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nm3-DF-WvY">
                                 <rect key="frame" x="0.0" y="465" width="199" height="135"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="135" id="2aD-BW-OOL"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="135" id="2aD-BW-OOL"/>
                                 </constraints>
                                 <state key="normal" image="n12899752_5266.JPEG"/>
                                 <connections>
@@ -148,7 +148,8 @@
                             <button opaque="NO" clipsSubviews="YES" tag="50" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAZ-Uq-QIf">
                                 <rect key="frame" x="0.0" y="308" width="299" height="155"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="155" id="5ab-3w-Zk7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="2eT-Qw-5va"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="155" id="5ab-3w-Zk7"/>
                                 </constraints>
                                 <state key="normal" image="n12899752_5266.JPEG"/>
                                 <connections>
@@ -315,28 +316,30 @@
                         <viewControllerLayoutGuide type="bottom" id="kpu-bC-hP2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9dv-FQ-uND">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="n12899752_5266.JPEG" translatesAutoresizingMaskIntoConstraints="NO" id="qII-gf-WIp">
-                                <rect key="frame" x="0.0" y="64" width="552" height="157"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="157"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="80" y="57" width="240" height="128"/>
                                 </variation>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ly1-h8-e6W">
-                                <rect key="frame" x="0.0" y="222" width="600" height="378"/>
+                                <rect key="frame" x="0.0" y="222" width="600" height="427"/>
+                                <color key="tintColor" red="0.18039215689999999" green="0.65490196079999996" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="r0R-UZ-2nc" kind="embed" identifier="ToContainerInfoAndPhotos" id="AgA-AQ-gda"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cK-Fq-VcL">
-                                <rect key="frame" x="554" y="191" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cK-Fq-VcL">
+                                <rect key="frame" x="554" y="184" width="46" height="37"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7ao-U9-8bE"/>
                                     <constraint firstAttribute="width" constant="46" id="H02-A9-3qC"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="chat"/>
+                                <state key="normal" image="75E71538-9046-432D-9671-DD4F4FE41054"/>
                                 <connections>
                                     <action selector="openModal:" destination="0X7-K8-mcc" eventType="touchUpInside" id="d8T-i0-zbC"/>
                                 </connections>
@@ -345,7 +348,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="ly1-h8-e6W" secondAttribute="bottom" constant="-49" id="Jdt-kH-Jv7"/>
-                            <constraint firstItem="2cK-Fq-VcL" firstAttribute="leading" secondItem="qII-gf-WIp" secondAttribute="trailing" constant="2" id="MPr-7n-ooG"/>
+                            <constraint firstItem="2cK-Fq-VcL" firstAttribute="leading" secondItem="qII-gf-WIp" secondAttribute="trailing" constant="-46" id="MPr-7n-ooG"/>
                             <constraint firstItem="2cK-Fq-VcL" firstAttribute="trailing" secondItem="ly1-h8-e6W" secondAttribute="trailing" id="MYd-4d-fbj"/>
                             <constraint firstItem="2cK-Fq-VcL" firstAttribute="top" secondItem="man-s6-FdJ" secondAttribute="bottom" constant="127" id="RYD-Rz-xbj"/>
                             <constraint firstItem="qII-gf-WIp" firstAttribute="leading" secondItem="ly1-h8-e6W" secondAttribute="leading" id="SC5-3X-lxu"/>
@@ -384,12 +387,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="24z-qi-Wak">
-                                <rect key="frame" x="122" y="80" width="356" height="391"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="24z-qi-Wak">
+                                <rect key="frame" x="20" y="72" width="560" height="459"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="356" id="gQI-GL-9CV"/>
-                                </constraints>
+                                <color key="tintColor" red="0.18039215689999999" green="0.65490196079999996" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Mussum Ipsum, cacilds vidis litro abertis. A ordem dos tratores não altera o pão duris Manduma pindureta quium dia nois paga. Quem num gosta di mé, boa gente num é. Mé faiz elementum girarzis, nisi eros vermeio.
 
 Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Si num tem leite então bota uma pinga aí cumpadi! undefined  http://plantinfo.herokuapp.com/index.html#/plants</string>
@@ -400,9 +401,10 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="24z-qi-Wak" firstAttribute="centerX" secondItem="w9c-aZ-7Ml" secondAttribute="centerX" id="5dU-2U-nX8"/>
-                            <constraint firstItem="24z-qi-Wak" firstAttribute="centerY" secondItem="w9c-aZ-7Ml" secondAttribute="centerY" id="bnP-o8-sd9"/>
-                            <constraint firstItem="24z-qi-Wak" firstAttribute="top" secondItem="FBN-qC-Mta" secondAttribute="bottom" constant="16" id="uxs-gK-E7u"/>
+                            <constraint firstItem="24z-qi-Wak" firstAttribute="trailing" secondItem="w9c-aZ-7Ml" secondAttribute="trailingMargin" id="4jM-vv-aDV"/>
+                            <constraint firstItem="24z-qi-Wak" firstAttribute="top" secondItem="FBN-qC-Mta" secondAttribute="bottom" constant="8" id="BzQ-hi-iNm"/>
+                            <constraint firstItem="24z-qi-Wak" firstAttribute="leading" secondItem="w9c-aZ-7Ml" secondAttribute="leadingMargin" id="Fvb-Wg-dOa"/>
+                            <constraint firstItem="CnD-yF-acM" firstAttribute="top" secondItem="24z-qi-Wak" secondAttribute="bottom" constant="20" id="bzJ-ze-9ca"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Info" id="NGC-7n-L0U"/>
@@ -442,7 +444,11 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="q7Q-D3-5b7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="1" green="0.57452380489999999" blue="0.085381463130000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.1803921568627451" green="0.65490196078431373" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="HDx-E6-zZW" kind="relationship" relationship="viewControllers" id="mYl-Hg-j4V"/>
@@ -463,6 +469,7 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8oU-wD-Iq2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.1803921568627451" green="0.65490196078431373" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -482,6 +489,7 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UL2-q9-BfP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.18039215689999999" green="0.65490196079999996" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -501,6 +509,7 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="v2l-Jh-fQ3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.18039215689999999" green="0.65490196079999996" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -523,14 +532,8 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Positiva ou negativamente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxH-UJ-jZC">
-                                <rect key="frame" x="77" y="201" width="201" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otB-RT-6lb">
-                                <rect key="frame" x="525" y="196" width="55" height="30"/>
+                                <rect key="frame" x="525" y="234" width="55" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="4O0-4W-rmS"/>
                                 </constraints>
@@ -553,6 +556,17 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
                                     <action selector="dismissClick:" destination="5Pr-F5-BeR" eventType="touchUpInside" id="PUb-dg-Yv1"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJ1-dm-FgP" customClass="M13Checkbox" customModule="M13Checkbox">
+                                <rect key="frame" x="20" y="195" width="32" height="32"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="2aH-N4-jrE"/>
+                                    <constraint firstAttribute="width" constant="32" id="l4r-K3-6kl"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="_IBStateChangeAnimation" value="Fill"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDV-fb-eSq">
                                 <rect key="frame" x="20" y="87" width="560" height="84"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -566,29 +580,36 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
                                     <outlet property="delegate" destination="5Pr-F5-BeR" id="KTR-HF-xnb"/>
                                 </connections>
                             </textView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJ1-dm-FgP" customClass="M13Checkbox" customModule="M13Checkbox">
-                                <rect key="frame" x="20" y="195" width="32" height="32"/>
-                                <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="_IBStateChangeAnimation" value="Fill"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MX-hP-jX7">
+                                <rect key="frame" x="263" y="44" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check if you agree with the identification." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="gxH-UJ-jZC">
+                                <rect key="frame" x="60" y="200" width="317" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.18039215689999999" green="0.65490196079999996" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="gxH-UJ-jZC" firstAttribute="leading" secondItem="NZR-ib-XOQ" secondAttribute="leading" constant="77" id="2Ex-WG-62y"/>
-                            <constraint firstItem="BDV-fb-eSq" firstAttribute="leading" secondItem="sJ1-dm-FgP" secondAttribute="leading" id="Acb-VR-n8W"/>
-                            <constraint firstItem="gxH-UJ-jZC" firstAttribute="leading" secondItem="sJ1-dm-FgP" secondAttribute="trailing" constant="25" id="EXX-aF-40E"/>
+                            <constraint firstItem="3MX-hP-jX7" firstAttribute="centerY" secondItem="Haj-EZ-Nte" secondAttribute="centerY" id="9Hd-nD-Vkf"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="gxH-UJ-jZC" secondAttribute="trailing" constant="205" id="DUt-pi-a16"/>
                             <constraint firstItem="BDV-fb-eSq" firstAttribute="trailing" secondItem="NZR-ib-XOQ" secondAttribute="trailingMargin" id="Eub-Wx-Mge"/>
-                            <constraint firstItem="gxH-UJ-jZC" firstAttribute="centerY" secondItem="otB-RT-6lb" secondAttribute="centerY" id="HJD-yu-wvG"/>
-                            <constraint firstItem="otB-RT-6lb" firstAttribute="top" secondItem="BDV-fb-eSq" secondAttribute="bottom" constant="25" id="V75-CB-1i8"/>
+                            <constraint firstItem="otB-RT-6lb" firstAttribute="top" secondItem="BDV-fb-eSq" secondAttribute="bottom" constant="63" id="V75-CB-1i8"/>
+                            <constraint firstItem="gxH-UJ-jZC" firstAttribute="top" secondItem="BDV-fb-eSq" secondAttribute="bottom" constant="29" id="V8b-9H-pGw"/>
                             <constraint firstItem="BDV-fb-eSq" firstAttribute="trailing" secondItem="otB-RT-6lb" secondAttribute="trailing" id="Z9o-ci-fnc"/>
                             <constraint firstItem="BDV-fb-eSq" firstAttribute="top" secondItem="Haj-EZ-Nte" secondAttribute="bottom" constant="17" id="dC4-o8-R4b"/>
-                            <constraint firstItem="sJ1-dm-FgP" firstAttribute="centerY" secondItem="gxH-UJ-jZC" secondAttribute="centerY" id="hIW-1e-jYu"/>
-                            <constraint firstItem="sJ1-dm-FgP" firstAttribute="top" secondItem="BDV-fb-eSq" secondAttribute="bottom" constant="24" id="mRS-ln-bs4"/>
+                            <constraint firstItem="3MX-hP-jX7" firstAttribute="centerX" secondItem="BDV-fb-eSq" secondAttribute="centerX" id="hnz-MS-5V6"/>
                             <constraint firstItem="Haj-EZ-Nte" firstAttribute="leading" secondItem="NZR-ib-XOQ" secondAttribute="leadingMargin" constant="-5" id="mXi-F2-wky"/>
+                            <constraint firstItem="gxH-UJ-jZC" firstAttribute="leading" secondItem="sJ1-dm-FgP" secondAttribute="trailing" constant="8" id="ngs-4P-vvy"/>
                             <constraint firstItem="Haj-EZ-Nte" firstAttribute="top" secondItem="HK0-U3-Ox1" secondAttribute="bottom" constant="20" id="pOe-gh-irM"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="sJ1-dm-FgP" secondAttribute="leading" id="qud-ZV-143"/>
                             <constraint firstItem="BDV-fb-eSq" firstAttribute="leading" secondItem="NZR-ib-XOQ" secondAttribute="leadingMargin" id="rj1-FU-K2a"/>
+                            <constraint firstItem="sJ1-dm-FgP" firstAttribute="top" secondItem="BDV-fb-eSq" secondAttribute="bottom" constant="24" id="wTu-fj-WPN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Modal" id="uuv-8B-alM">
@@ -686,11 +707,11 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
                         <viewControllerLayoutGuide type="bottom" id="aiC-vH-o5P"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ceo-c2-z4g">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="378"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="427"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJd-bQ-bq6" customClass="SwiftPages" customModule="PlantInfo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="378"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="427"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -710,10 +731,10 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
             </objects>
             <point key="canvasLocation" x="3845" y="840"/>
         </scene>
-        <!--Info Controller-->
+        <!--Info Table View Controller-->
         <scene sceneID="x3h-mv-IL5">
             <objects>
-                <viewController restorationIdentifier="InfoController" storyboardIdentifier="InfoController" id="3XB-JL-dLW" customClass="InfoController" customModule="PlantInfo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="InfoController" storyboardIdentifier="InfoController" id="3XB-JL-dLW" customClass="InfoTableViewController" customModule="PlantInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LhE-Fb-UbI"/>
                         <viewControllerLayoutGuide type="bottom" id="lYy-gl-GlK"/>
@@ -726,35 +747,42 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="InfoPlantCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InfoPlantCell" rowHeight="60" id="HGR-vX-PSw" customClass="InfoPlantCell" customModule="PlantInfo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="InfoPlantCell" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InfoPlantCell" rowHeight="80" id="HGR-vX-PSw" customClass="InfoPlantCell" customModule="PlantInfo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HGR-vX-PSw" id="OF1-li-itr">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent Em pé sem cair, deitado sem" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Vcx-HU-Ex8">
-                                                    <rect key="frame" x="8" y="19" width="573" height="32"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent Em pé sem cair, deitado sem" textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="none" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Vcx-HU-Ex8">
+                                                    <rect key="frame" x="8" y="33" width="581" height="38"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name should work" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sh-Yr-6zk">
-                                                    <rect key="frame" x="5" y="0.0" width="584" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <rect key="frame" x="8" y="0.0" width="581" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Vcx-HU-Ex8" firstAttribute="leading" secondItem="OF1-li-itr" secondAttribute="leadingMargin" id="1ry-rO-F5O"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="0Sh-Yr-6zk" secondAttribute="bottom" constant="32" id="NIp-Cc-Gfn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0Sh-Yr-6zk" secondAttribute="bottom" constant="48" id="NIp-Cc-Gfn"/>
                                                 <constraint firstItem="0Sh-Yr-6zk" firstAttribute="top" secondItem="OF1-li-itr" secondAttribute="top" id="QaR-ly-m3I"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Vcx-HU-Ex8" secondAttribute="trailing" constant="11" id="gtH-vj-awm"/>
-                                                <constraint firstItem="0Sh-Yr-6zk" firstAttribute="leading" secondItem="OF1-li-itr" secondAttribute="leadingMargin" constant="-3" id="kZb-14-daq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Vcx-HU-Ex8" secondAttribute="trailing" constant="3" id="gtH-vj-awm"/>
+                                                <constraint firstItem="0Sh-Yr-6zk" firstAttribute="leading" secondItem="OF1-li-itr" secondAttribute="leadingMargin" id="kZb-14-daq"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="0Sh-Yr-6zk" secondAttribute="trailing" constant="3" id="srr-5O-1Om"/>
+                                                <constraint firstItem="Vcx-HU-Ex8" firstAttribute="top" secondItem="0Sh-Yr-6zk" secondAttribute="bottom" constant="9" id="tov-hc-nuJ"/>
                                                 <constraint firstItem="Vcx-HU-Ex8" firstAttribute="bottom" secondItem="OF1-li-itr" secondAttribute="bottomMargin" constant="-1" id="yAH-1G-wG0"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="yAH-1G-wG0"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="categoryTitleLabel" destination="0Sh-Yr-6zk" id="Ydj-XC-sIJ"/>
@@ -783,14 +811,132 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
         </scene>
     </scenes>
     <resources>
+        <image name="75E71538-9046-432D-9671-DD4F4FE41054" width="32" height="32">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
+GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
+c1dOU0NvbG9ygAKADRIgwAAAgAOAC1h7MzIsIDMyfdIVChYYWk5TLm9iamVjdHOhF4AEgArSFQoaHaIb
+HIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPERieTU0AKgAAEAgAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQAAAF0AAACLAAAAtAAAAMAAAADAAAAA
+wAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAACsAAAAeAAAAEMAAAAJAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAGwAAADnAAAAvgAAAIQAAABhAAAA
+WAAAAFgAAABYAAAAWAAAAFgAAABYAAAAWAAAAFgAAABYAAAAWAAAAGsAAACeAAAA1AAAAN0AAAA/AAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAACbAAAA0QAAADYAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+XQAAAO0AAACGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAigAAAMYAAAAQAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAHAAAAOQAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEAAADxAAAA
+HgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARwAAAOcAAAASAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA
+owAAAMUAAABoAAAAaAAAAGgAAABoAAAAaAAAAGgAAABoAAAAaAAAAGgAAABoAAAAWwAAADAAAAAIAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApwAAAHQAAAAAAAAAAAAAAAAAAAAZAAAA
+iAAAAOcAAADWAAAArgAAAKgAAACoAAAAqAAAAKgAAACoAAAAqAAAAKgAAACoAAAAqAAAAKgAAAC2AAAA
+5wAAAPwAAACfAAAAFwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkAAAAqQAAAAAAAAAAAAAA
+LgAAAOMAAACbAAAAMQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAGwAAAJcAAADwAAAAUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADEAAADdAAAA
+AAAAADMAAADtAAAAYQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEYAAADoAAAAPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+EAAAAP8AAAABAAAAyQAAAG4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFwAAADtAAAAEQAAAAAAAAAAAAAA
+AAAAAAAAAAAQAAAA/wAAAFwAAADUAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALAAAABsAAAA
+AAAAAAAAAAAAAAAAAAAAABAAAAD/AAAAqAAAAGkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+VAAAAM8AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAP8AAADUAAAAOwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAqAAAA/QAAAP8AAAD/AAAA/wAAAP8AAAD/AAAARwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAhAAAA/wAAAAcAAAAAAAAAAAAAAAAAAAAQAAAA/wAAAPsAAAAUAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAOAAAAEAAAABAAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAD1AAAAHQAAAAAAAAAAAAAAAAAAABAAAAD/AAAA/wAAABAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAgAAAAAAAAAAAAAAAAAAAAHgAAAPAAAAD/AAAA
+EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKgAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAA
+QAAAAEAAAAAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AAAACAAAAAAAAAAAAAAAAAAAABKAAAA
+xAAAAP8AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAEAAACtAAAA0AAAANAAAADQAAAA0AAAANAAAADQAAAA
+0AAAANAAAADQAAAA0AAAAL8AAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAAIAAAAAAAAAAAAAAA
+AAAAAIoAAACUAAAA/wAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAgAAAA
+AAAAAAAAAAAWAAAA7wAAACgAAAD/AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+8AAAACAAAAAAAAAABQAAALAAAACSAAAAAAAAAPoAAAAVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABrAAAA
+iAAAAIgAAACIAAAAiAAAAIgAAACIAAAAiAAAAIgAAACIAAAAiAAAAHgAAAAEAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAADxAAAAHgAAAA8AAAC1AAAAvQAAAA0AAAAAAAAAzQAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAGsAAACIAAAAiAAAAIgAAACIAAAAiAAAAIgAAACIAAAAiAAAAIgAAACIAAAAeAAAAAQAAAAAAAAA
+AAAAAAAAAAAAAAAACQAAAP4AAACMAAAA7wAAAKMAAAAGAAAAAAAAAAAAAACaAAAAcwAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAA+AAAA9wAAAJsAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAFYAAADTAAAA
+BQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALEAAAB6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAALwAAAB+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAAAA6wAAAAwAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAIgAAAO8AAABlAAAAAAAAAAAAAAAAAAAASgAAAEoAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANAAAAOwAAABPAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAANgAAACoAAAAKgAAAAAAAACIAAAAiAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAIYAAADwAAAAVwAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAAJEAAADnAAAA4wAAANoAAACIAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAANgAAAGgAAACSAAAApAAAAM8AAAD4AAAArQAAACcAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtAAAA
+tAAAAIgAAAAAAAAAAAAAAAUAAAB9AAAA0wAAAPkAAADXAAAApwAAAH0AAABsAAAARAAAABkAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACIAAAAiAAAAAAAAAAwAAAA0AAAALwAAAA6AAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAIgAAACNAAAAgAAAAO4AAABpAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhwAAAPkAAADEAAAAIQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvAAAAmAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAA4BAAADAAAAAQAgAAABAQADAAAAAQAgAAABAgADAAAABAAAELYBAwADAAAAAQABAAAB
+BgADAAAAAQACAAABEQAEAAAAAQAAAAgBEgADAAAAAQABAAABFQADAAAAAQAEAAABFgADAAAAAQAgAAAB
+FwAEAAAAAQAAEAABHAADAAAAAQABAAABUgADAAAAAQABAAABUwADAAAABAAAEL6HcwAHAAAH2AAAEMYA
+AAAAAAgACAAIAAgAAQABAAEAAQAAB9hhcHBsAiAAAG1udHJSR0IgWFlaIAfZAAIAGQALABoAC2Fjc3BB
+UFBMAAAAAGFwcGwAAAAAAAAAAAAAAAAAAAAAAAD21gABAAAAANMtYXBwbAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC2Rlc2MAAAEIAAAAb2RzY20AAAF4AAAFnGNwcnQA
+AAcUAAAAOHd0cHQAAAdMAAAAFHJYWVoAAAdgAAAAFGdYWVoAAAd0AAAAFGJYWVoAAAeIAAAAFHJUUkMA
+AAecAAAADmNoYWQAAAesAAAALGJUUkMAAAecAAAADmdUUkMAAAecAAAADmRlc2MAAAAAAAAAFEdlbmVy
+aWMgUkdCIFByb2ZpbGUAAAAAAAAAAAAAABRHZW5lcmljIFJHQiBQcm9maWxlAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtbHVjAAAAAAAAAB8AAAAMc2tTSwAAACgA
+AAGEZGFESwAAAC4AAAGsY2FFUwAAACQAAAHadmlWTgAAACQAAAH+cHRCUgAAACYAAAIidWtVQQAAACoA
+AAJIZnJGVQAAACgAAAJyaHVIVQAAACgAAAKaemhUVwAAABYAAALCbmJOTwAAACYAAALYY3NDWgAAACIA
+AAL+aGVJTAAAAB4AAAMgaXRJVAAAACgAAAM+cm9STwAAACQAAANmZGVERQAAACwAAAOKa29LUgAAABYA
+AAO2c3ZTRQAAACYAAALYemhDTgAAABYAAAPMamFKUAAAABoAAAPiZWxHUgAAACIAAAP8cHRQTwAAACYA
+AAQebmxOTAAAACgAAAREZXNFUwAAACYAAAQedGhUSAAAACQAAARsdHJUUgAAACIAAASQZmlGSQAAACgA
+AASyaHJIUgAAACgAAATacGxQTAAAACwAAAUCcnVSVQAAACIAAAUuYXJFRwAAACYAAAVQZW5VUwAAACYA
+AAV2AFYBYQBlAG8AYgBlAGMAbgD9ACAAUgBHAEIAIABwAHIAbwBmAGkAbABHAGUAbgBlAHIAZQBsACAA
+UgBHAEIALQBiAGUAcwBrAHIAaQB2AGUAbABzAGUAUABlAHIAZgBpAGwAIABSAEcAQgAgAGcAZQBuAOgA
+cgBpAGMAQx6lAHUAIABoAOwAbgBoACAAUgBHAEIAIABDAGgAdQBuAGcAUABlAHIAZgBpAGwAIABSAEcA
+QgAgAEcAZQBuAOkAcgBpAGMAbwQXBDAEMwQwBDsETAQ9BDgEOQAgBD8EQAQ+BEQEMAQ5BDsAIABSAEcA
+QgBQAHIAbwBmAGkAbAAgAGcA6QBuAOkAcgBpAHEAdQBlACAAUgBWAEIAwQBsAHQAYQBsAOEAbgBvAHMA
+IABSAEcAQgAgAHAAcgBvAGYAaQBskBp1KAAgAFIARwBCACCCcl9pY8+P8ABHAGUAbgBlAHIAaQBzAGsA
+IABSAEcAQgAtAHAAcgBvAGYAaQBsAE8AYgBlAGMAbgD9ACAAUgBHAEIAIABwAHIAbwBmAGkAbAXkBegF
+1QXkBdkF3AAgAFIARwBCACAF2wXcBdwF2QBQAHIAbwBmAGkAbABvACAAUgBHAEIAIABnAGUAbgBlAHIA
+aQBjAG8AUAByAG8AZgBpAGwAIABSAEcAQgAgAGcAZQBuAGUAcgBpAGMAQQBsAGwAZwBlAG0AZQBpAG4A
+ZQBzACAAUgBHAEIALQBQAHIAbwBmAGkAbMd8vBgAIABSAEcAQgAg1QS4XNMMx3xmbpAaACAAUgBHAEIA
+IGPPj/Blh072TgCCLAAgAFIARwBCACAw1zDtMNUwoTCkMOsDkwO1A70DuQO6A8wAIAPAA8EDvwPGA68D
+uwAgAFIARwBCAFAAZQByAGYAaQBsACAAUgBHAEIAIABnAGUAbgDpAHIAaQBjAG8AQQBsAGcAZQBtAGUA
+ZQBuACAAUgBHAEIALQBwAHIAbwBmAGkAZQBsDkIOGw4jDkQOHw4lDkwAIABSAEcAQgAgDhcOMQ5IDicO
+RA4bAEcAZQBuAGUAbAAgAFIARwBCACAAUAByAG8AZgBpAGwAaQBZAGwAZQBpAG4AZQBuACAAUgBHAEIA
+LQBwAHIAbwBmAGkAaQBsAGkARwBlAG4AZQByAGkBDQBrAGkAIABSAEcAQgAgAHAAcgBvAGYAaQBsAFUA
+bgBpAHcAZQByAHMAYQBsAG4AeQAgAHAAcgBvAGYAaQBsACAAUgBHAEIEHgQxBEkEOAQ5ACAEPwRABD4E
+RAQ4BDsETAAgAFIARwBCBkUGRAZBACAGKgY5BjEGSgZBACAAUgBHAEIAIAYnBkQGOQYnBkUARwBlAG4A
+ZQByAGkAYwAgAFIARwBCACAAUAByAG8AZgBpAGwAZXRleHQAAAAAQ29weXJpZ2h0IDIwMDcgQXBwbGUg
+SW5jLiwgYWxsIHJpZ2h0cyByZXNlcnZlZC4AWFlaIAAAAAAAAPNSAAEAAAABFs9YWVogAAAAAAAAdE0A
+AD3uAAAD0FhZWiAAAAAAAABadQAArHMAABc0WFlaIAAAAAAAACgaAAAVnwAAuDZjdXJ2AAAAAAAAAAEB
+zQAAc2YzMgAAAAAAAQxCAAAF3v//8yYAAAeSAAD9kf//+6L///2jAAAD3AAAwGzSJSYnKFokY2xhc3Nu
+YW1lWCRjbGFzc2VzXxAQTlNCaXRtYXBJbWFnZVJlcKMnKSpaTlNJbWFnZVJlcFhOU09iamVjdNIlJiwt
+V05TQXJyYXmiLCrSJSYvMF5OU011dGFibGVBcnJheaMvLCrTMjMKNDU2V05TV2hpdGVcTlNDb2xvclNw
+YWNlRDAgMAAQA4AM0iUmODlXTlNDb2xvcqI4KtIlJjs8V05TSW1hZ2WiOypfEA9OU0tleWVkQXJjaGl2
+ZXLRP0BUcm9vdIABAAgAEQAaACMALQAyADcARgBMAFcAXgBlAHIAeQCBAIMAhQCKAIwAjgCXAJwApwCp
+AKsArQCyALUAtwC5ALsAvQDCANkA2wDdGX8ZhBmPGZgZqxmvGboZwxnIGdAZ0xnYGecZ6xnyGfoaBxoM
+Gg4aEBoVGh0aIBolGi0aMBpCGkUaSgAAAAAAAAIBAAAAAAAAAEEAAAAAAAAAAAAAAAAAABpMA
+</mutableData>
+        </image>
         <image name="cancel" width="32" height="32"/>
-        <image name="chat" width="32" height="32"/>
         <image name="information" width="32" height="32"/>
         <image name="list" width="32" height="32"/>
         <image name="n12899752_5266.JPEG" width="256" height="256"/>
         <image name="photo-camera" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nqG-Cm-h57"/>
+        <segue reference="XpS-lj-jxk"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -51,7 +51,7 @@ class SelectPlantController: UIViewController, FPHandlesIncomingObjects {
             //button?.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLink!)!, forState: .Normal)
             
             nameLabel?.text = plant.info?.scientificName
-            let probability = Double(listOfPredictions[index].probability)!
+            let probability = listOfPredictions[index].probability
             probLabel?.text = String(format: "%.0f", probability * 100) + "%"
             buttonXPlants[button!] = plant
         }
