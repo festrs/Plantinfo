@@ -12,6 +12,7 @@ import ReachabilitySwift
 
 class PhotosController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,ReceivedPlantProtocol {
     
+    @IBOutlet weak var collectionView: UICollectionView!
     private var plant:Plant!
     private let reuseIdentifier = "photoCell"
     @IBOutlet var photsCollection: UICollectionView!
@@ -26,6 +27,17 @@ class PhotosController: UIViewController,UICollectionViewDataSource,UICollection
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            let itemWidth = view.bounds.width / 2.0
+            let itemHeight = layout.itemSize.height
+            layout.itemSize = CGSize(width: itemWidth-7, height: itemHeight)
+            layout.invalidateLayout()
+        }
     }
     
     func receivePlant(plant: Plant) {
@@ -65,5 +77,6 @@ class PhotosController: UIViewController,UICollectionViewDataSource,UICollection
 class PhotosCellController : UICollectionViewCell{
     
     @IBOutlet weak var plantImageView: UIImageView!
+    
     
 }
