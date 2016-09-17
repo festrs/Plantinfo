@@ -95,6 +95,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-PlantInfo/M13Checkbox.framework"
   install_framework "Pods-PlantInfo/MBProgressHUD.framework"
   install_framework "Pods-PlantInfo/ObjectMapper.framework"
+  install_framework "Pods-PlantInfo/ReachabilitySwift.framework"
   install_framework "Pods-PlantInfo/TransitionAnimation.framework"
   install_framework "Pods-PlantInfo/TransitionTreasury.framework"
 fi
@@ -110,6 +111,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-PlantInfo/M13Checkbox.framework"
   install_framework "Pods-PlantInfo/MBProgressHUD.framework"
   install_framework "Pods-PlantInfo/ObjectMapper.framework"
+  install_framework "Pods-PlantInfo/ReachabilitySwift.framework"
   install_framework "Pods-PlantInfo/TransitionAnimation.framework"
   install_framework "Pods-PlantInfo/TransitionTreasury.framework"
 fi

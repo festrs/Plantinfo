@@ -64,6 +64,7 @@ UINavigationControllerDelegate {
             })
         }
         let plant = PlantCore.sharedInstance.getPlantByID(identificationObj.plant_ID!)
+        cell?.imageView?.image = UIImage(named: "default-placeholder")
         cell?.textLabel?.text = plant.info?.scientificName
         cell?.detailTextLabel?.text = NSDateFormatter.localizedStringFromDate(identificationObj.date!, dateStyle: .ShortStyle, timeStyle: .NoStyle)
         return cell!

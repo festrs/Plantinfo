@@ -33,6 +33,7 @@ class PhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePic
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBarHidden = false
+        self.resetAssets()
     }
     
     // MARK: - HUD

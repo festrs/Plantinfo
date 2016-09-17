@@ -42,6 +42,18 @@ extension CGFloat {
     }
 }
 
+extension UIImage {
+    
+    func imageWithAlpha(alpha: CGFloat) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        drawAtPoint(CGPointZero, blendMode: .Normal, alpha: alpha)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    
+}
+
 extension UIColor {
     static func randomColor() -> UIColor {
         let r = CGFloat.random()

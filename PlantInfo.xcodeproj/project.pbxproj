@@ -125,6 +125,7 @@
 		3A8626071D4D3C2C00214348 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8626061D4D3C2C00214348 /* Plant.swift */; };
 		3A8626091D4D3E3C00214348 /* PlantCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8626081D4D3E3C00214348 /* PlantCore.swift */; };
 		3A86260B1D4D4D4A00214348 /* PlantInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86260A1D4D4D4A00214348 /* PlantInfo.swift */; };
+		3A87ECEB1D8D91890053D10B /* InfoSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A87ECEA1D8D91890053D10B /* InfoSceneViewController.swift */; };
 		3A8CB13B1D59625A0097AE0F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8CB13A1D59625A0097AE0F /* TabBarController.swift */; };
 		3A8CB13D1D5A83280097AE0F /* ImageViewWithGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8CB13C1D5A83280097AE0F /* ImageViewWithGradient.swift */; };
 		3A8CB13F1D5AAC870097AE0F /* CreateIdentificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8CB13E1D5AAC870097AE0F /* CreateIdentificationController.swift */; };
@@ -375,6 +376,7 @@
 		3A8626061D4D3C2C00214348 /* Plant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		3A8626081D4D3E3C00214348 /* PlantCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantCore.swift; sourceTree = "<group>"; };
 		3A86260A1D4D4D4A00214348 /* PlantInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantInfo.swift; sourceTree = "<group>"; };
+		3A87ECEA1D8D91890053D10B /* InfoSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSceneViewController.swift; sourceTree = "<group>"; };
 		3A8CB13A1D59625A0097AE0F /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3A8CB13C1D5A83280097AE0F /* ImageViewWithGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewWithGradient.swift; sourceTree = "<group>"; };
 		3A8CB13E1D5AAC870097AE0F /* CreateIdentificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateIdentificationController.swift; sourceTree = "<group>"; };
@@ -528,6 +530,7 @@
 		3A54E3AF1D2C664D00A805EA /* PlantInfo */ = {
 			isa = PBXGroup;
 			children = (
+				3A87ECE91D8D91730053D10B /* Info */,
 				3A24A4841D48224C00BA685C /* CoreData */,
 				3A24A4821D481F1F00BA685C /* Naviagation */,
 				3A24A47B1D48178D00BA685C /* Utilities */,
@@ -831,6 +834,14 @@
 				3A09A6C51D738D7C0072ED56 /* Comment.swift */,
 			);
 			name = Objects;
+			sourceTree = "<group>";
+		};
+		3A87ECE91D8D91730053D10B /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				3A87ECEA1D8D91890053D10B /* InfoSceneViewController.swift */,
+			);
+			name = Info;
 			sourceTree = "<group>";
 		};
 		3ABED8ED1D87900D0069EFAD /* PlantInfoUITests */ = {
@@ -1143,6 +1154,7 @@
 				3A54FCB91D2CA3B500A805EA /* io.cpp in Sources */,
 				3A54FCB61D2CA3B500A805EA /* im2col.cpp in Sources */,
 				3A54FC631D2CA3B500A805EA /* cudnn_pooling_layer.cpp in Sources */,
+				3A87ECEB1D8D91890053D10B /* InfoSceneViewController.swift in Sources */,
 				3AF5E1A51D824FCB0042F8E2 /* PhotosController.swift in Sources */,
 				3A54FC811D2CA3B500A805EA /* im2col_layer.cpp in Sources */,
 				3A54FCAB1D2CA3B500A805EA /* tanh_layer.cpp in Sources */,

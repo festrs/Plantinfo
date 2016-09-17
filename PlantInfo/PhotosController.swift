@@ -8,12 +8,25 @@
 
 import UIKit
 import Kingfisher
+import ReachabilitySwift
 
 class PhotosController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,ReceivedPlantProtocol {
-
+    
     private var plant:Plant!
     private let reuseIdentifier = "photoCell"
     @IBOutlet var photsCollection: UICollectionView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
     
     func receivePlant(plant: Plant) {
         self.plant = plant
@@ -25,7 +38,7 @@ class PhotosController: UIViewController,UICollectionViewDataSource,UICollection
     }
     
     func collectionView(collectionView: UICollectionView,
-                                 numberOfItemsInSection section: Int) -> Int {
+                        numberOfItemsInSection section: Int) -> Int {
         return (plant.imageLinks?.count)!
     }
     
@@ -34,10 +47,10 @@ class PhotosController: UIViewController,UICollectionViewDataSource,UICollection
         UICollectionViewCell {
             
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier,
-            forIndexPath: indexPath) as! PhotosCellController
+                                                                             forIndexPath: indexPath) as! PhotosCellController
             
             // Configure the cell
-            cell.plantImageView.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLinks![indexPath.row])!, placeholderImage: nil, optionsInfo: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+            cell.plantImageView.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLinks![indexPath.row])!, placeholderImage: UIImage(named: "default-placeholder"), optionsInfo: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
                 
             }
             return cell
@@ -52,6 +65,5 @@ class PhotosController: UIViewController,UICollectionViewDataSource,UICollection
 class PhotosCellController : UICollectionViewCell{
     
     @IBOutlet weak var plantImageView: UIImageView!
-    
     
 }

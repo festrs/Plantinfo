@@ -16,6 +16,7 @@ target 'PlantInfo' do
     pod 'TransitionTreasury', '~> 3.0.4'
     pod 'TransitionAnimation', '~>3.0.4'
     pod 'M13Checkbox'
+    pod 'ReachabilitySwift'
 end
 
 target 'PlantInfoTests' do
