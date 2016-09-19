@@ -121,7 +121,6 @@
 		3A54FCDC1D2CAB1400A805EA /* libglog.a in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FCC21D2CA78600A805EA /* libglog.a */; };
 		3A54FCDD1D2CAB1400A805EA /* libprotobuf.a in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FCC31D2CA78600A805EA /* libprotobuf.a */; };
 		3A66518F1D46DFA500D6A6E5 /* models in Resources */ = {isa = PBXBuildFile; fileRef = 3A66518E1D46DFA500D6A6E5 /* models */; };
-		3A66519C1D46EEF700D6A6E5 /* n12899752_5266.JPEG in Resources */ = {isa = PBXBuildFile; fileRef = 3A66519B1D46EEF700D6A6E5 /* n12899752_5266.JPEG */; };
 		3A8626071D4D3C2C00214348 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8626061D4D3C2C00214348 /* Plant.swift */; };
 		3A8626091D4D3E3C00214348 /* PlantCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8626081D4D3E3C00214348 /* PlantCore.swift */; };
 		3A86260B1D4D4D4A00214348 /* PlantInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86260A1D4D4D4A00214348 /* PlantInfo.swift */; };
@@ -372,7 +371,6 @@
 		3A54FCC81D2CA7A000A805EA /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_core.a; path = caffe/ios/lib/libopencv_core.a; sourceTree = "<group>"; };
 		3A54FCC91D2CA7A000A805EA /* libzlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzlib.a; path = caffe/ios/lib/libzlib.a; sourceTree = "<group>"; };
 		3A66518E1D46DFA500D6A6E5 /* models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = models; sourceTree = SOURCE_ROOT; };
-		3A66519B1D46EEF700D6A6E5 /* n12899752_5266.JPEG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = n12899752_5266.JPEG; sourceTree = "<group>"; };
 		3A8626061D4D3C2C00214348 /* Plant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		3A8626081D4D3E3C00214348 /* PlantCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantCore.swift; sourceTree = "<group>"; };
 		3A86260A1D4D4D4A00214348 /* PlantInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantInfo.swift; sourceTree = "<group>"; };
@@ -543,7 +541,6 @@
 				3A54E3BC1D2C664D00A805EA /* LaunchScreen.storyboard */,
 				3A24A48C1D4C2DDB00BA685C /* plants.json */,
 				3A54E3BF1D2C664D00A805EA /* Info.plist */,
-				3A66519B1D46EEF700D6A6E5 /* n12899752_5266.JPEG */,
 				3A66518E1D46DFA500D6A6E5 /* models */,
 				3A54FA741D2CA36D00A805EA /* caffe */,
 				3A54FA4E1D2CA31300A805EA /* Include */,
@@ -999,7 +996,6 @@
 				3A66518F1D46DFA500D6A6E5 /* models in Resources */,
 				3A54FCD91D2CAA7300A805EA /* math_functions.cu in Resources */,
 				3A54FCD81D2CAA7000A805EA /* im2col.cu in Resources */,
-				3A66519C1D46EEF700D6A6E5 /* n12899752_5266.JPEG in Resources */,
 				3A54E3BE1D2C664D00A805EA /* LaunchScreen.storyboard in Resources */,
 				3A54E3BB1D2C664D00A805EA /* Assets.xcassets in Resources */,
 				3A54E3B61D2C664D00A805EA /* Main.storyboard in Resources */,
@@ -1409,6 +1405,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PlantInfo/PlantInfo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/caffe/include $(SRCROOT)/caffe/ios/include";
 			};
 			name = Debug;
@@ -1450,6 +1447,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PlantInfo/PlantInfo-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/caffe/include $(SRCROOT)/caffe/ios/include";
 			};
 			name = Release;

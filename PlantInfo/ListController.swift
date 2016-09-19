@@ -40,6 +40,7 @@ UINavigationControllerDelegate {
         self.fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: self.MOC, sectionNameKeyPath: nil, cacheName: "rootCache")
         self.performFetch()
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
+        self.tableView.rowHeight = 65
     }
     
     //MARK: Incoming object
@@ -53,21 +54,22 @@ UINavigationControllerDelegate {
         indexPath: NSIndexPath) -> UITableViewCell {
         let identificationObj = self.fetchedResultsController?.objectAtIndexPath(indexPath) as! Identifications
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("IdentificationCell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("IdentificationCell") as! ListCellController
         
         if let identifier = identificationObj.image_ID {
             CustomPhotoAlbum.sharedInstance.retrieveImageWithIdentifer(identifier, completion: { (image) -> Void in
                 dispatch_async(dispatch_get_main_queue(),{
-                    cell?.imageView?.image = image
-                    cell?.setNeedsLayout()
+                    cell.photoImageView.image = image
+                    cell.setNeedsLayout()
                 })
             })
         }
         let plant = PlantCore.sharedInstance.getPlantByID(identificationObj.plant_ID!)
-        cell?.imageView?.image = UIImage(named: "default-placeholder")
-        cell?.textLabel?.text = plant.info?.scientificName
-        cell?.detailTextLabel?.text = NSDateFormatter.localizedStringFromDate(identificationObj.date!, dateStyle: .ShortStyle, timeStyle: .NoStyle)
-        return cell!
+        cell.photoImageView.image = UIImage(named: "default-placeholder")
+        cell.titleLabel.text = plant.info?.scientificName
+        cell.detailLabel.text = NSDateFormatter.localizedStringFromDate(identificationObj.date!, dateStyle: .ShortStyle, timeStyle: .NoStyle)
+
+        return cell
     }
     
     // MARK: - Navigation
@@ -78,13 +80,25 @@ UINavigationControllerDelegate {
         
         if segue.identifier == SEGUE_IDENTIFIER,
             let vc = segue.destinationViewController as? CreateIdentificationController,
-            let cell = sender as? UITableViewCell{
+            let cell = sender as? ListCellController{
             let index = self.tableView.indexPathForCell(cell)
             let identificationObj = self.fetchedResultsController?.objectAtIndexPath(index!) as! Identifications
             vc.selectedPlant = PlantCore.sharedInstance.getPlantByID(identificationObj.plant_ID!)
-            vc.incomingImage = cell.imageView?.image
+            vc.incomingImage = cell.photoImageView?.image
             vc.imageIdentifier = identificationObj.image_ID
         }
+    }
+    
+}
+
+class ListCellController : UITableViewCell{
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
+    
+    override func layoutSubviews() {
+        self.photoImageView.layer.cornerRadius = self.photoImageView.frame.size.width / 2
+        self.photoImageView.clipsToBounds = true
     }
     
 }

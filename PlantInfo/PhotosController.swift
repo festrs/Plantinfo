@@ -32,7 +32,7 @@ class PhotosController: UIViewController,UICollectionViewDataSource,UICollection
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+        if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             let itemWidth = view.bounds.width / 2.0
             let itemHeight = layout.itemSize.height
             layout.itemSize = CGSize(width: itemWidth-7, height: itemHeight)

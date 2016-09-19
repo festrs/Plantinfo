@@ -10,6 +10,7 @@ import UIKit
 
 class InfoTableViewController: UIViewController,ReceivedPlantProtocol,UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
     var plant:Plant!
     var infoPlant = [String:AnyObject]()
     let redInfo = ["Poison Part:","Posion Delivery Mode:","Severity:","Symptoms:"]
@@ -34,6 +35,7 @@ class InfoTableViewController: UIViewController,ReceivedPlantProtocol,UITableVie
         infoPlant = self.plant.info.map({
             return $0.toJSON()
         })!
+        self.tableView.rowHeight = 80
     }
     
     func receivePlant(plant: Plant) {
@@ -55,8 +57,6 @@ class InfoTableViewController: UIViewController,ReceivedPlantProtocol,UITableVie
         let info = infoPlant[key] as? String
         
         let cell = tableView.dequeueReusableCellWithIdentifier("InfoPlantCell") as? InfoPlantCell
-        
-        tableView.rowHeight = 80
         
         if(redInfo.contains(category!)){
             cell?.categoryTitleLabel.textColor = UIColor.redColor()
