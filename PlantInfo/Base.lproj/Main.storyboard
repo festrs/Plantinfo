@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QdW-hj-c2Z">
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QdW-hj-c2Z">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -31,8 +31,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EP7-KN-AOZ">
-                                                    <rect key="frame" x="550" y="22" width="42" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <rect key="frame" x="553" y="24" width="39" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -43,8 +43,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfN-bm-BG6">
-                                                    <rect key="frame" x="61" y="22" width="32" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <rect key="frame" x="61" y="22" width="34" height="20"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -90,7 +90,7 @@
             </objects>
             <point key="canvasLocation" x="1839" y="183"/>
         </scene>
-        <!--Resultado-->
+        <!--Results-->
         <scene sceneID="GHq-Ik-N8T">
             <objects>
                 <viewController id="56j-hN-owe" customClass="SelectPlantController" customModule="PlantInfo" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,7 +163,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="2eT-Qw-5va"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="155" id="5ab-3w-Zk7"/>
                                 </constraints>
-                                <state key="normal" image="default-placeholder"/>
+                                <state key="normal" image="n12056601_3450.png"/>
                                 <connections>
                                     <action selector="buttonTap:" destination="56j-hN-owe" eventType="touchUpInside" id="bzY-qd-pnP"/>
                                 </connections>
@@ -303,7 +303,7 @@
                             <constraint firstItem="rhZ-qc-6S5" firstAttribute="leading" secondItem="TAZ-Uq-QIf" secondAttribute="trailing" constant="8" symbolic="YES" id="yFd-PG-roE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Resultado" id="dvj-pw-fce"/>
+                    <navigationItem key="navigationItem" title="Results" id="dvj-pw-fce"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="pickedImageView" destination="kzz-eZ-Owx" id="Eu1-fH-haT"/>
@@ -328,7 +328,7 @@
                         <viewControllerLayoutGuide type="bottom" id="kpu-bC-hP2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9dv-FQ-uND">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="qII-gf-WIp">
@@ -338,7 +338,7 @@
                                 </variation>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ly1-h8-e6W">
-                                <rect key="frame" x="0.0" y="222" width="600" height="378"/>
+                                <rect key="frame" x="0.0" y="222" width="600" height="427"/>
                                 <color key="tintColor" red="0.18039215689999999" green="0.65490196079999996" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="r0R-UZ-2nc" kind="embed" identifier="ToContainerInfoAndPhotos" id="AgA-AQ-gda"/>
@@ -385,13 +385,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="24z-qi-Wak">
-                                <rect key="frame" x="20" y="72" width="560" height="459"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="24z-qi-Wak">
+                                <rect key="frame" x="20" y="0.0" width="560" height="543"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.18039215689999999" green="0.65490196079999996" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Mussum Ipsum, cacilds vidis litro abertis. A ordem dos tratores não altera o pão duris Manduma pindureta quium dia nois paga. Quem num gosta di mé, boa gente num é. Mé faiz elementum girarzis, nisi eros vermeio.
+                                <mutableString key="text"> We developed this app to help you learn more about a certain group of plants: the toxic or poisonous ones. To do so they trained a deep neural network to recognize images of 192 different species of poisonous or toxics plants.
 
-Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Si num tem leite então bota uma pinga aí cumpadi! undefined  http://plantinfo.herokuapp.com/index.html#/plants</string>
+But how it works? Is simple as take pictures, you simple take a picture of a plant then the algorithm will do the rest, for final, the app will show the top 5 possible species and you choose one then, also you can save the identification.
+
+You can find more about this app and the 192 plants list in the web site http://plantinfo.herokuapp.com/index.html</mutableString>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -400,9 +402,9 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="24z-qi-Wak" firstAttribute="trailing" secondItem="w9c-aZ-7Ml" secondAttribute="trailingMargin" id="4jM-vv-aDV"/>
-                            <constraint firstItem="24z-qi-Wak" firstAttribute="top" secondItem="FBN-qC-Mta" secondAttribute="bottom" constant="8" id="BzQ-hi-iNm"/>
+                            <constraint firstItem="24z-qi-Wak" firstAttribute="top" secondItem="FBN-qC-Mta" secondAttribute="bottom" constant="-64" id="BzQ-hi-iNm"/>
                             <constraint firstItem="24z-qi-Wak" firstAttribute="leading" secondItem="w9c-aZ-7Ml" secondAttribute="leadingMargin" id="Fvb-Wg-dOa"/>
-                            <constraint firstItem="CnD-yF-acM" firstAttribute="top" secondItem="24z-qi-Wak" secondAttribute="bottom" constant="20" id="bzJ-ze-9ca"/>
+                            <constraint firstItem="CnD-yF-acM" firstAttribute="top" secondItem="24z-qi-Wak" secondAttribute="bottom" constant="8" id="bzJ-ze-9ca"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Info" id="NGC-7n-L0U"/>
@@ -502,7 +504,7 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
         <scene sceneID="Ah2-p8-fgn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jaX-6c-Pb5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Info" image="information" id="1F0-eT-1LE"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="information-button" id="1F0-eT-1LE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="v2l-Jh-fQ3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -683,11 +685,11 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
                         <viewControllerLayoutGuide type="bottom" id="aiC-vH-o5P"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ceo-c2-z4g">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="378"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="427"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJd-bQ-bq6" customClass="SwiftPages" customModule="PlantInfo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="378"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="427"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -791,11 +793,12 @@ Diuretics paradis num copo é motivis de denguis. Admodum accumsan disputationi 
     <resources>
         <image name="cancel" width="32" height="32"/>
         <image name="default-placeholder" width="1500" height="1500"/>
-        <image name="information" width="32" height="32"/>
-        <image name="list" width="32" height="32"/>
-        <image name="photo-camera" width="32" height="32"/>
+        <image name="information-button" width="29" height="29"/>
+        <image name="list" width="29" height="29"/>
+        <image name="n12056601_3450.png" width="256" height="256"/>
+        <image name="photo-camera" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nqG-Cm-h57"/>
+        <segue reference="XpS-lj-jxk"/>
     </inferredMetricsTieBreakers>
 </document>

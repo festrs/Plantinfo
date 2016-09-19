@@ -9,8 +9,7 @@
 import UIKit
 import CoreData
 
-class ListController: CoreDataTableViewController, FPHandlesIncomingObjects, UIImagePickerControllerDelegate,
-UINavigationControllerDelegate {
+class ListController: CoreDataTableViewController, FPHandlesIncomingObjects {
     
     //MARK: - Variables
     @IBOutlet weak var tableView: UITableView!
@@ -41,6 +40,8 @@ UINavigationControllerDelegate {
         self.performFetch()
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
         self.tableView.rowHeight = 65
+        self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "info-background")!)
+        self.tableView.allowsMultipleSelectionDuringEditing = false
     }
     
     //MARK: Incoming object
@@ -68,8 +69,25 @@ UINavigationControllerDelegate {
         cell.photoImageView.image = UIImage(named: "default-placeholder")
         cell.titleLabel.text = plant.info?.scientificName
         cell.detailLabel.text = NSDateFormatter.localizedStringFromDate(identificationObj.date!, dateStyle: .ShortStyle, timeStyle: .NoStyle)
-
+        cell.setEditing(false, animated: false)
         return cell
+    }
+    
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let identification = self.fetchedResultsController!.objectAtIndexPath(indexPath) as! Identifications
+
+            self.MOC.deleteObject(identification)
+
+            self.performFetch()
+            self.tableView.reloadData()
+            
+        }
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
     }
     
     // MARK: - Navigation
