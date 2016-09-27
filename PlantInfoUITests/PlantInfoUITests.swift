@@ -24,7 +24,7 @@ class PlantInfoUITests: XCTestCase {
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
         super.tearDown()
     }
     
@@ -33,14 +33,15 @@ class PlantInfoUITests: XCTestCase {
         snapshot("01ListScreen")
         app.tabBars.buttons["New"].tap()
         app.collectionViews.childrenMatchingType(.Cell).matchingIdentifier("Photo").elementBoundByIndex(0).tap()
-        snapshot("02PhotoScreen")
         app.buttons["Done"].tap()
-        app.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Button).elementBoundByIndex(1).tap()
-        snapshot("03InfoScreen")
+        app.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Button).elementBoundByIndex(0).tap()
         app.buttons["Photos"].tap()
-        snapshot("04PhotosScreen")
+        snapshot("02PhotosScreen")
         app.buttons["Info"].tap()
+        snapshot("03PlantInfoScreen")
         app.buttons["Save"].tap()
+        app.tabBars.buttons["Info"].tap()
+        snapshot("04InfoScreen")
     }
     
 }

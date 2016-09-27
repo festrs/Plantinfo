@@ -9,6 +9,8 @@ build/
 DerivedData/
 .ipa
 .zip
+.cer
+.html
 *.DS_Store
 .DS_Store
 

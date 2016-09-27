@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QdW-hj-c2Z">
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QdW-hj-c2Z">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -27,7 +27,7 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7lH-8m-WZv" id="R3P-8V-BRX">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EP7-KN-AOZ">
@@ -37,7 +37,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GHQ-Yz-Kho">
-                                                    <rect key="frame" x="8" y="9" width="45" height="45"/>
+                                                    <rect key="frame" x="8" y="9" width="45" height="47"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="45" id="oiN-JY-h9c"/>
                                                     </constraints>
@@ -328,7 +328,7 @@
                         <viewControllerLayoutGuide type="bottom" id="kpu-bC-hP2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9dv-FQ-uND">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="qII-gf-WIp">
@@ -338,7 +338,7 @@
                                 </variation>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ly1-h8-e6W">
-                                <rect key="frame" x="0.0" y="222" width="600" height="427"/>
+                                <rect key="frame" x="0.0" y="222" width="600" height="378"/>
                                 <color key="tintColor" red="0.18039215689999999" green="0.65490196079999996" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="r0R-UZ-2nc" kind="embed" identifier="ToContainerInfoAndPhotos" id="AgA-AQ-gda"/>
@@ -385,15 +385,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="24z-qi-Wak">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="24z-qi-Wak">
                                 <rect key="frame" x="20" y="0.0" width="560" height="543"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.18039215689999999" green="0.65490196079999996" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text"> We developed this app to help you learn more about a certain group of plants: the toxic or poisonous ones. To do so they trained a deep neural network to recognize images of 192 different species of poisonous or toxics plants.
+                                <string key="text"> We developed this app to help you learn more about a certain group of plants: the toxic or poisonous ones. To do so they trained a deep neural network to recognize images of 192 different species of poisonous or toxics plants.
 
-But how it works? Is simple as take pictures, you simple take a picture of a plant then the algorithm will do the rest, for final, the app will show the top 5 possible species and you choose one then, also you can save the identification.
+But how it works? Is simple as take pictures, you simple take a picture of a plant then let the algorithm do the rest, as a result, the app will show the top 5 possible species and you choose one of then, also you can save the identification.
 
-You can find more about this app and the 192 plants list in the web site http://plantinfo.herokuapp.com/index.html</mutableString>
+You can find more about this app and the plant list in the web site  http://plantinfo.herokuapp.com/index.html</string>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -685,11 +685,11 @@ You can find more about this app and the 192 plants list in the web site http://
                         <viewControllerLayoutGuide type="bottom" id="aiC-vH-o5P"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ceo-c2-z4g">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="427"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="378"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJd-bQ-bq6" customClass="SwiftPages" customModule="PlantInfo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="427"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="378"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -799,6 +799,6 @@ You can find more about this app and the 192 plants list in the web site http://
         <image name="photo-camera" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XpS-lj-jxk"/>
+        <segue reference="nqG-Cm-h57"/>
     </inferredMetricsTieBreakers>
 </document>
