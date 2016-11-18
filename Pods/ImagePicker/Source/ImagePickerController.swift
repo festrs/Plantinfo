@@ -1,12 +1,13 @@
+// swiftlint:disable file_length
 import UIKit
 import MediaPlayer
 import Photos
 
-public protocol ImagePickerDelegate: class {
+@objc public protocol ImagePickerDelegate: class {
 
-    func wrapperDidPress(imagePicker: ImagePickerController, images: [UIImage], assets:[PHAsset])
-    func doneButtonDidPress(imagePicker: ImagePickerController, images: [UIImage], assets:[PHAsset])
-    func cancelButtonDidPress(imagePicker: ImagePickerController)
+  func wrapperDidPress(imagePicker: ImagePickerController, images: [UIImage])
+  func doneButtonDidPress(imagePicker: ImagePickerController, images: [UIImage])
+  func cancelButtonDidPress(imagePicker: ImagePickerController)
 }
 
 public class ImagePickerController: UIViewController {
@@ -46,6 +47,7 @@ public class ImagePickerController: UIViewController {
   lazy var cameraController: CameraView = { [unowned self] in
     let controller = CameraView()
     controller.delegate = self
+    controller.startOnFrontCamera = self.startOnFrontCamera
 
     return controller
     }()
@@ -69,6 +71,8 @@ public class ImagePickerController: UIViewController {
   public weak var delegate: ImagePickerDelegate?
   public var stack = ImageStack()
   public var imageLimit = 0
+  public var preferredImageSize: CGSize?
+  public var startOnFrontCamera = false
   var totalSize: CGSize { return UIScreen.mainScreen().bounds.size }
   var initialFrame: CGRect?
   var initialContentOffset: CGPoint?
@@ -331,8 +335,14 @@ extension ImagePickerController: BottomContainerViewDelegate {
   }
 
   func doneButtonDidPress() {
-    let images = AssetManager.resolveAssets(stack.assets)
-    delegate?.doneButtonDidPress(self, images: images,assets: stack.assets)
+    var images: [UIImage]
+    if let preferredImageSize = preferredImageSize {
+      images = AssetManager.resolveAssets(stack.assets, size: preferredImageSize)
+    } else {
+      images = AssetManager.resolveAssets(stack.assets)
+    }
+
+    delegate?.doneButtonDidPress(self, images: images)
   }
 
   func cancelButtonDidPress() {
@@ -341,8 +351,14 @@ extension ImagePickerController: BottomContainerViewDelegate {
   }
 
   func imageStackViewDidPress() {
-    let images = AssetManager.resolveAssets(stack.assets)
-    delegate?.wrapperDidPress(self, images: images,assets: stack.assets)
+    var images: [UIImage]
+    if let preferredImageSize = preferredImageSize {
+        images = AssetManager.resolveAssets(stack.assets, size: preferredImageSize)
+    } else {
+        images = AssetManager.resolveAssets(stack.assets)
+    }
+
+    delegate?.wrapperDidPress(self, images: images)
   }
 }
 
@@ -485,5 +501,4 @@ extension ImagePickerController: ImageGalleryPanGestureDelegate {
       collapseGalleryView(nil)
     }
   }
-    
 }

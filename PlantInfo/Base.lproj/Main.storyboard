@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="73T-ui-2PO">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="73T-ui-2PO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -163,7 +163,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="2eT-Qw-5va"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="155" id="5ab-3w-Zk7"/>
                                 </constraints>
-                                <state key="normal" image="n12056601_3450.png"/>
+                                <state key="normal" image="default-placeholder"/>
                                 <connections>
                                     <action selector="buttonTap:" destination="56j-hN-owe" eventType="touchUpInside" id="bzY-qd-pnP"/>
                                 </connections>
@@ -328,7 +328,7 @@
                         <viewControllerLayoutGuide type="bottom" id="kpu-bC-hP2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9dv-FQ-uND">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="qII-gf-WIp">
@@ -338,7 +338,7 @@
                                 </variation>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ly1-h8-e6W">
-                                <rect key="frame" x="0.0" y="222" width="600" height="378"/>
+                                <rect key="frame" x="0.0" y="222" width="600" height="427"/>
                                 <color key="tintColor" red="0.18039215689999999" green="0.65490196079999996" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="r0R-UZ-2nc" kind="embed" identifier="ToContainerInfoAndPhotos" id="AgA-AQ-gda"/>
@@ -372,46 +372,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3F-Mr-HG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3129" y="951"/>
-        </scene>
-        <!--Info-->
-        <scene sceneID="QVh-QB-9Ws">
-            <objects>
-                <viewController id="8s1-f1-8dy" customClass="InfoSceneViewController" customModule="PlantInfo" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FBN-qC-Mta"/>
-                        <viewControllerLayoutGuide type="bottom" id="CnD-yF-acM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="w9c-aZ-7Ml">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="24z-qi-Wak">
-                                <rect key="frame" x="20" y="0.0" width="560" height="543"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" red="0.18039215689999999" green="0.65490196079999996" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text"> We developed this app to help you learn more about a certain group of plants: the toxic or poisonous ones. To do so they trained a deep neural network to recognize images of 192 different species of poisonous or toxics plants.
-
-But how it works? Is simple as take pictures, you simple take a picture of a plant then let the algorithm do the rest, as a result, the app will show the top 5 possible species and you choose one of then, also you can save the identification.
-
-You can find more about this app and the plant list in the web site  http://plantinfo.herokuapp.com/index.html</string>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="24z-qi-Wak" firstAttribute="trailing" secondItem="w9c-aZ-7Ml" secondAttribute="trailingMargin" id="4jM-vv-aDV"/>
-                            <constraint firstItem="24z-qi-Wak" firstAttribute="top" secondItem="FBN-qC-Mta" secondAttribute="bottom" constant="-64" id="BzQ-hi-iNm"/>
-                            <constraint firstItem="24z-qi-Wak" firstAttribute="leading" secondItem="w9c-aZ-7Ml" secondAttribute="leadingMargin" id="Fvb-Wg-dOa"/>
-                            <constraint firstItem="CnD-yF-acM" firstAttribute="top" secondItem="24z-qi-Wak" secondAttribute="bottom" constant="8" id="bzJ-ze-9ca"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Info" id="NGC-7n-L0U"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kqs-hx-8wV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1757" y="1732"/>
         </scene>
         <!--Photo Controller-->
         <scene sceneID="tb8-Mq-xMv">
@@ -453,7 +413,6 @@ You can find more about this app and the plant list in the web site  http://pl
                     <connections>
                         <segue destination="HDx-E6-zZW" kind="relationship" relationship="viewControllers" id="mYl-Hg-j4V"/>
                         <segue destination="Plm-nH-4wI" kind="relationship" relationship="viewControllers" id="qMK-TY-vkh"/>
-                        <segue destination="jaX-6c-Pb5" kind="relationship" relationship="viewControllers" id="foV-JZ-DZx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xO2-GS-rgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -499,112 +458,6 @@ You can find more about this app and the plant list in the web site  http://pl
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8NO-SP-kwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="985" y="951"/>
-        </scene>
-        <!--Info-->
-        <scene sceneID="Ah2-p8-fgn">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jaX-6c-Pb5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Info" image="information-button" id="1F0-eT-1LE"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v2l-Jh-fQ3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.18039215689999999" green="0.65490196079999996" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="8s1-f1-8dy" kind="relationship" relationship="rootViewController" id="1jB-f4-j3z"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YzA-Is-dF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="985" y="1732"/>
-        </scene>
-        <!--Modal-->
-        <scene sceneID="t0H-8d-LzN">
-            <objects>
-                <viewController storyboardIdentifier="SendIndentificationController" id="5Pr-F5-BeR" customClass="SendIndentificationController" customModule="PlantInfo" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HK0-U3-Ox1"/>
-                        <viewControllerLayoutGuide type="bottom" id="4ff-XY-ugd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NZR-ib-XOQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Haj-EZ-Nte">
-                                <rect key="frame" x="15" y="40" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="CWs-Cj-SMX"/>
-                                    <constraint firstAttribute="height" constant="30" id="SUi-ix-ZxH"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <state key="normal" image="cancel">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="dismissClick:" destination="5Pr-F5-BeR" eventType="touchUpInside" id="PUb-dg-Yv1"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDV-fb-eSq">
-                                <rect key="frame" x="20" y="87" width="560" height="84"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="84" id="bIB-9K-WF6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="5Pr-F5-BeR" id="KTR-HF-xnb"/>
-                                </connections>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MX-hP-jX7">
-                                <rect key="frame" x="263" y="44" width="75" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otB-RT-6lb">
-                                <rect key="frame" x="525" y="179" width="55" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="4O0-4W-rmS"/>
-                                </constraints>
-                                <state key="normal" title="Send"/>
-                                <connections>
-                                    <action selector="sendIdentificationAndImage:" destination="5Pr-F5-BeR" eventType="touchUpInside" id="4jL-cX-fix"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.18039215689999999" green="0.65490196079999996" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="3MX-hP-jX7" firstAttribute="centerY" secondItem="Haj-EZ-Nte" secondAttribute="centerY" id="9Hd-nD-Vkf"/>
-                            <constraint firstItem="BDV-fb-eSq" firstAttribute="trailing" secondItem="NZR-ib-XOQ" secondAttribute="trailingMargin" id="Eub-Wx-Mge"/>
-                            <constraint firstItem="otB-RT-6lb" firstAttribute="top" secondItem="BDV-fb-eSq" secondAttribute="bottom" constant="8" id="V75-CB-1i8"/>
-                            <constraint firstItem="BDV-fb-eSq" firstAttribute="trailing" secondItem="otB-RT-6lb" secondAttribute="trailing" id="Z9o-ci-fnc"/>
-                            <constraint firstItem="BDV-fb-eSq" firstAttribute="top" secondItem="Haj-EZ-Nte" secondAttribute="bottom" constant="17" id="dC4-o8-R4b"/>
-                            <constraint firstItem="3MX-hP-jX7" firstAttribute="centerX" secondItem="BDV-fb-eSq" secondAttribute="centerX" id="hnz-MS-5V6"/>
-                            <constraint firstItem="Haj-EZ-Nte" firstAttribute="leading" secondItem="NZR-ib-XOQ" secondAttribute="leadingMargin" constant="-5" id="mXi-F2-wky"/>
-                            <constraint firstItem="Haj-EZ-Nte" firstAttribute="top" secondItem="HK0-U3-Ox1" secondAttribute="bottom" constant="20" id="pOe-gh-irM"/>
-                            <constraint firstItem="BDV-fb-eSq" firstAttribute="leading" secondItem="NZR-ib-XOQ" secondAttribute="leadingMargin" id="rj1-FU-K2a"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Modal" id="uuv-8B-alM">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="Iku-Gj-Zf2">
-                            <connections>
-                                <action selector="dismissClick:" destination="5Pr-F5-BeR" id="gpF-YB-zWY"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <connections>
-                        <outlet property="commentTextField" destination="BDV-fb-eSq" id="jeF-jM-4bt"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M64-wp-x3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3909" y="1702"/>
         </scene>
         <!--Photos Controller-->
         <scene sceneID="MBd-Cl-mXv">
@@ -685,11 +538,11 @@ You can find more about this app and the plant list in the web site  http://pl
                         <viewControllerLayoutGuide type="bottom" id="aiC-vH-o5P"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ceo-c2-z4g">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="378"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="427"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJd-bQ-bq6" customClass="SwiftPages" customModule="PlantInfo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="378"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="427"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -791,14 +644,11 @@ You can find more about this app and the plant list in the web site  http://pl
         </scene>
     </scenes>
     <resources>
-        <image name="cancel" width="32" height="32"/>
         <image name="default-placeholder" width="1500" height="1500"/>
-        <image name="information-button" width="29" height="29"/>
         <image name="list" width="29" height="29"/>
-        <image name="n12056601_3450.png" width="256" height="256"/>
         <image name="photo-camera" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nqG-Cm-h57"/>
+        <segue reference="XpS-lj-jxk"/>
     </inferredMetricsTieBreakers>
 </document>

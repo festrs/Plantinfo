@@ -370,6 +370,6 @@ extension Array {
     }
 }
 
-private func pure<T>(value: T) -> [T] {
-    return [value]
+func pure<T>(a: T) -> [T] {
+    return [a]
 }
