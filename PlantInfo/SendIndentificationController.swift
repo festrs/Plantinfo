@@ -67,8 +67,8 @@ class SendIndentificationController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func sendIdentificationAndImage(sender: AnyObject) {
-        let flagChecked = checkBoxView.checkState == .Checked ? 1 : 0
-        let comment = Comment(description: commentTextField.text, flag:flagChecked)
+        
+        let comment = Comment(description: commentTextField.text, flag:1)
         self.identification.comments.append(comment)
         showLoadingHUD()
         senderImageObjec.sendImage { (result) in

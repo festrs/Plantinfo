@@ -28,7 +28,7 @@ class PlantInfoUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func scrennShotTakerExample() {
         let app = XCUIApplication()
         snapshot("01ListScreen")
         app.tabBars.buttons["New"].tap()
@@ -40,8 +40,7 @@ class PlantInfoUITests: XCTestCase {
         app.buttons["Info"].tap()
         snapshot("03PlantInfoScreen")
         app.buttons["Save"].tap()
-        app.tabBars.buttons["Info"].tap()
-        snapshot("04InfoScreen")
+
     }
     
 }

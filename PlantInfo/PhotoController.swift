@@ -71,7 +71,6 @@ class PhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePic
             }
         }
     }
-    
     func cancelButtonDidPress(imagePicker: ImagePickerController){
         imagePicker.dismissViewControllerAnimated(true, completion: {
             self.tabBarController?.selectedIndex = 0

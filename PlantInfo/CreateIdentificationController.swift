@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 import MapKit
-import CoreLocation
 import TransitionTreasury
 import TransitionAnimation
 
@@ -28,7 +27,6 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
     var MOC:NSManagedObjectContext!
     var locationManager = CLLocationManager()
     private let SEGUE_CONTAINER = "ToContainerInfoAndPhotos"
-    var userLocation:CLLocation = CLLocation()
     var tr_presentTransition: TRViewControllerTransitionDelegate?
 
     //MARK: Life cycle
@@ -75,21 +73,18 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
         }
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        self.userLocation = locations.first!
-        
-        manager.stopUpdatingLocation()
-    }
-    @IBAction func clickButton(sender: AnyObject) {
-        print("teste")
-    }
+//    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        self.userLocation = locations.first!
+//        
+//        manager.stopUpdatingLocation()
+//    }
     
     @IBAction func openModal(sender: AnyObject) {
         
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SendIndentificationController") as! SendIndentificationController
         vc.modalDelegate = self
         vc.incomingImage = incomingImage
-        vc.identification = Identification(latitude: self.userLocation.coordinate.latitude, longitude: self.userLocation.coordinate.longitude, plantID: self.selectedPlant.nid)
+        vc.identification = Identification(latitude: 0.0, longitude: 0.0, plantID: self.selectedPlant.nid)
         tr_presentViewController(vc, method: TRPresentTransitionMethod.PopTip(visibleHeight: self.view.frame.size.height*0.90), completion: nil)
     }
     

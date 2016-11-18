@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="73T-ui-2PO">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="73T-ui-2PO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -132,13 +132,6 @@
                                     <action selector="buttonTap:" destination="56j-hN-owe" eventType="touchUpInside" id="vng-vJ-uH6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" tag="53" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knk-eO-Kud">
-                                <rect key="frame" x="201" y="465" width="199" height="135"/>
-                                <state key="normal" image="default-placeholder"/>
-                                <connections>
-                                    <action selector="buttonTap:" destination="56j-hN-owe" eventType="touchUpInside" id="nCV-q2-ffv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" clipsSubviews="YES" tag="52" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nm3-DF-WvY">
                                 <rect key="frame" x="0.0" y="465" width="199" height="135"/>
                                 <constraints>
@@ -163,7 +156,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="2eT-Qw-5va"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="155" id="5ab-3w-Zk7"/>
                                 </constraints>
-                                <state key="normal" image="n12056601_3450.png"/>
+                                <state key="normal" image="default-placeholder"/>
                                 <connections>
                                     <action selector="buttonTap:" destination="56j-hN-owe" eventType="touchUpInside" id="bzY-qd-pnP"/>
                                 </connections>
@@ -237,6 +230,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" clipsSubviews="YES" tag="53" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knk-eO-Kud">
+                                <rect key="frame" x="201" y="465" width="199" height="135"/>
+                                <state key="normal" image="default-placeholder"/>
+                                <connections>
+                                    <action selector="buttonTap:" destination="56j-hN-owe" eventType="touchUpInside" id="nCV-q2-ffv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -328,34 +328,50 @@
                         <viewControllerLayoutGuide type="bottom" id="kpu-bC-hP2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9dv-FQ-uND">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="qII-gf-WIp">
-                                <rect key="frame" x="0.0" y="64" width="600" height="157"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="80" y="57" width="240" height="128"/>
-                                </variation>
-                            </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ly1-h8-e6W">
-                                <rect key="frame" x="0.0" y="222" width="600" height="378"/>
+                                <rect key="frame" x="0.0" y="222" width="600" height="427"/>
                                 <color key="tintColor" red="0.18039215689999999" green="0.65490196079999996" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="r0R-UZ-2nc" kind="embed" identifier="ToContainerInfoAndPhotos" id="AgA-AQ-gda"/>
                                 </connections>
                             </containerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="qII-gf-WIp">
+                                <rect key="frame" x="0.0" y="64" width="600" height="157"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="157" id="Tdl-BQ-Nmh"/>
+                                </constraints>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="80" y="57" width="240" height="128"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoU-ld-SfU">
+                                <rect key="frame" x="546" y="188" width="22" height="22"/>
+                                <connections>
+                                    <action selector="openModal:" destination="0X7-K8-mcc" eventType="touchUpInside" id="mdo-qe-1Ai"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ly1-h8-e6W" firstAttribute="top" secondItem="qII-gf-WIp" secondAttribute="bottom" constant="1" id="1Bu-7n-jrP"/>
-                            <constraint firstItem="ly1-h8-e6W" firstAttribute="top" secondItem="9dv-FQ-uND" secondAttribute="top" constant="222" id="2DT-kQ-GBN"/>
+                            <constraint firstItem="ly1-h8-e6W" firstAttribute="top" relation="lessThanOrEqual" secondItem="9dv-FQ-uND" secondAttribute="top" constant="222" id="2DT-kQ-GBN"/>
                             <constraint firstItem="qII-gf-WIp" firstAttribute="top" secondItem="man-s6-FdJ" secondAttribute="bottom" id="4HI-SF-tjX"/>
                             <constraint firstItem="qII-gf-WIp" firstAttribute="leading" secondItem="9dv-FQ-uND" secondAttribute="leadingMargin" constant="-20" id="CIE-oZ-K2k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qII-gf-WIp" secondAttribute="trailing" constant="-20" id="HhP-eS-mOt"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ly1-h8-e6W" secondAttribute="bottom" constant="-49" id="Jdt-kH-Jv7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aoU-ld-SfU" secondAttribute="trailing" constant="12" id="Plf-5B-rfH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ly1-h8-e6W" secondAttribute="trailing" constant="-20" id="SEr-LQ-kU1"/>
                             <constraint firstItem="ly1-h8-e6W" firstAttribute="leading" secondItem="9dv-FQ-uND" secondAttribute="leadingMargin" constant="-20" id="fUO-mB-N4K"/>
+                            <constraint firstItem="ly1-h8-e6W" firstAttribute="top" secondItem="aoU-ld-SfU" secondAttribute="bottom" constant="12" id="uA4-xC-NYS"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2DT-kQ-GBN"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="New Identification" id="pXL-Fm-S09">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="hGp-ZZ-kvu">
@@ -382,11 +398,11 @@
                         <viewControllerLayoutGuide type="bottom" id="CnD-yF-acM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="w9c-aZ-7Ml">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="24z-qi-Wak">
-                                <rect key="frame" x="20" y="0.0" width="560" height="543"/>
+                                <rect key="frame" x="20" y="0.0" width="560" height="592"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.18039215689999999" green="0.65490196079999996" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text"> We developed this app to help you learn more about a certain group of plants: the toxic or poisonous ones. To do so they trained a deep neural network to recognize images of 192 different species of poisonous or toxics plants.
@@ -453,7 +469,6 @@ You can find more about this app and the plant list in the web site  http://pl
                     <connections>
                         <segue destination="HDx-E6-zZW" kind="relationship" relationship="viewControllers" id="mYl-Hg-j4V"/>
                         <segue destination="Plm-nH-4wI" kind="relationship" relationship="viewControllers" id="qMK-TY-vkh"/>
-                        <segue destination="jaX-6c-Pb5" kind="relationship" relationship="viewControllers" id="foV-JZ-DZx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xO2-GS-rgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -685,11 +700,11 @@ You can find more about this app and the plant list in the web site  http://pl
                         <viewControllerLayoutGuide type="bottom" id="aiC-vH-o5P"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ceo-c2-z4g">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="378"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="427"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJd-bQ-bq6" customClass="SwiftPages" customModule="PlantInfo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="378"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="427"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -795,10 +810,9 @@ You can find more about this app and the plant list in the web site  http://pl
         <image name="default-placeholder" width="1500" height="1500"/>
         <image name="information-button" width="29" height="29"/>
         <image name="list" width="29" height="29"/>
-        <image name="n12056601_3450.png" width="256" height="256"/>
         <image name="photo-camera" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nqG-Cm-h57"/>
+        <segue reference="XpS-lj-jxk"/>
     </inferredMetricsTieBreakers>
 </document>

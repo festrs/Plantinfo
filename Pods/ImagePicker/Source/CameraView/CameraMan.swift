@@ -17,6 +17,7 @@ class CameraMan {
   var backCamera: AVCaptureDeviceInput?
   var frontCamera: AVCaptureDeviceInput?
   var stillImageOutput: AVCaptureStillImageOutput?
+  var startOnFrontCamera: Bool = false
 
   deinit {
     stop()
@@ -24,7 +25,8 @@ class CameraMan {
 
   // MARK: - Setup
 
-  func setup() {
+  func setup(startOnFrontCamera: Bool = false) {
+    self.startOnFrontCamera = startOnFrontCamera
     checkPermission()
   }
 
@@ -100,7 +102,7 @@ class CameraMan {
     // Devices
     setupDevices()
 
-    guard let input = backCamera, output = stillImageOutput else { return }
+    guard let input = (self.startOnFrontCamera) ? frontCamera ?? backCamera : backCamera, output = stillImageOutput else { return }
 
     addInput(input)
 
@@ -151,7 +153,7 @@ class CameraMan {
   func takePhoto(previewLayer: AVCaptureVideoPreviewLayer, location: CLLocation?, completion: (() -> Void)? = nil) {
     guard let connection = stillImageOutput?.connectionWithMediaType(AVMediaTypeVideo) else { return }
 
-    connection.videoOrientation = previewLayer.connection.videoOrientation
+    connection.videoOrientation = Helper.videoOrientation()
 
     dispatch_async(queue) {
       self.stillImageOutput?.captureStillImageAsynchronouslyFromConnection(connection) {
