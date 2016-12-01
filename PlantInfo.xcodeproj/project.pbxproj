@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A048F251DDF93A80071B7F0 /* CustomAlbumPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A048F241DDF93A80071B7F0 /* CustomAlbumPhoto.swift */; };
 		3A09A6C41D738D410072ED56 /* Identification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A09A6C31D738D410072ED56 /* Identification.swift */; };
 		3A09A6C61D738D7C0072ED56 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A09A6C51D738D7C0072ED56 /* Comment.swift */; };
 		3A24A4721D48167100BA685C /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4701D48167100BA685C /* CoreDataTableViewController.swift */; };
@@ -168,6 +169,7 @@
 
 /* Begin PBXFileReference section */
 		26F650650A9F9E7FF2DB4375 /* Pods-PlantInfoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantInfoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlantInfoTests/Pods-PlantInfoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A048F241DDF93A80071B7F0 /* CustomAlbumPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlbumPhoto.swift; sourceTree = "<group>"; };
 		3A09A6C31D738D410072ED56 /* Identification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identification.swift; sourceTree = "<group>"; };
 		3A09A6C51D738D7C0072ED56 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		3A24A4701D48167100BA685C /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 				3A3A53661D7E541100F6E6E9 /* SwiftPages.swift */,
 				3AFA3FB51D442D7F00F2BD3D /* Extensions.swift */,
 				3A8626081D4D3E3C00214348 /* PlantCore.swift */,
+				3A048F241DDF93A80071B7F0 /* CustomAlbumPhoto.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -1203,6 +1206,7 @@
 				3A54FC731D2CA3B500A805EA /* eltwise_layer.cpp in Sources */,
 				3A54E3B11D2C664D00A805EA /* AppDelegate.swift in Sources */,
 				3A54FC771D2CA3B500A805EA /* exp_layer.cpp in Sources */,
+				3A048F251DDF93A80071B7F0 /* CustomAlbumPhoto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1387,6 +1391,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/caffe/include $(SRCROOT)/caffe/ios/include";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -1429,6 +1434,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "PlantInfo/PlantInfo-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/caffe/include $(SRCROOT)/caffe/ios/include";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};

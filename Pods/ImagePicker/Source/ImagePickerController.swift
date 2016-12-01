@@ -5,8 +5,8 @@ import Photos
 
 @objc public protocol ImagePickerDelegate: class {
 
-  func wrapperDidPress(imagePicker: ImagePickerController, images: [UIImage])
-  func doneButtonDidPress(imagePicker: ImagePickerController, images: [UIImage])
+    func wrapperDidPress(imagePicker: ImagePickerController, images: [UIImage],assets:[PHAsset])
+  func doneButtonDidPress(imagePicker: ImagePickerController, images: [UIImage],assets:[PHAsset])
   func cancelButtonDidPress(imagePicker: ImagePickerController)
 }
 
@@ -70,7 +70,7 @@ public class ImagePickerController: UIViewController {
 
   public weak var delegate: ImagePickerDelegate?
   public var stack = ImageStack()
-  public var imageLimit = 0
+  public var imageLimit = 1
   public var preferredImageSize: CGSize?
   public var startOnFrontCamera = false
   var totalSize: CGSize { return UIScreen.mainScreen().bounds.size }
@@ -342,7 +342,7 @@ extension ImagePickerController: BottomContainerViewDelegate {
       images = AssetManager.resolveAssets(stack.assets)
     }
 
-    delegate?.doneButtonDidPress(self, images: images)
+    delegate?.doneButtonDidPress(self, images: images, assets: stack.assets)
   }
 
   func cancelButtonDidPress() {
@@ -358,7 +358,7 @@ extension ImagePickerController: BottomContainerViewDelegate {
         images = AssetManager.resolveAssets(stack.assets)
     }
 
-    delegate?.wrapperDidPress(self, images: images)
+    delegate?.wrapperDidPress(self, images: images, assets: stack.assets)
   }
 }
 

@@ -40,8 +40,6 @@ class PlantInfoUITests: XCTestCase {
         app.buttons["Info"].tap()
         snapshot("03PlantInfoScreen")
         app.buttons["Save"].tap()
-        app.tabBars.buttons["Info"].tap()
-        snapshot("04InfoScreen")
     }
-    
+
 }

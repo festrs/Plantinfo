@@ -44,6 +44,7 @@ class ListController: CoreDataTableViewController, FPHandlesIncomingObjects {
         self.tableView.allowsMultipleSelectionDuringEditing = false
     }
     
+    
     //MARK: Incoming object
     func receiveMOC(incomingMOC: NSManagedObjectContext) {
         self.MOC = incomingMOC

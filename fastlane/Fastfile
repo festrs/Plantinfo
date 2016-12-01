@@ -22,6 +22,17 @@ platform :ios do
     
   end
 
+  lane :build do
+	#sudo xcode-select --switch /Applications/Xcode4.6/Xcode.app
+    increment_build_number
+    sigh
+    gym(scheme: “PlantInfo”, use_legacy_build_api: false) 
+  end
+
+  lane :screenshots do
+    snapshot
+  end
+
   desc "Runs all the tests"
   lane :test do
     scan
@@ -71,3 +82,5 @@ end
 
 # fastlane reports which actions are used
 # No personal data is recorded. Learn more at https://github.com/fastlane/enhancer
+
+
