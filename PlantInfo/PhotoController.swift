@@ -15,11 +15,9 @@ import MBProgressHUD
 class PhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePickerDelegate  {
     
     private var moc:NSManagedObjectContext!
-    private var bridginObjectClassifier:BridgingObjectClassifier!
     private let SEGUE_IDENTIFIER = "ToSelect";
     private var imageIdentifier:String!
     private var predictionResult = []
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +33,7 @@ class PhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePic
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBarHidden = false
+        self.resetAssets()
     }
     
     // MARK: - HUD
@@ -72,7 +71,6 @@ class PhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePic
             }
         }
     }
-    
     func cancelButtonDidPress(imagePicker: ImagePickerController){
         imagePicker.dismissViewControllerAnimated(true, completion: {
             self.tabBarController?.selectedIndex = 0

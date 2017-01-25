@@ -23,7 +23,7 @@ let monthsName: [Int:String] = [1:"JAN",2:"FEV",3:"MAR",4:"ABR",5:"MAIO",6:"JUN"
 
 struct PredictInfo {
     var nid:String!
-    var probability:String!
+    var probability:Double!
 }
 
 func getDocumentsURL() -> NSURL {
@@ -40,6 +40,18 @@ extension CGFloat {
     static func random() -> CGFloat {
         return CGFloat(arc4random()) / CGFloat(UInt32.max)
     }
+}
+
+extension UIImage {
+    
+    func imageWithAlpha(alpha: CGFloat) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        drawAtPoint(CGPointZero, blendMode: .Normal, alpha: alpha)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    
 }
 
 extension UIColor {

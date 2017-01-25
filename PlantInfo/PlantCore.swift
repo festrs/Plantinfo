@@ -48,7 +48,11 @@ class PlantCore{
     
     func getListOfPredictions(identificationResult: [String]) -> [PredictInfo]{
         return identificationResult.map({
-            return PredictInfo(nid: $0.characters.split(";").map(String.init).first, probability: $0.characters.split(";").map(String.init).last)
-        }).sort { $0.probability.localizedCaseInsensitiveCompare($1.probability) == .OrderedDescending}
+            var probability = $0.characters.split(";").map(String.init).last
+            if probability!.containsString("e"){
+                probability = "0"
+            }
+            return PredictInfo(nid: $0.characters.split(";").map(String.init).first, probability: Double(probability!))
+        }).sort { $0.probability > $1.probability}
     }
 }

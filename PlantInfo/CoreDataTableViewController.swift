@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class CoreDataTableViewController: UIViewController, CoreDataTableViewControllerProtocol {
+class CoreDataTableViewController: UIViewController, CoreDataTableViewControllerProtocol, UITableViewDelegate {
     var coreDataTableView:UITableView!
     var _fetchedResultsController:NSFetchedResultsController?
     
