@@ -5,7 +5,7 @@ import Photos
 
 @objc public protocol ImagePickerDelegate: class {
 
-    func wrapperDidPress(imagePicker: ImagePickerController, images: [UIImage],assets:[PHAsset])
+  func wrapperDidPress(imagePicker: ImagePickerController, images: [UIImage],assets:[PHAsset])
   func doneButtonDidPress(imagePicker: ImagePickerController, images: [UIImage],assets:[PHAsset])
   func cancelButtonDidPress(imagePicker: ImagePickerController)
 }
@@ -70,7 +70,7 @@ public class ImagePickerController: UIViewController {
 
   public weak var delegate: ImagePickerDelegate?
   public var stack = ImageStack()
-  public var imageLimit = 1
+  public var imageLimit = 0
   public var preferredImageSize: CGSize?
   public var startOnFrontCamera = false
   var totalSize: CGSize { return UIScreen.mainScreen().bounds.size }
