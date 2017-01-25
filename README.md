@@ -6,6 +6,7 @@ This project was created as a final paper for the graduation program, of system 
 
 This work consists of using deep learning methods for image recognition of plants. The Caffe library was used to generate the prediction model. 
 
+
 [PlantInfo Website](http://plantinfo.herokuapp.com/)
 
 # Autor
