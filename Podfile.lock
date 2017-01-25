@@ -23,7 +23,7 @@ DEPENDENCIES:
   - AWSCognito (= 2.4.7)
   - AWSCore (= 2.4.7)
   - AWSS3 (= 2.4.7)
-  - ImagePicker (from `https://github.com/hyperoslo/ImagePicker.git`, branch `swift-2.3`)
+  - ImagePicker (from `https://github.com/festrs/ImagePicker.git`, branch `swift-2.3`)
   - JSONWebToken (= 1.5.0)
   - Kingfisher (= 2.4)
   - M13Checkbox (= 2.1.2)
@@ -36,12 +36,12 @@ DEPENDENCIES:
 EXTERNAL SOURCES:
   ImagePicker:
     :branch: swift-2.3
-    :git: https://github.com/hyperoslo/ImagePicker.git
+    :git: https://github.com/festrs/ImagePicker.git
 
 CHECKOUT OPTIONS:
   ImagePicker:
-    :commit: f5fd08c9a3561c5f468de06116f9a6dfc7ef5a85
-    :git: https://github.com/hyperoslo/ImagePicker.git
+    :commit: 6f3dc2a4d512590d8a9d2d6c1c985753e5a62305
+    :git: https://github.com/festrs/ImagePicker.git
 
 SPEC CHECKSUMS:
   Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
@@ -59,6 +59,6 @@ SPEC CHECKSUMS:
   TransitionAnimation: d761c1a338f5333f4b02a184935e61a8dc14d0e4
   TransitionTreasury: 7228b7758ba4b742e152a198dbe6ca1e46b43949
 
-PODFILE CHECKSUM: 2a8f1fff1d624119e1e3520311ce62f2da688cb6
+PODFILE CHECKSUM: 732d9b613905f9952683aec0490bcc1ece145d9b
 
 COCOAPODS: 1.1.1

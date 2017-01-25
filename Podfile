@@ -12,7 +12,7 @@ target 'PlantInfo' do
     pod 'Alamofire', '3.5.0'
     pod 'ObjectMapper', '1.3'
     pod 'Kingfisher', '2.4'
-    pod 'ImagePicker', :git => 'https://github.com/hyperoslo/ImagePicker.git', :branch => 'swift-2.3'
+    pod 'ImagePicker', :git => 'https://github.com/festrs/ImagePicker.git', :branch => 'swift-2.3'
     pod 'TransitionTreasury', '3.0.4'
     pod 'TransitionAnimation', '3.0.4'
     pod 'M13Checkbox', '2.1.2'
