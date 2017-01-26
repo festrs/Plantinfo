@@ -2,14 +2,5 @@ language: objective-c
 
 osx_image: xcode7.3
 
-# disable the default submodule logic
-git:
-  submodules: false
-
-# use sed to replace the SSH URL with the public URL, then init and update submodules
-before_install:
-  - git submodule init
-  - git submodule foreach --recursive
-
 script:
 - xcodebuild -workspace PlantInfo.xcworkspace -scheme PlantInfo -sdk iphonesimulator clean build
