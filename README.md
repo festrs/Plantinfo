@@ -2,18 +2,23 @@
 
 This project was created as a final paper for the graduation program, of system information at [PUCRS](http://www.pucrs.br/), the goal is to improve the plants classification process and reduce the time at same time. Because of some limitations like, the lack amount images classified of plants and the great quantity of plants, I kept my focus in a specific group of plants, the poisonous or toxic plants.
 
-# Body (conteúdo)
+# Body
 
-This work consists of using deep learning methods for image recognition of plants. The Caffe library was used to generate the prediction model. 
+This work consists of using deep learning methods for image recognition of plants. The [Caffe](http://caffe.berkeleyvision.org) framework was used to generate the prediction model. A [website](http://plantinfo.herokuapp.com/) complents this mobile aplication bringing more information about the range of plants and auxiliar caracteristics. Also we used the new Deep Learning system from NVIDEA called [DIGITS](https://developer.nvidia.com/digits) whos turned the process a lot easier.
 
+For more information about Deep Learning methods [here](http://cs231n.github.io/convolutional-networks/#add) there is a great article from Stanford University about it.
 
-[PlantInfo Website](http://plantinfo.herokuapp.com/)
+# Installation
+
+We used cocoapods for managing the dependencies, remember to use **pod install** before compiling.
 
 # Autor
 
-Felipe Pereira, [@festrs](festrs.github.io)
+Felipe Pereira [@festrs](festrs.github.io)
 
-**Contributors** Rafael Braun
+**Contributors**
+
+[Rafael Braun](https://www.facebook.com/mbraun.raphael)
 
 ## License and Citation
 
