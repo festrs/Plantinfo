@@ -5,12 +5,15 @@
 ## Build generated
 build/
 
+models/
+
 ##others
 DerivedData/
 .ipa
 .zip
 .cer
 .html
+.mobileprovision
 *.DS_Store
 .DS_Store
 
@@ -28,6 +31,7 @@ xcuserdata/
 ## Other
 *.moved-aside
 *.xcuserstate
+*.mobileprovision
 
 ## Obj-C/Swift specific
 *.hmap

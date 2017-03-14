@@ -22,6 +22,6 @@ class Plant: Mappable {
     func mapping(map: Map) {
         nid             <- map["_id"]
         info            <- map["id_plant_info"]
-        imageLinks       <- map["image_links"]
+        imageLinks      <- map["image_links"]
     }
 }

@@ -26,10 +26,10 @@ Classifier *classifier = NULL;
 - (id)init {
     if (self = [super init]) {
         //Load model
-        NSString* model_file = [NSBundle.mainBundle pathForResource:@"deploy" ofType:@"prototxt" inDirectory:@"models"];
+        NSString* model_file = [NSBundle.mainBundle pathForResource:@"new/deploy" ofType:@"prototxt" inDirectory:@"models"];
         NSString* label_file = [NSBundle.mainBundle pathForResource:@"labels" ofType:@"txt" inDirectory:@"models"];
-        NSString* mean_file = [NSBundle.mainBundle pathForResource:@"mean" ofType:@"binaryproto" inDirectory:@"models"];
-        NSString* trained_file = [NSBundle.mainBundle pathForResource:@"snapshot_iter_120000" ofType:@"caffemodel" inDirectory:@"models"];
+        NSString* mean_file = [NSBundle.mainBundle pathForResource:@"new/mean" ofType:@"binaryproto" inDirectory:@"models"];
+        NSString* trained_file = [NSBundle.mainBundle pathForResource:@"new/snapshot_iter_293610" ofType:@"caffemodel" inDirectory:@"models"];
         string model_file_str = std::string([model_file UTF8String]);
         string label_file_str = std::string([label_file UTF8String]);
         string trained_file_str = std::string([trained_file UTF8String]);

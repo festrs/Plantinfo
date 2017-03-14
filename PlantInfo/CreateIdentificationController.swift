@@ -8,15 +8,12 @@
 
 import UIKit
 import CoreData
-import MapKit
-import TransitionTreasury
-import TransitionAnimation
 
 protocol ReceivedPlantProtocol:class{
     func receivePlant(plant: Plant)
 }
 
-class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,CLLocationManagerDelegate,ModalTransitionDelegate,ReceivedPlantProtocol {
+class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,ReceivedPlantProtocol {
     
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var plantImageView: UIImageView?
@@ -25,20 +22,11 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
     var imageIdentifier:String!
     var incomingImage:UIImage!
     var MOC:NSManagedObjectContext!
-    var locationManager = CLLocationManager()
     private let SEGUE_CONTAINER = "ToContainerInfoAndPhotos"
-    var tr_presentTransition: TRViewControllerTransitionDelegate?
 
-    //MARK: Life cycle
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        locationManager.requestWhenInUseAuthorization()
-//        locationManager.delegate = self
-//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//        locationManager.distanceFilter = kCLDistanceFilterNone
-//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//        locationManager.startUpdatingLocation()
         
         self.plantImageView!.image = incomingImage
         
@@ -71,26 +59,6 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
         } catch {
             fatalError("Failure to save context: \(error)")
         }
-    }
-    
-//    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        self.userLocation = locations.first!
-//        
-//        manager.stopUpdatingLocation()
-//    }
-    
-    @IBAction func openModal(sender: AnyObject) {
-        
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SendIndentificationController") as! SendIndentificationController
-        vc.modalDelegate = self
-        vc.incomingImage = incomingImage
-        vc.identification = Identification(latitude: 0.0, longitude: 0.0, plantID: self.selectedPlant.nid)
-        tr_presentViewController(vc, method: TRPresentTransitionMethod.PopTip(visibleHeight: self.view.frame.size.height*0.90), completion: nil)
-    }
-    
-    // MARK: - Modal viewController delegate
-    func modalViewControllerDismiss(callbackData data: AnyObject? = nil) {
-        tr_dismissViewController(completion: nil)
     }
     
     //MARK: Incomings

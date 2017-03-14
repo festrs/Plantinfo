@@ -60,16 +60,9 @@ class PhotosController: UIViewController,UICollectionViewDataSource,UICollection
             
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier,
                                                                              forIndexPath: indexPath) as! PhotosCellController
-            
             // Configure the cell
-            cell.plantImageView.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLinks![indexPath.row])!, placeholderImage: UIImage(named: "default-placeholder"), optionsInfo: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
-                
-            }
+            cell.plantImageView.kf_setImageWithURL(NSURL(string: URL_IMAGE_BASE+plant.imageLinks![indexPath.row])!, placeholderImage: UIImage(named: "default-placeholder"), optionsInfo: nil, progressBlock: nil)
             return cell
-    }
-    
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        //let cell = collectionView.cellForItemAtIndexPath(indexPath) as! PhotosCellController
     }
 }
 
@@ -77,6 +70,5 @@ class PhotosController: UIViewController,UICollectionViewDataSource,UICollection
 class PhotosCellController : UICollectionViewCell{
     
     @IBOutlet weak var plantImageView: UIImageView!
-    
     
 }
