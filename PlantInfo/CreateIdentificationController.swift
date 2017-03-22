@@ -31,7 +31,7 @@ class CreateIdentificationController: UIViewController,FPHandlesIncomingObjects,
         self.plantImageView!.image = incomingImage
         
         if newFlag {
-            self.title = "New Identification"
+            self.title = selectedPlant.info?.commonName!.characters.split(",").map(String.init).first
         }else{
             self.title = "Info"
             self.navigationItem.rightBarButtonItem = nil

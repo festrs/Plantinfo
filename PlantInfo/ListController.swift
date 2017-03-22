@@ -10,7 +10,6 @@ import UIKit
 import CoreData
 
 class ListController: CoreDataTableViewController, FPHandlesIncomingObjects {
-    
     //MARK: - Variables
     @IBOutlet weak var tableView: UITableView!
     private var MOC:NSManagedObjectContext!
@@ -20,10 +19,6 @@ class ListController: CoreDataTableViewController, FPHandlesIncomingObjects {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configTableView()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -109,7 +104,7 @@ class ListController: CoreDataTableViewController, FPHandlesIncomingObjects {
     
 }
 
-class ListCellController : UITableViewCell{
+class ListCellController : UITableViewCell {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!

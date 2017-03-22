@@ -13,6 +13,7 @@ class PlantCore{
     
     static let sharedInstance = PlantCore()
     private var listOfPlants:[Plant] = []
+    private let NOT_POISONOUS_ID = "n12205694"
     
     private init() {
         initPlants()
@@ -39,20 +40,23 @@ class PlantCore{
         }).first!
     }
     
-    func getPlantList(predictions: [PredictInfo]) -> [Plant]{
-        let nids = predictions.map({return $0.nid}) as [String]
-        return listOfPlants.filter({
-            nids.contains($0.nid!)
-        })
-    }
-    
-    func getListOfPredictions(identificationResult: [String]) -> [PredictInfo]{
-        return identificationResult.map({
-            var probability = $0.characters.split(";").map(String.init).last
-            if probability!.containsString("e"){
+    func getListOfPlantsBy(identificationResult: [String]) -> [Plant]{
+        let arrayResult = identificationResult.map { (string) -> PredictInfo in
+            var probability = string.characters.split(";").map(String.init).last
+            if probability!.containsString("e") {
                 probability = "0"
             }
-            return PredictInfo(nid: $0.characters.split(";").map(String.init).first, probability: Double(probability!))
-        }).sort { $0.probability > $1.probability}
+            return PredictInfo(nid: string.characters.split(";").map(String.init).first, probability: Double(probability!))
+        }
+        
+        let predictions = Dictionary(keyValuePairs: arrayResult.map{($0.nid, $0)})
+        
+        return listOfPlants.filter({
+            if let val = predictions[$0.nid!] where $0.nid! != NOT_POISONOUS_ID {
+                $0.probability = (val.probability * 100)
+                return true
+            }
+            return false
+        }).sort({$0.probability > $1.probability})
     }
 }

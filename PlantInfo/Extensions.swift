@@ -26,6 +26,13 @@ struct PredictInfo {
     var probability:Double!
 }
 
+extension Double {
+    func roundToDecimal(fractionDigits: Int) -> Double {
+        let multiplier = pow(10, Double(fractionDigits))
+        return Darwin.round(self * multiplier) / multiplier
+    }
+}
+
 func getDocumentsURL() -> NSURL {
     let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
     return documentsURL
@@ -51,8 +58,24 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return newImage
     }
-    
 }
+
+extension UIImageView {
+    func gradientTopDownBlack() {
+        let myGradientLayer = CAGradientLayer()
+        myGradientLayer.frame = self.layer.frame
+        let colors: [CGColorRef] = [
+            UIColor.clearColor().CGColor,
+            UIColor.clearColor().CGColor,
+            UIColor.blackColor().CGColor]
+        myGradientLayer.colors = colors
+        myGradientLayer.opaque = true
+        myGradientLayer.locations = [0.0, 0.5, 1.0]
+        self.layer.insertSublayer(myGradientLayer, above: self.layer)
+    }
+}
+
+
 
 extension UIColor {
     static func randomColor() -> UIColor {
@@ -145,6 +168,15 @@ extension String
     func removeSpaces() -> String
     {
         return self.stringByReplacingOccurrencesOfString(" ", withString: "")
+    }
+}
+
+extension Dictionary {
+    public init(keyValuePairs: [(Key, Value)]) {
+        self.init()
+        for pair in keyValuePairs {
+            self[pair.0] = pair.1
+        }
     }
 }
 

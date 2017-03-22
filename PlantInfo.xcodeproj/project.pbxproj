@@ -13,10 +13,10 @@
 		3A24A47A1D48176400BA685C /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4791D48176400BA685C /* ListController.swift */; };
 		3A24A4801D481EA100BA685C /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A47F1D481EA100BA685C /* NavigationViewController.swift */; };
 		3A24A4881D48225F00BA685C /* Identifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4861D48225F00BA685C /* Identifications.swift */; };
-		3A24A48A1D4826FF00BA685C /* SelectPlantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4891D4826FF00BA685C /* SelectPlantController.swift */; };
+		3A24A48A1D4826FF00BA685C /* ResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24A4891D4826FF00BA685C /* ResultsController.swift */; };
 		3A24A48E1D4C2DDB00BA685C /* plants.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A24A48C1D4C2DDB00BA685C /* plants.json */; };
 		3A2813B81D2F35B900FA2078 /* Classifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3D51D2C669500A805EA /* Classifier.mm */; };
-		3A2813C21D2F417200FA2078 /* BridgingObjectClassifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */; };
+		3A2813C21D2F417200FA2078 /* BridgingObjectClassifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
 		3A2813C31D2F439F00FA2078 /* BridgingObjectClassifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */; };
 		3A3A53651D7E538A00F6E6E9 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A53641D7E538A00F6E6E9 /* SubViewController.swift */; };
 		3A3A53671D7E541100F6E6E9 /* SwiftPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A53661D7E541100F6E6E9 /* SwiftPages.swift */; };
@@ -29,101 +29,103 @@
 		3A54E3BB1D2C664D00A805EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A54E3BA1D2C664D00A805EA /* Assets.xcassets */; };
 		3A54E3BE1D2C664D00A805EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A54E3BC1D2C664D00A805EA /* LaunchScreen.storyboard */; };
 		3A54E3C91D2C664D00A805EA /* PlantInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3C81D2C664D00A805EA /* PlantInfoTests.swift */; };
-		3A54E3D71D2C669500A805EA /* Classifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3D51D2C669500A805EA /* Classifier.mm */; };
+		3A54E3D71D2C669500A805EA /* Classifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3D51D2C669500A805EA /* Classifier.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
 		3A54E4121D2C699600A805EA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A54E4111D2C699600A805EA /* AudioToolbox.framework */; };
 		3A54E4141D2C69A100A805EA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A54E4131D2C69A100A805EA /* Accelerate.framework */; };
 		3A54E4181D2C69D400A805EA /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A54E4171D2C69D400A805EA /* libstdc++.tbd */; };
 		3A54F3131D2C987600A805EA /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A54F3121D2C987600A805EA /* opencv2.framework */; };
-		3A54FB311D2CA38D00A805EA /* gflags.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FA751D2CA38C00A805EA /* gflags.cc */; };
-		3A54FB321D2CA38D00A805EA /* gflags_completions.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FA761D2CA38C00A805EA /* gflags_completions.cc */; };
-		3A54FB331D2CA38D00A805EA /* gflags_reporting.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FA771D2CA38C00A805EA /* gflags_reporting.cc */; };
-		3A54FBDC1D2CA38D00A805EA /* blob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FB281D2CA38C00A805EA /* blob.cpp */; };
-		3A54FBDD1D2CA38D00A805EA /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FB291D2CA38C00A805EA /* common.cpp */; };
-		3A54FBDE1D2CA38D00A805EA /* data_transformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FB2A1D2CA38C00A805EA /* data_transformer.cpp */; };
-		3A54FBDF1D2CA38D00A805EA /* internal_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FB2B1D2CA38C00A805EA /* internal_thread.cpp */; };
-		3A54FBE01D2CA38D00A805EA /* layer_factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FB2C1D2CA38C00A805EA /* layer_factory.cpp */; };
-		3A54FBE11D2CA38D00A805EA /* net.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FB2D1D2CA38C00A805EA /* net.cpp */; };
-		3A54FBE21D2CA38D00A805EA /* solver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FB2E1D2CA38C00A805EA /* solver.cpp */; };
-		3A54FBE31D2CA38D00A805EA /* syncedmem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FB2F1D2CA38C00A805EA /* syncedmem.cpp */; };
-		3A54FC521D2CA3B500A805EA /* absval_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBE41D2CA3B500A805EA /* absval_layer.cpp */; };
-		3A54FC541D2CA3B500A805EA /* accuracy_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBE61D2CA3B500A805EA /* accuracy_layer.cpp */; };
-		3A54FC551D2CA3B500A805EA /* argmax_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBE71D2CA3B500A805EA /* argmax_layer.cpp */; };
-		3A54FC561D2CA3B500A805EA /* base_conv_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBE81D2CA3B500A805EA /* base_conv_layer.cpp */; };
-		3A54FC571D2CA3B500A805EA /* base_data_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBE91D2CA3B500A805EA /* base_data_layer.cpp */; };
-		3A54FC591D2CA3B500A805EA /* bnll_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBEB1D2CA3B500A805EA /* bnll_layer.cpp */; };
-		3A54FC5B1D2CA3B500A805EA /* concat_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBED1D2CA3B500A805EA /* concat_layer.cpp */; };
-		3A54FC5D1D2CA3B500A805EA /* contrastive_loss_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBEF1D2CA3B500A805EA /* contrastive_loss_layer.cpp */; };
-		3A54FC5F1D2CA3B500A805EA /* conv_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBF11D2CA3B500A805EA /* conv_layer.cpp */; };
-		3A54FC611D2CA3B500A805EA /* cudnn_conv_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBF31D2CA3B500A805EA /* cudnn_conv_layer.cpp */; };
-		3A54FC631D2CA3B500A805EA /* cudnn_pooling_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBF51D2CA3B500A805EA /* cudnn_pooling_layer.cpp */; };
-		3A54FC651D2CA3B500A805EA /* cudnn_relu_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBF71D2CA3B500A805EA /* cudnn_relu_layer.cpp */; };
-		3A54FC671D2CA3B500A805EA /* cudnn_sigmoid_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBF91D2CA3B500A805EA /* cudnn_sigmoid_layer.cpp */; };
-		3A54FC691D2CA3B500A805EA /* cudnn_softmax_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBFB1D2CA3B500A805EA /* cudnn_softmax_layer.cpp */; };
-		3A54FC6B1D2CA3B500A805EA /* cudnn_tanh_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBFD1D2CA3B500A805EA /* cudnn_tanh_layer.cpp */; };
-		3A54FC6D1D2CA3B500A805EA /* data_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBFF1D2CA3B500A805EA /* data_layer.cpp */; };
-		3A54FC6E1D2CA3B500A805EA /* deconv_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC001D2CA3B500A805EA /* deconv_layer.cpp */; };
-		3A54FC701D2CA3B500A805EA /* dropout_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC021D2CA3B500A805EA /* dropout_layer.cpp */; };
-		3A54FC721D2CA3B500A805EA /* dummy_data_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC041D2CA3B500A805EA /* dummy_data_layer.cpp */; };
-		3A54FC731D2CA3B500A805EA /* eltwise_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC051D2CA3B500A805EA /* eltwise_layer.cpp */; };
-		3A54FC751D2CA3B500A805EA /* euclidean_loss_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC071D2CA3B500A805EA /* euclidean_loss_layer.cpp */; };
-		3A54FC771D2CA3B500A805EA /* exp_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC091D2CA3B500A805EA /* exp_layer.cpp */; };
-		3A54FC791D2CA3B500A805EA /* filter_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC0B1D2CA3B500A805EA /* filter_layer.cpp */; };
-		3A54FC7B1D2CA3B500A805EA /* flatten_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC0D1D2CA3B500A805EA /* flatten_layer.cpp */; };
-		3A54FC801D2CA3B500A805EA /* hinge_loss_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC121D2CA3B500A805EA /* hinge_loss_layer.cpp */; };
-		3A54FC811D2CA3B500A805EA /* im2col_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC131D2CA3B500A805EA /* im2col_layer.cpp */; };
-		3A54FC841D2CA3B500A805EA /* infogain_loss_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC161D2CA3B500A805EA /* infogain_loss_layer.cpp */; };
-		3A54FC851D2CA3B500A805EA /* inner_product_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC171D2CA3B500A805EA /* inner_product_layer.cpp */; };
-		3A54FC871D2CA3B500A805EA /* log_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC191D2CA3B500A805EA /* log_layer.cpp */; };
-		3A54FC891D2CA3B500A805EA /* loss_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC1B1D2CA3B500A805EA /* loss_layer.cpp */; };
-		3A54FC8A1D2CA3B500A805EA /* lrn_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC1C1D2CA3B500A805EA /* lrn_layer.cpp */; };
-		3A54FC8C1D2CA3B500A805EA /* memory_data_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC1E1D2CA3B500A805EA /* memory_data_layer.cpp */; };
-		3A54FC8D1D2CA3B500A805EA /* multinomial_logistic_loss_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC1F1D2CA3B500A805EA /* multinomial_logistic_loss_layer.cpp */; };
-		3A54FC8E1D2CA3B500A805EA /* mvn_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC201D2CA3B500A805EA /* mvn_layer.cpp */; };
-		3A54FC901D2CA3B500A805EA /* neuron_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC221D2CA3B500A805EA /* neuron_layer.cpp */; };
-		3A54FC911D2CA3B500A805EA /* pooling_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC231D2CA3B500A805EA /* pooling_layer.cpp */; };
-		3A54FC931D2CA3B500A805EA /* power_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC251D2CA3B500A805EA /* power_layer.cpp */; };
-		3A54FC951D2CA3B500A805EA /* prelu_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC271D2CA3B500A805EA /* prelu_layer.cpp */; };
-		3A54FC971D2CA3B500A805EA /* reduction_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC291D2CA3B500A805EA /* reduction_layer.cpp */; };
-		3A54FC991D2CA3B500A805EA /* relu_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC2B1D2CA3B500A805EA /* relu_layer.cpp */; };
-		3A54FC9B1D2CA3B500A805EA /* reshape_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC2D1D2CA3B500A805EA /* reshape_layer.cpp */; };
-		3A54FC9C1D2CA3B500A805EA /* sigmoid_cross_entropy_loss_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC2E1D2CA3B500A805EA /* sigmoid_cross_entropy_loss_layer.cpp */; };
-		3A54FC9E1D2CA3B500A805EA /* sigmoid_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC301D2CA3B500A805EA /* sigmoid_layer.cpp */; };
-		3A54FCA01D2CA3B500A805EA /* silence_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC321D2CA3B500A805EA /* silence_layer.cpp */; };
-		3A54FCA21D2CA3B500A805EA /* slice_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC341D2CA3B500A805EA /* slice_layer.cpp */; };
-		3A54FCA41D2CA3B500A805EA /* softmax_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC361D2CA3B500A805EA /* softmax_layer.cpp */; };
-		3A54FCA61D2CA3B500A805EA /* softmax_loss_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC381D2CA3B500A805EA /* softmax_loss_layer.cpp */; };
-		3A54FCA81D2CA3B500A805EA /* split_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC3A1D2CA3B500A805EA /* split_layer.cpp */; };
-		3A54FCAA1D2CA3B500A805EA /* spp_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC3C1D2CA3B500A805EA /* spp_layer.cpp */; };
-		3A54FCAB1D2CA3B500A805EA /* tanh_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC3D1D2CA3B500A805EA /* tanh_layer.cpp */; };
-		3A54FCAD1D2CA3B500A805EA /* threshold_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC3F1D2CA3B500A805EA /* threshold_layer.cpp */; };
+		3A54FB311D2CA38D00A805EA /* gflags.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FA751D2CA38C00A805EA /* gflags.cc */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FB321D2CA38D00A805EA /* gflags_completions.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FA761D2CA38C00A805EA /* gflags_completions.cc */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FB331D2CA38D00A805EA /* gflags_reporting.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FA771D2CA38C00A805EA /* gflags_reporting.cc */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FBDC1D2CA38D00A805EA /* blob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FB281D2CA38C00A805EA /* blob.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FBDD1D2CA38D00A805EA /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FB291D2CA38C00A805EA /* common.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FBDE1D2CA38D00A805EA /* data_transformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FB2A1D2CA38C00A805EA /* data_transformer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FBDF1D2CA38D00A805EA /* internal_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FB2B1D2CA38C00A805EA /* internal_thread.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FBE01D2CA38D00A805EA /* layer_factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FB2C1D2CA38C00A805EA /* layer_factory.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FBE11D2CA38D00A805EA /* net.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FB2D1D2CA38C00A805EA /* net.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FBE21D2CA38D00A805EA /* solver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FB2E1D2CA38C00A805EA /* solver.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FBE31D2CA38D00A805EA /* syncedmem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FB2F1D2CA38C00A805EA /* syncedmem.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC521D2CA3B500A805EA /* absval_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBE41D2CA3B500A805EA /* absval_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC541D2CA3B500A805EA /* accuracy_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBE61D2CA3B500A805EA /* accuracy_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC551D2CA3B500A805EA /* argmax_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBE71D2CA3B500A805EA /* argmax_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC561D2CA3B500A805EA /* base_conv_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBE81D2CA3B500A805EA /* base_conv_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC571D2CA3B500A805EA /* base_data_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBE91D2CA3B500A805EA /* base_data_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC591D2CA3B500A805EA /* bnll_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBEB1D2CA3B500A805EA /* bnll_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC5B1D2CA3B500A805EA /* concat_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBED1D2CA3B500A805EA /* concat_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC5D1D2CA3B500A805EA /* contrastive_loss_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBEF1D2CA3B500A805EA /* contrastive_loss_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC5F1D2CA3B500A805EA /* conv_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBF11D2CA3B500A805EA /* conv_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC611D2CA3B500A805EA /* cudnn_conv_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBF31D2CA3B500A805EA /* cudnn_conv_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC631D2CA3B500A805EA /* cudnn_pooling_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBF51D2CA3B500A805EA /* cudnn_pooling_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC651D2CA3B500A805EA /* cudnn_relu_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBF71D2CA3B500A805EA /* cudnn_relu_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC671D2CA3B500A805EA /* cudnn_sigmoid_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBF91D2CA3B500A805EA /* cudnn_sigmoid_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC691D2CA3B500A805EA /* cudnn_softmax_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBFB1D2CA3B500A805EA /* cudnn_softmax_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC6B1D2CA3B500A805EA /* cudnn_tanh_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBFD1D2CA3B500A805EA /* cudnn_tanh_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC6D1D2CA3B500A805EA /* data_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FBFF1D2CA3B500A805EA /* data_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC6E1D2CA3B500A805EA /* deconv_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC001D2CA3B500A805EA /* deconv_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC701D2CA3B500A805EA /* dropout_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC021D2CA3B500A805EA /* dropout_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC721D2CA3B500A805EA /* dummy_data_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC041D2CA3B500A805EA /* dummy_data_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC731D2CA3B500A805EA /* eltwise_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC051D2CA3B500A805EA /* eltwise_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC751D2CA3B500A805EA /* euclidean_loss_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC071D2CA3B500A805EA /* euclidean_loss_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC771D2CA3B500A805EA /* exp_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC091D2CA3B500A805EA /* exp_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC791D2CA3B500A805EA /* filter_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC0B1D2CA3B500A805EA /* filter_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC7B1D2CA3B500A805EA /* flatten_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC0D1D2CA3B500A805EA /* flatten_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC801D2CA3B500A805EA /* hinge_loss_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC121D2CA3B500A805EA /* hinge_loss_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC811D2CA3B500A805EA /* im2col_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC131D2CA3B500A805EA /* im2col_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC841D2CA3B500A805EA /* infogain_loss_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC161D2CA3B500A805EA /* infogain_loss_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC851D2CA3B500A805EA /* inner_product_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC171D2CA3B500A805EA /* inner_product_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC871D2CA3B500A805EA /* log_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC191D2CA3B500A805EA /* log_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC891D2CA3B500A805EA /* loss_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC1B1D2CA3B500A805EA /* loss_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC8A1D2CA3B500A805EA /* lrn_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC1C1D2CA3B500A805EA /* lrn_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC8C1D2CA3B500A805EA /* memory_data_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC1E1D2CA3B500A805EA /* memory_data_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC8D1D2CA3B500A805EA /* multinomial_logistic_loss_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC1F1D2CA3B500A805EA /* multinomial_logistic_loss_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC8E1D2CA3B500A805EA /* mvn_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC201D2CA3B500A805EA /* mvn_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC901D2CA3B500A805EA /* neuron_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC221D2CA3B500A805EA /* neuron_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC911D2CA3B500A805EA /* pooling_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC231D2CA3B500A805EA /* pooling_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC931D2CA3B500A805EA /* power_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC251D2CA3B500A805EA /* power_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC951D2CA3B500A805EA /* prelu_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC271D2CA3B500A805EA /* prelu_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC971D2CA3B500A805EA /* reduction_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC291D2CA3B500A805EA /* reduction_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC991D2CA3B500A805EA /* relu_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC2B1D2CA3B500A805EA /* relu_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC9B1D2CA3B500A805EA /* reshape_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC2D1D2CA3B500A805EA /* reshape_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC9C1D2CA3B500A805EA /* sigmoid_cross_entropy_loss_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC2E1D2CA3B500A805EA /* sigmoid_cross_entropy_loss_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FC9E1D2CA3B500A805EA /* sigmoid_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC301D2CA3B500A805EA /* sigmoid_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCA01D2CA3B500A805EA /* silence_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC321D2CA3B500A805EA /* silence_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCA21D2CA3B500A805EA /* slice_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC341D2CA3B500A805EA /* slice_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCA41D2CA3B500A805EA /* softmax_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC361D2CA3B500A805EA /* softmax_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCA61D2CA3B500A805EA /* softmax_loss_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC381D2CA3B500A805EA /* softmax_loss_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCA81D2CA3B500A805EA /* split_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC3A1D2CA3B500A805EA /* split_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCAA1D2CA3B500A805EA /* spp_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC3C1D2CA3B500A805EA /* spp_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCAB1D2CA3B500A805EA /* tanh_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC3D1D2CA3B500A805EA /* tanh_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCAD1D2CA3B500A805EA /* threshold_layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC3F1D2CA3B500A805EA /* threshold_layer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		3A54FCB01D2CA3B500A805EA /* caffe.proto in Resources */ = {isa = PBXBuildFile; fileRef = 3A54FC431D2CA3B500A805EA /* caffe.proto */; };
-		3A54FCB11D2CA3B500A805EA /* benchmark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC451D2CA3B500A805EA /* benchmark.cpp */; };
-		3A54FCB21D2CA3B500A805EA /* cudnn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC461D2CA3B500A805EA /* cudnn.cpp */; };
-		3A54FCB31D2CA3B500A805EA /* db_leveldb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC471D2CA3B500A805EA /* db_leveldb.cpp */; };
-		3A54FCB41D2CA3B500A805EA /* db_lmdb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC481D2CA3B500A805EA /* db_lmdb.cpp */; };
-		3A54FCB51D2CA3B500A805EA /* db.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC491D2CA3B500A805EA /* db.cpp */; };
-		3A54FCB61D2CA3B500A805EA /* im2col.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC4A1D2CA3B500A805EA /* im2col.cpp */; };
-		3A54FCB81D2CA3B500A805EA /* insert_splits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC4C1D2CA3B500A805EA /* insert_splits.cpp */; };
-		3A54FCB91D2CA3B500A805EA /* io.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC4D1D2CA3B500A805EA /* io.cpp */; };
-		3A54FCBA1D2CA3B500A805EA /* math_functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC4E1D2CA3B500A805EA /* math_functions.cpp */; };
-		3A54FCBC1D2CA3B500A805EA /* upgrade_proto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC501D2CA3B500A805EA /* upgrade_proto.cpp */; };
+		3A54FCB11D2CA3B500A805EA /* benchmark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC451D2CA3B500A805EA /* benchmark.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCB21D2CA3B500A805EA /* cudnn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC461D2CA3B500A805EA /* cudnn.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCB31D2CA3B500A805EA /* db_leveldb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC471D2CA3B500A805EA /* db_leveldb.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCB41D2CA3B500A805EA /* db_lmdb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC481D2CA3B500A805EA /* db_lmdb.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCB51D2CA3B500A805EA /* db.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC491D2CA3B500A805EA /* db.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCB61D2CA3B500A805EA /* im2col.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC4A1D2CA3B500A805EA /* im2col.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCB81D2CA3B500A805EA /* insert_splits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC4C1D2CA3B500A805EA /* insert_splits.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCB91D2CA3B500A805EA /* io.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC4D1D2CA3B500A805EA /* io.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCBA1D2CA3B500A805EA /* math_functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC4E1D2CA3B500A805EA /* math_functions.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCBC1D2CA3B500A805EA /* upgrade_proto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC501D2CA3B500A805EA /* upgrade_proto.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		3A54FCC41D2CA78600A805EA /* libprotoc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A54FCC11D2CA78600A805EA /* libprotoc.a */; };
 		3A54FCC51D2CA78600A805EA /* libglog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A54FCC21D2CA78600A805EA /* libglog.a */; };
 		3A54FCC61D2CA78600A805EA /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A54FCC31D2CA78600A805EA /* libprotobuf.a */; };
 		3A54FCCA1D2CA7A000A805EA /* libleveldb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A54FCC71D2CA7A000A805EA /* libleveldb.a */; };
 		3A54FCD81D2CAA7000A805EA /* im2col.cu in Resources */ = {isa = PBXBuildFile; fileRef = 3A54FC4B1D2CA3B500A805EA /* im2col.cu */; };
 		3A54FCD91D2CAA7300A805EA /* math_functions.cu in Resources */ = {isa = PBXBuildFile; fileRef = 3A54FC4F1D2CA3B500A805EA /* math_functions.cu */; };
-		3A54FCDA1D2CAAE800A805EA /* caffe.proto in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC431D2CA3B500A805EA /* caffe.proto */; };
-		3A54FCDB1D2CAB1400A805EA /* libprotoc.a in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FCC11D2CA78600A805EA /* libprotoc.a */; };
-		3A54FCDC1D2CAB1400A805EA /* libglog.a in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FCC21D2CA78600A805EA /* libglog.a */; };
-		3A54FCDD1D2CAB1400A805EA /* libprotobuf.a in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FCC31D2CA78600A805EA /* libprotobuf.a */; };
+		3A54FCDA1D2CAAE800A805EA /* caffe.proto in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FC431D2CA3B500A805EA /* caffe.proto */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCDB1D2CAB1400A805EA /* libprotoc.a in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FCC11D2CA78600A805EA /* libprotoc.a */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCDC1D2CAB1400A805EA /* libglog.a in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FCC21D2CA78600A805EA /* libglog.a */; settings = {COMPILER_FLAGS = "-w"; }; };
+		3A54FCDD1D2CAB1400A805EA /* libprotobuf.a in Sources */ = {isa = PBXBuildFile; fileRef = 3A54FCC31D2CA78600A805EA /* libprotobuf.a */; settings = {COMPILER_FLAGS = "-w"; }; };
 		3A66518F1D46DFA500D6A6E5 /* models in Resources */ = {isa = PBXBuildFile; fileRef = 3A66518E1D46DFA500D6A6E5 /* models */; };
 		3A8626071D4D3C2C00214348 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8626061D4D3C2C00214348 /* Plant.swift */; };
 		3A8626091D4D3E3C00214348 /* PlantCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8626081D4D3E3C00214348 /* PlantCore.swift */; };
 		3A86260B1D4D4D4A00214348 /* PlantInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86260A1D4D4D4A00214348 /* PlantInfo.swift */; };
 		3A8CB13B1D59625A0097AE0F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8CB13A1D59625A0097AE0F /* TabBarController.swift */; };
 		3A8CB13F1D5AAC870097AE0F /* CreateIdentificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8CB13E1D5AAC870097AE0F /* CreateIdentificationController.swift */; };
-		3AA73EA61D5F69BE0042CD19 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA73EA51D5F69BE0042CD19 /* PhotoController.swift */; };
+		3AA73EA61D5F69BE0042CD19 /* PickTakePhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA73EA51D5F69BE0042CD19 /* PickTakePhotoController.swift */; };
+		3AB683C31E82D724001C7A28 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB683C21E82D724001C7A28 /* MainTableViewCell.swift */; };
+		3AB683C71E82EB94001C7A28 /* BlackLayerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB683C61E82EB94001C7A28 /* BlackLayerImageView.swift */; };
 		3ABED8EF1D87900D0069EFAD /* PlantInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABED8EE1D87900D0069EFAD /* PlantInfoUITests.swift */; };
 		3ABED8F71D8790F90069EFAD /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABED8F61D8790F90069EFAD /* SnapshotHelper.swift */; };
 		3AE074A41D689CB100985E4C /* Identifications+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE074A31D689CB100985E4C /* Identifications+CoreDataProperties.swift */; };
@@ -172,7 +174,7 @@
 		3A24A4791D48176400BA685C /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		3A24A47F1D481EA100BA685C /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		3A24A4861D48225F00BA685C /* Identifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifications.swift; sourceTree = "<group>"; };
-		3A24A4891D4826FF00BA685C /* SelectPlantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPlantController.swift; sourceTree = "<group>"; };
+		3A24A4891D4826FF00BA685C /* ResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsController.swift; sourceTree = "<group>"; };
 		3A24A48C1D4C2DDB00BA685C /* plants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = plants.json; sourceTree = "<group>"; };
 		3A2813C01D2F417200FA2078 /* BridgingObjectClassifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingObjectClassifier.h; sourceTree = "<group>"; };
 		3A2813C11D2F417200FA2078 /* BridgingObjectClassifier.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BridgingObjectClassifier.mm; sourceTree = "<group>"; };
@@ -365,7 +367,9 @@
 		3A86260A1D4D4D4A00214348 /* PlantInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantInfo.swift; sourceTree = "<group>"; };
 		3A8CB13A1D59625A0097AE0F /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3A8CB13E1D5AAC870097AE0F /* CreateIdentificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateIdentificationController.swift; sourceTree = "<group>"; };
-		3AA73EA51D5F69BE0042CD19 /* PhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
+		3AA73EA51D5F69BE0042CD19 /* PickTakePhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickTakePhotoController.swift; sourceTree = "<group>"; };
+		3AB683C21E82D724001C7A28 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		3AB683C61E82EB94001C7A28 /* BlackLayerImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackLayerImageView.swift; sourceTree = "<group>"; };
 		3ABED8EC1D87900D0069EFAD /* PlantInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ABED8EE1D87900D0069EFAD /* PlantInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoUITests.swift; sourceTree = "<group>"; };
 		3ABED8F01D87900D0069EFAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -418,8 +422,9 @@
 		3A24A4781D48174100BA685C /* Identifications */ = {
 			isa = PBXGroup;
 			children = (
-				3AA73EA51D5F69BE0042CD19 /* PhotoController.swift */,
-				3A24A4891D4826FF00BA685C /* SelectPlantController.swift */,
+				3AA73EA51D5F69BE0042CD19 /* PickTakePhotoController.swift */,
+				3A24A4891D4826FF00BA685C /* ResultsController.swift */,
+				3AB683C11E82D459001C7A28 /* Cells */,
 				3A3A536A1D80AA6300F6E6E9 /* Create */,
 			);
 			name = Identifications;
@@ -428,11 +433,11 @@
 		3A24A47B1D48178D00BA685C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				3A24A47C1D48179E00BA685C /* Protocols */,
 				3A3A53661D7E541100F6E6E9 /* SwiftPages.swift */,
 				3AFA3FB51D442D7F00F2BD3D /* Extensions.swift */,
 				3A4884FF1D67DA9400C6212B /* CustomAlbumPhoto.swift */,
 				3A8626081D4D3E3C00214348 /* PlantCore.swift */,
+				3AB683C61E82EB94001C7A28 /* BlackLayerImageView.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -516,7 +521,6 @@
 				3A24A47B1D48178D00BA685C /* Utilities */,
 				3A24A4781D48174100BA685C /* Identifications */,
 				3ABF66741D6A384D00BCBD81 /* List */,
-				3A8626051D4D3BD300214348 /* Objects */,
 				3A54E3B01D2C664D00A805EA /* AppDelegate.swift */,
 				3A54E3B41D2C664D00A805EA /* Main.storyboard */,
 				3A54E3BA1D2C664D00A805EA /* Assets.xcassets */,
@@ -823,6 +827,14 @@
 			name = Objects;
 			sourceTree = "<group>";
 		};
+		3AB683C11E82D459001C7A28 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3AB683C21E82D724001C7A28 /* MainTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		3ABED8ED1D87900D0069EFAD /* PlantInfoUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -836,6 +848,8 @@
 		3ABF66741D6A384D00BCBD81 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				3A8626051D4D3BD300214348 /* Objects */,
+				3A24A47C1D48179E00BA685C /* Protocols */,
 				3A24A4701D48167100BA685C /* CoreDataTableViewController.swift */,
 				3A24A4791D48176400BA685C /* ListController.swift */,
 			);
@@ -1141,7 +1155,7 @@
 				3A54FCA41D2CA3B500A805EA /* softmax_layer.cpp in Sources */,
 				3A54FC9C1D2CA3B500A805EA /* sigmoid_cross_entropy_loss_layer.cpp in Sources */,
 				3A54FC871D2CA3B500A805EA /* log_layer.cpp in Sources */,
-				3AA73EA61D5F69BE0042CD19 /* PhotoController.swift in Sources */,
+				3AA73EA61D5F69BE0042CD19 /* PickTakePhotoController.swift in Sources */,
 				3A54FC701D2CA3B500A805EA /* dropout_layer.cpp in Sources */,
 				3A54FC721D2CA3B500A805EA /* dummy_data_layer.cpp in Sources */,
 				3AE074A41D689CB100985E4C /* Identifications+CoreDataProperties.swift in Sources */,
@@ -1166,11 +1180,12 @@
 				3A54FCB81D2CA3B500A805EA /* insert_splits.cpp in Sources */,
 				3A3A53651D7E538A00F6E6E9 /* SubViewController.swift in Sources */,
 				3A54FBE21D2CA38D00A805EA /* solver.cpp in Sources */,
-				3A24A48A1D4826FF00BA685C /* SelectPlantController.swift in Sources */,
+				3A24A48A1D4826FF00BA685C /* ResultsController.swift in Sources */,
 				3A54FC8C1D2CA3B500A805EA /* memory_data_layer.cpp in Sources */,
 				3A54FC8D1D2CA3B500A805EA /* multinomial_logistic_loss_layer.cpp in Sources */,
 				3A54FC751D2CA3B500A805EA /* euclidean_loss_layer.cpp in Sources */,
 				3A3A53691D80A9F300F6E6E9 /* InfoTableViewController.swift in Sources */,
+				3AB683C71E82EB94001C7A28 /* BlackLayerImageView.swift in Sources */,
 				3A8626091D4D3E3C00214348 /* PlantCore.swift in Sources */,
 				3A24A4731D48167100BA685C /* ProtocolCoreDataTableViewController.swift in Sources */,
 				3A54FC911D2CA3B500A805EA /* pooling_layer.cpp in Sources */,
@@ -1192,6 +1207,7 @@
 				3A54FC651D2CA3B500A805EA /* cudnn_relu_layer.cpp in Sources */,
 				3A54FC6E1D2CA3B500A805EA /* deconv_layer.cpp in Sources */,
 				3A54FC931D2CA3B500A805EA /* power_layer.cpp in Sources */,
+				3AB683C31E82D724001C7A28 /* MainTableViewCell.swift in Sources */,
 				3A54FC7B1D2CA3B500A805EA /* flatten_layer.cpp in Sources */,
 				3A8626071D4D3C2C00214348 /* Plant.swift in Sources */,
 				3A54FC6D1D2CA3B500A805EA /* data_layer.cpp in Sources */,
@@ -1348,6 +1364,8 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Felipe Dias Pereira (4ESLPZ55NB)";
 				CURRENT_PROJECT_VERSION = 9;
@@ -1364,6 +1382,9 @@
 					"CPU_ONLY=1",
 				);
 				GCC_VERSION = "";
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1397,6 +1418,8 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Felipe Pereira (439F5NHE7E)";
 				CURRENT_PROJECT_VERSION = 9;
@@ -1409,6 +1432,9 @@
 				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = "CPU_ONLY=1";
 				GCC_VERSION = "";
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,

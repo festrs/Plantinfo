@@ -12,28 +12,30 @@ import ImagePicker
 import Photos
 import MBProgressHUD
 
-class PhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePickerDelegate  {
-    
+class PickTakePhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePickerDelegate  {
     private var moc:NSManagedObjectContext!
     private let SEGUE_IDENTIFIER = "ToSelect";
     private var imageIdentifier:String!
-    private var predictionResult = []
+    private var plantsList:[Plant]?
+    private lazy var plantCore = {
+        return PlantCore.sharedInstance;
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.delegate = self
-        self.imageLimit = 1
+        delegate = self
+        imageLimit = 1
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden = true
+        navigationController?.navigationBarHidden = true
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.navigationBarHidden = false
-        self.resetAssets()
+        navigationController?.navigationBarHidden = false
+        resetAssets()
     }
     
     // MARK: - HUD
@@ -61,7 +63,8 @@ class PhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePic
         showLoadingHUD()
         let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            self.predictionResult = BridgingObjectClassifier.sharedManager().predictWithImage(images.first)
+            let predictions = BridgingObjectClassifier.sharedManager().predictWithImage(images.first) as! [String]
+            self.plantsList = self.plantCore.getListOfPlantsBy(predictions)
             dispatch_async(dispatch_get_main_queue()) {
                 self.hideLoadingHUD()
                 if let image = images.first{
@@ -84,11 +87,11 @@ class PhotoController: ImagePickerController, FPHandlesIncomingObjects, ImagePic
         }
         
         if segue.identifier == SEGUE_IDENTIFIER,
-            let vc = segue.destinationViewController as? SelectPlantController,
+            let vc = segue.destinationViewController as? ResultsController,
             let image = sender as? UIImage{
             vc.incomingImage = image
-            vc.imageIdentifier = self.imageIdentifier
-            vc.identificationResult = self.predictionResult as? [String]
+            vc.imageIdentifier = imageIdentifier
+            vc.listOfResults = plantsList
         }
     }
 }
