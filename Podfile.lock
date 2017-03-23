@@ -1,8 +1,5 @@
 PODS:
   - Alamofire (3.5.0)
-  - Charts (2.3.1):
-    - Charts/Core (= 2.3.1)
-  - Charts/Core (2.3.1)
   - CryptoSwift (0.4.1)
   - ImagePicker (1.4.0)
   - JSONWebToken (1.5.0):
@@ -14,7 +11,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 3.5.0)
-  - Charts (= 2.3.1)
   - ImagePicker (from `https://github.com/festrs/ImagePicker.git`, branch `swift-2.3`)
   - JSONWebToken (= 1.5.0)
   - Kingfisher (= 2.4)
@@ -29,12 +25,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   ImagePicker:
-    :commit: 6f3dc2a4d512590d8a9d2d6c1c985753e5a62305
+    :commit: 18a67109e5b0f580a270241c72827625a503c3a3
     :git: https://github.com/festrs/ImagePicker.git
 
 SPEC CHECKSUMS:
   Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
-  Charts: f04119c743c6996ba67fb8016d3a4878a38ca13f
   CryptoSwift: 25b5aff3f260967391f8fff2e9abe4254d2c6fd5
   ImagePicker: 6659ccdd4737bfa14ed3b4aa7ffe18b193d92a0c
   JSONWebToken: 6c8968ace6b60b2e6156a7bbe5019fd9b5ff9b5a
@@ -43,6 +38,6 @@ SPEC CHECKSUMS:
   ObjectMapper: 4eb08a726e9791a93b2632049951b56a7c17e471
   ReachabilitySwift: dc7452dab85ff881904215e1a113326ad8d07beb
 
-PODFILE CHECKSUM: e1ac6e578c25da9d409318abb533ab5c1be558e4
+PODFILE CHECKSUM: 1672c0a9690ba12f25ac59c8821922addd0b13ff
 
 COCOAPODS: 1.2.0

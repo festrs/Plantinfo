@@ -9,7 +9,6 @@
 import UIKit
 
 class InfoTableViewController: UIViewController,ReceivedPlantProtocol,UITableViewDataSource, UITableViewDelegate {
-
     @IBOutlet weak var tableView: UITableView!
     var plant:Plant!
     var infoPlant = [String:AnyObject]()
@@ -35,7 +34,7 @@ class InfoTableViewController: UIViewController,ReceivedPlantProtocol,UITableVie
         infoPlant = self.plant.info.map({
             return $0.toJSON()
         })!
-        self.tableView.rowHeight = 80
+        self.tableView.rowHeight = 60
     }
     
     func receivePlant(plant: Plant) {

@@ -10,24 +10,11 @@ import UIKit
 import Kingfisher
 import ReachabilitySwift
 
-class PhotosController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,ReceivedPlantProtocol {
-    
+class PhotosController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, ReceivedPlantProtocol {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet var photsCollection: UICollectionView!
     private var plant:Plant!
     private let reuseIdentifier = "photoCell"
-    @IBOutlet var photsCollection: UICollectionView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -35,7 +22,7 @@ class PhotosController: UIViewController,UICollectionViewDataSource,UICollection
         if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             let itemWidth = view.bounds.width / 2.0
             let itemHeight = layout.itemSize.height
-            layout.itemSize = CGSize(width: itemWidth-7, height: itemHeight)
+            layout.itemSize = CGSize(width: itemWidth-2, height: itemHeight)
             layout.invalidateLayout()
         }
     }
@@ -70,5 +57,4 @@ class PhotosController: UIViewController,UICollectionViewDataSource,UICollection
 class PhotosCellController : UICollectionViewCell{
     
     @IBOutlet weak var plantImageView: UIImageView!
-    
 }

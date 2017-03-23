@@ -12,6 +12,7 @@ import Kingfisher
 
 class ResultsController: UIViewController, FPHandlesIncomingObjects {
     //MARK: - Variables
+    @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var probabilityLabel: UILabel!
     @IBOutlet weak var plantImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
@@ -27,21 +28,25 @@ class ResultsController: UIViewController, FPHandlesIncomingObjects {
         static private let NOT_POISONOUS_ID = "n12205694"
         static private let MAIN_CELL_IDENTIFIER = "mainCell"
         static private let HEIGHT_FOR_ROW = 160.0
+        static private let FLAT_GREEN = "#39AF54"
+        static private let FLAT_ORANGE = "#D96C00"
+        static private let FLAT_RED = "#AC281C"
     }
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        infoLabel.text = "Chances of being poisonous:"
         plantImage.image = incomingImage
         plantImage.gradientTopDownBlack()
         let proba = listOfResults?.reduce(0.0, combine: {$0.0! + $0.1.probability!} )
         probabilityLabel.text = "\(Int(proba!))%";
         if proba <= 40.0 {
-            probabilityLabel.backgroundColor = UIColor.hex("#39AF54", alpha: 1.0)
+            probabilityLabel.backgroundColor = UIColor.hex(Keys.FLAT_GREEN, alpha: 1.0)
         }else if(proba > 40.0 && proba <= 75.0){
-            probabilityLabel.backgroundColor = UIColor.hex("#D96C00", alpha: 1.0)
+            probabilityLabel.backgroundColor = UIColor.hex(Keys.FLAT_ORANGE, alpha: 1.0)
         }else{
-            probabilityLabel.backgroundColor = UIColor.hex("#AC281C", alpha: 1.0)
+            probabilityLabel.backgroundColor = UIColor.hex(Keys.FLAT_RED, alpha: 1.0)
         }
     }
 

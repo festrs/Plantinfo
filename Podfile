@@ -11,7 +11,6 @@ target 'PlantInfo' do
     pod 'Kingfisher', '2.4'
     pod 'ImagePicker', :git => 'https://github.com/festrs/ImagePicker.git', :branch => 'swift-2.3'
     pod 'ReachabilitySwift', '2.4'
-    pod 'Charts', '2.3.1'
 end
 
 target 'PlantInfoTests' do

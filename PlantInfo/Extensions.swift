@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 let URL_IMAGE_BASE = "https://s3-sa-east-1.amazonaws.com/plantinfo/listimage/"
 
@@ -27,6 +28,7 @@ struct PredictInfo {
 }
 
 extension Double {
+    
     func roundToDecimal(fractionDigits: Int) -> Double {
         let multiplier = pow(10, Double(fractionDigits))
         return Darwin.round(self * multiplier) / multiplier
@@ -44,6 +46,7 @@ func fileInDocumentsDirectory(filename: String) -> String {
 }
 
 extension CGFloat {
+    
     static func random() -> CGFloat {
         return CGFloat(arc4random()) / CGFloat(UInt32.max)
     }
@@ -61,9 +64,10 @@ extension UIImage {
 }
 
 extension UIImageView {
+    
     func gradientTopDownBlack() {
         let myGradientLayer = CAGradientLayer()
-        myGradientLayer.frame = self.layer.frame
+        myGradientLayer.frame = self.bounds
         let colors: [CGColorRef] = [
             UIColor.clearColor().CGColor,
             UIColor.clearColor().CGColor,
@@ -71,7 +75,7 @@ extension UIImageView {
         myGradientLayer.colors = colors
         myGradientLayer.opaque = true
         myGradientLayer.locations = [0.0, 0.5, 1.0]
-        self.layer.insertSublayer(myGradientLayer, above: self.layer)
+        self.layer.addSublayer(myGradientLayer)
     }
 }
 
