@@ -62,9 +62,15 @@ class ListController: CoreDataTableViewController, FPHandlesIncomingObjects {
         }
         let plant = PlantCore.sharedInstance.getPlantByID(identificationObj.plant_ID!)
         cell.photoImageView.image = UIImage(named: "default-placeholder")
-        cell.titleLabel.text = plant.info?.scientificName
+        cell.scientificNameLabel.text = plant.info?.scientificName
         cell.detailLabel.text = NSDateFormatter.localizedStringFromDate(identificationObj.date!, dateStyle: .ShortStyle, timeStyle: .NoStyle)
         cell.setEditing(false, animated: false)
+        
+        guard let commonName = plant.info?.commonName else {
+            return cell
+        }
+        cell.titleLabel.text = commonName.characters.split(",").map(String.init).first
+        
         return cell
     }
     
@@ -108,6 +114,7 @@ class ListCellController : UITableViewCell {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var scientificNameLabel: UILabel!
     
     override func layoutSubviews() {
         self.photoImageView.layer.cornerRadius = self.photoImageView.frame.size.width / 2

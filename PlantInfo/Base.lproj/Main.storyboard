@@ -42,25 +42,34 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfN-bm-BG6">
-                                                    <rect key="frame" x="61" y="23" width="34" height="20"/>
+                                                    <rect key="frame" x="61" y="16" width="34" height="20"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgq-tr-slj">
+                                                    <rect key="frame" x="61" y="37" width="31" height="15"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="nfN-bm-BG6" firstAttribute="leading" secondItem="GHQ-Yz-Kho" secondAttribute="trailing" constant="8" symbolic="YES" id="B4S-TJ-bvS"/>
-                                                <constraint firstItem="GHQ-Yz-Kho" firstAttribute="centerY" secondItem="nfN-bm-BG6" secondAttribute="centerY" id="Jkz-cL-Tou"/>
+                                                <constraint firstItem="nfN-bm-BG6" firstAttribute="leading" secondItem="GHQ-Yz-Kho" secondAttribute="trailing" constant="8" symbolic="YES" id="Dic-cR-afy"/>
                                                 <constraint firstItem="GHQ-Yz-Kho" firstAttribute="centerY" secondItem="R3P-8V-BRX" secondAttribute="centerY" id="SPV-DJ-nVo"/>
                                                 <constraint firstItem="GHQ-Yz-Kho" firstAttribute="leading" secondItem="R3P-8V-BRX" secondAttribute="leadingMargin" id="cup-px-Vet"/>
                                                 <constraint firstItem="GHQ-Yz-Kho" firstAttribute="top" secondItem="R3P-8V-BRX" secondAttribute="topMargin" constant="1" id="dFg-mi-7gy"/>
+                                                <constraint firstItem="EP7-KN-AOZ" firstAttribute="top" secondItem="R3P-8V-BRX" secondAttribute="topMargin" constant="17" id="hPF-wF-Fbe"/>
+                                                <constraint firstItem="nfN-bm-BG6" firstAttribute="leading" secondItem="bgq-tr-slj" secondAttribute="leading" id="jXo-he-Bdy"/>
                                                 <constraint firstItem="EP7-KN-AOZ" firstAttribute="trailing" secondItem="R3P-8V-BRX" secondAttribute="trailingMargin" id="nK7-hS-lzK"/>
-                                                <constraint firstItem="nfN-bm-BG6" firstAttribute="baseline" secondItem="EP7-KN-AOZ" secondAttribute="baseline" id="z1L-Bd-xAJ"/>
+                                                <constraint firstItem="nfN-bm-BG6" firstAttribute="top" secondItem="R3P-8V-BRX" secondAttribute="topMargin" constant="8" id="p9q-cg-KTG"/>
+                                                <constraint firstItem="bgq-tr-slj" firstAttribute="top" secondItem="nfN-bm-BG6" secondAttribute="bottom" constant="1" id="pDe-dY-kWO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="detailLabel" destination="EP7-KN-AOZ" id="y4b-PL-5oT"/>
                                             <outlet property="photoImageView" destination="GHQ-Yz-Kho" id="43X-TX-UBk"/>
+                                            <outlet property="scientificNameLabel" destination="bgq-tr-slj" id="NrR-Pq-qZV"/>
                                             <outlet property="titleLabel" destination="nfN-bm-BG6" id="kzl-hI-Si8"/>
                                             <segue destination="0X7-K8-mcc" kind="show" identifier="ToIdentifierPlant" id="nqG-Cm-h57"/>
                                         </connections>
@@ -238,7 +247,7 @@
                         <viewControllerLayoutGuide type="bottom" id="kpu-bC-hP2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9dv-FQ-uND">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="qII-gf-WIp">
@@ -251,7 +260,7 @@
                                 </constraints>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ly1-h8-e6W">
-                                <rect key="frame" x="0.0" y="222" width="600" height="427"/>
+                                <rect key="frame" x="0.0" y="222" width="600" height="378"/>
                                 <color key="tintColor" red="0.18039215689999999" green="0.65490196079999996" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="r0R-UZ-2nc" kind="embed" identifier="ToContainerInfoAndPhotos" id="AgA-AQ-gda"/>
@@ -456,11 +465,11 @@
                         <viewControllerLayoutGuide type="bottom" id="aiC-vH-o5P"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ceo-c2-z4g">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="427"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="378"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJd-bQ-bq6" customClass="SwiftPages" customModule="PlantInfo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="427"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="378"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -567,6 +576,6 @@
         <image name="photo-camera" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XpS-lj-jxk"/>
+        <segue reference="nqG-Cm-h57"/>
     </inferredMetricsTieBreakers>
 </document>

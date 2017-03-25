@@ -26,7 +26,6 @@
 		3A54E3B11D2C664D00A805EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3B01D2C664D00A805EA /* AppDelegate.swift */; };
 		3A54E3B61D2C664D00A805EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A54E3B41D2C664D00A805EA /* Main.storyboard */; };
 		3A54E3B91D2C664D00A805EA /* PlantInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3B71D2C664D00A805EA /* PlantInfo.xcdatamodeld */; };
-		3A54E3BB1D2C664D00A805EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A54E3BA1D2C664D00A805EA /* Assets.xcassets */; };
 		3A54E3BE1D2C664D00A805EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A54E3BC1D2C664D00A805EA /* LaunchScreen.storyboard */; };
 		3A54E3C91D2C664D00A805EA /* PlantInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3C81D2C664D00A805EA /* PlantInfoTests.swift */; };
 		3A54E3D71D2C669500A805EA /* Classifier.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A54E3D51D2C669500A805EA /* Classifier.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -130,6 +129,8 @@
 		3ABED8F71D8790F90069EFAD /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABED8F61D8790F90069EFAD /* SnapshotHelper.swift */; };
 		3AE074A41D689CB100985E4C /* Identifications+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE074A31D689CB100985E4C /* Identifications+CoreDataProperties.swift */; };
 		3AF5E1A51D824FCB0042F8E2 /* PhotosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF5E1A41D824FCB0042F8E2 /* PhotosController.swift */; };
+		3AF8C5731E85AC9400DA4A47 /* newplants.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AF8C5721E85AC9400DA4A47 /* newplants.json */; };
+		3AF8C5751E85B67B00DA4A47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AF8C5741E85B67B00DA4A47 /* Assets.xcassets */; };
 		3AFA3FB61D442D7F00F2BD3D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA3FB51D442D7F00F2BD3D /* Extensions.swift */; };
 		E91BE3748B8B4AD0F9603A8C /* Pods_PlantInfoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91EDDFD6739CC9A773B2F59E /* Pods_PlantInfoTests.framework */; };
 /* End PBXBuildFile section */
@@ -187,7 +188,6 @@
 		3A54E3B01D2C664D00A805EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A54E3B51D2C664D00A805EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A54E3B81D2C664D00A805EA /* PlantInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlantInfo.xcdatamodel; sourceTree = "<group>"; };
-		3A54E3BA1D2C664D00A805EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A54E3BD1D2C664D00A805EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A54E3BF1D2C664D00A805EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A54E3C41D2C664D00A805EA /* PlantInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -376,6 +376,8 @@
 		3ABED8F61D8790F90069EFAD /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		3AE074A31D689CB100985E4C /* Identifications+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Identifications+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3AF5E1A41D824FCB0042F8E2 /* PhotosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosController.swift; sourceTree = "<group>"; };
+		3AF8C5721E85AC9400DA4A47 /* newplants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newplants.json; sourceTree = "<group>"; };
+		3AF8C5741E85B67B00DA4A47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AFA3FB51D442D7F00F2BD3D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		58C6496275BB046A403BABBF /* Pods-PlantInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlantInfo/Pods-PlantInfo.release.xcconfig"; sourceTree = "<group>"; };
 		8585FDFCE15A9B69B18B6CEE /* Pods-PlantInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlantInfo/Pods-PlantInfo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -523,9 +525,10 @@
 				3ABF66741D6A384D00BCBD81 /* List */,
 				3A54E3B01D2C664D00A805EA /* AppDelegate.swift */,
 				3A54E3B41D2C664D00A805EA /* Main.storyboard */,
-				3A54E3BA1D2C664D00A805EA /* Assets.xcassets */,
 				3A54E3BC1D2C664D00A805EA /* LaunchScreen.storyboard */,
+				3AF8C5741E85B67B00DA4A47 /* Assets.xcassets */,
 				3A24A48C1D4C2DDB00BA685C /* plants.json */,
+				3AF8C5721E85AC9400DA4A47 /* newplants.json */,
 				3A54E3BF1D2C664D00A805EA /* Info.plist */,
 				3A66518E1D46DFA500D6A6E5 /* models */,
 				3A54FA741D2CA36D00A805EA /* caffe */,
@@ -993,8 +996,9 @@
 				3A54FCD91D2CAA7300A805EA /* math_functions.cu in Resources */,
 				3A54FCD81D2CAA7000A805EA /* im2col.cu in Resources */,
 				3A54E3BE1D2C664D00A805EA /* LaunchScreen.storyboard in Resources */,
-				3A54E3BB1D2C664D00A805EA /* Assets.xcassets in Resources */,
 				3A54E3B61D2C664D00A805EA /* Main.storyboard in Resources */,
+				3AF8C5731E85AC9400DA4A47 /* newplants.json in Resources */,
+				3AF8C5751E85B67B00DA4A47 /* Assets.xcassets in Resources */,
 				3A24A48E1D4C2DDB00BA685C /* plants.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

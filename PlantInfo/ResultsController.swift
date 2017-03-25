@@ -49,7 +49,7 @@ class ResultsController: UIViewController, FPHandlesIncomingObjects {
             probabilityLabel.backgroundColor = UIColor.hex(Keys.FLAT_RED, alpha: 1.0)
         }
     }
-
+    
     //MARK: Incomings
     func receiveMOC(incomingMOC: NSManagedObjectContext) {
         self.MOC = incomingMOC
@@ -89,7 +89,7 @@ extension ResultsController: UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return Keys.NUMBER_OF_SECTIONS
     }
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (listOfResults?.count)!
     }
@@ -99,11 +99,19 @@ extension ResultsController: UITableViewDataSource {
         let plant = listOfResults![indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier(Keys.MAIN_CELL_IDENTIFIER, forIndexPath: indexPath) as! MainTableViewCell
         
-        let imageName = plant.imageLinks![0].componentsSeparatedByString("/").last;
+        let imageNameIndex = plant.imageLinks?.indexOf { item in
+            let name = item.substringFromIndex(item.startIndex.advancedBy(10))
+            if UIImage(named: name.stringByReplacingOccurrencesOfString(".JPEG", withString: "")) != nil{
+                return true
+            }
+            return false
+        }
+
+        let imageName = plant.imageLinks![imageNameIndex!].componentsSeparatedByString("/").last;
         cell.plantImage.image = UIImage(named: imageName!.stringByReplacingOccurrencesOfString(".JPEG", withString: ""));
         cell.scientificNameLabel.text = plant.info?.scientificName!
         cell.probabilityLabel.text = "\(Int(plant.probability!))%"
-    
+        
         guard let commonName = plant.info?.commonName else {
             return cell
         }
@@ -111,6 +119,7 @@ extension ResultsController: UITableViewDataSource {
         
         return cell;
     }
+    
 }
 
 

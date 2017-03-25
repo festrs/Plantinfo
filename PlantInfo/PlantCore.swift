@@ -20,7 +20,7 @@ class PlantCore{
     }
     
     private func initPlants(){
-        let plantsUrl = NSBundle.mainBundle().URLForResource("plants", withExtension: "json")
+        let plantsUrl = NSBundle.mainBundle().URLForResource("newplants", withExtension: "json")
         let plantsData = NSData(contentsOfURL: plantsUrl!)
         do {
             let object = try NSJSONSerialization.JSONObjectWithData(plantsData!, options: .AllowFragments)

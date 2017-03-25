@@ -9,7 +9,7 @@
 import UIKit
 import QuartzCore
 
-let URL_IMAGE_BASE = "https://s3-sa-east-1.amazonaws.com/plantinfo/listimage/"
+let URL_IMAGE_BASE = "https://s3-sa-east-1.amazonaws.com/plantinfo/newphoto/"
 
 // MARK: JWT Secret key
 let jwtSecretKey:String = "felipe.com.br.plantinfo.5939854fe"
